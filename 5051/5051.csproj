@@ -196,6 +196,9 @@
     <Compile Include="Backend\AvatarDataSourceMock.cs" />
     <Compile Include="Backend\AvatarInterface.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\StudentBadgesController.cs" />
+    <Compile Include="Controllers\AdminLoginController.cs" />
+    <Compile Include="Controllers\StudentDataController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\AvatarController.cs" />
@@ -220,6 +223,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\AdminLogin.jpg" />
     <Content Include="Content\img\avatar0.png" />
     <Content Include="Content\img\avatar1.png" />
     <Content Include="Content\img\avatar2.png" />
@@ -230,6 +234,8 @@
     <Content Include="Content\img\avatar7.png" />
     <Content Include="Content\img\avatar8.png" />
     <Content Include="Content\img\avatar9.png" />
+    <Content Include="Content\img\StudentBadgeTab.jpg" />
+    <Content Include="Content\img\StudentDataTab.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -300,6 +306,9 @@
     <Content Include="Views\Home\StudentExample.cshtml" />
     <Content Include="Views\Home\ShopExample.cshtml" />
     <Content Include="Views\Home\HouseExample.cshtml" />
+    <Content Include="Views\StudentBadges\Index.cshtml" />
+    <Content Include="Views\StudentData\Index.cshtml" />
+    <Content Include="Views\AdminLogin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
