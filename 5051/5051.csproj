@@ -196,6 +196,8 @@
     <Compile Include="Backend\AvatarDataSourceMock.cs" />
     <Compile Include="Backend\AvatarInterface.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminCalendarController.cs" />
+    <Compile Include="Controllers\AdminReportController.cs" />
     <Compile Include="Controllers\StudentBadgesController.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
     <Compile Include="Controllers\StudentDataController.cs" />
@@ -309,6 +311,8 @@
     <Content Include="Views\StudentBadges\Index.cshtml" />
     <Content Include="Views\StudentData\Index.cshtml" />
     <Content Include="Views\AdminLogin\Index.cshtml" />
+    <Content Include="Views\AdminReport\Index.cshtml" />
+    <Content Include="Views\AdminCalendar\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
