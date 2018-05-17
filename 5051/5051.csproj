@@ -198,6 +198,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminCalendarController.cs" />
     <Compile Include="Controllers\AdminReportController.cs" />
+    <Compile Include="Controllers\AdminReportPDFController.cs" />
     <Compile Include="Controllers\StudentBadgesController.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
     <Compile Include="Controllers\StudentDataController.cs" />
@@ -225,6 +226,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\AdminCalender.png" />
+    <Content Include="Content\img\AdminReports.png" />
     <Content Include="Content\img\AdminLogin.jpg" />
     <Content Include="Content\img\avatar0.png" />
     <Content Include="Content\img\avatar1.png" />
@@ -236,6 +239,7 @@
     <Content Include="Content\img\avatar7.png" />
     <Content Include="Content\img\avatar8.png" />
     <Content Include="Content\img\avatar9.png" />
+    <Content Include="Content\img\Report PDF.png" />
     <Content Include="Content\img\StudentBadgeTab.jpg" />
     <Content Include="Content\img\StudentDataTab.jpg" />
     <Content Include="favicon.ico" />
@@ -313,6 +317,7 @@
     <Content Include="Views\AdminLogin\Index.cshtml" />
     <Content Include="Views\AdminReport\Index.cshtml" />
     <Content Include="Views\AdminCalendar\Index.cshtml" />
+    <Content Include="Views\AdminReportPDF\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
