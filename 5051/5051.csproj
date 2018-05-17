@@ -199,6 +199,8 @@
     <Compile Include="Controllers\AdminCalendarController.cs" />
     <Compile Include="Controllers\AdminReportController.cs" />
     <Compile Include="Controllers\AdminReportPDFController.cs" />
+    <Compile Include="Controllers\AdminExpandedStudent.cs" />
+    <Compile Include="Controllers\AdminStudentController.cs" />
     <Compile Include="Controllers\StudentBadgesController.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
     <Compile Include="Controllers\StudentDataController.cs" />
@@ -318,6 +320,8 @@
     <Content Include="Views\AdminReport\Index.cshtml" />
     <Content Include="Views\AdminCalendar\Index.cshtml" />
     <Content Include="Views\AdminReportPDF\Index.cshtml" />
+    <Content Include="Views\AdminStudent\Index.cshtml" />
+    <Content Include="Views\AdminExpandedStudent\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
