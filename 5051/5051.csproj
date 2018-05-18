@@ -202,6 +202,7 @@
     <Compile Include="Controllers\AdminReportPDFController.cs" />
     <Compile Include="Controllers\AdminExpandedStudent.cs" />
     <Compile Include="Controllers\AdminStudentController.cs" />
+    <Compile Include="Controllers\KioskSignInController.cs" />
     <Compile Include="Controllers\StudentBadgesController.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
     <Compile Include="Controllers\StudentDataController.cs" />
@@ -320,6 +321,7 @@
     <Content Include="Views\AdminStudent\Index.cshtml" />
     <Content Include="Views\AdminExpandedStudent\Index.cshtml" />
     <Content Include="Views\AdminSettings\Index.cshtml" />
+    <Content Include="Views\KioskSignIn\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
