@@ -197,6 +197,7 @@
     <Compile Include="Backend\AvatarInterface.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminCalendarController.cs" />
+    <Compile Include="Controllers\AdminSettingsController.cs" />
     <Compile Include="Controllers\AdminReportController.cs" />
     <Compile Include="Controllers\AdminReportPDFController.cs" />
     <Compile Include="Controllers\AdminExpandedStudent.cs" />
@@ -231,6 +232,7 @@
     <Content Include="Content\img\AdminCalender.png" />
     <Content Include="Content\img\AdminLogin.jpg" />
     <Content Include="Content\img\AdminReports.png" />
+    <Content Include="Content\img\Admin_Settings_Tab.png" />
     <Content Include="Content\img\Kiosk.png" />
     <Content Include="Content\img\Kiosk_Signed_In.png" />
     <Content Include="Content\img\Kiosk_Signed_In_Notification.png" />
@@ -317,6 +319,7 @@
     <Content Include="Views\AdminReportPDF\Index.cshtml" />
     <Content Include="Views\AdminStudent\Index.cshtml" />
     <Content Include="Views\AdminExpandedStudent\Index.cshtml" />
+    <Content Include="Views\AdminSettings\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
