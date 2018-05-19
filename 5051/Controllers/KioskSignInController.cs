@@ -31,6 +31,21 @@ namespace _5051.Controllers
             return View(StudentViewModel);
         }
 
+        public ActionResult SignInNot()
+        {
+            return View(StudentViewModel);
+        }
+
+        public ActionResult ColoredNot()
+        {
+            return View(StudentViewModel);
+        }
+
+        public ActionResult SignOutNot()
+        {
+            return View(StudentViewModel);
+        }
+
         // GET: Kiosk/SetLogout/5
         public ActionResult SetLogin(string id)
         {
