@@ -1,48 +1,15 @@
-﻿@{
+﻿@*sets the title of the page*@
+@{
     ViewBag.Title = "Home Page";
 }
 
+@*wireframe png*@
 <div>
     <img src="~/Content/img/homepage.png" alt="Homepage Wireframe" class="center" usemap="#HomeMap">
 </div>
 
-
+@*hotspots on the wireframe image to link to the student and admin sections*@
 <map name="HomeMap">
     <area shape="rect" coords="210,400,330,430" href="~/StudentLogin/Index" alt="Sun">
     <area shape="rect" coords="490,400,680,430" href="~/AdminLogin/Index" alt="Sun">
 </map>
-
-@*Commented out Mike's placeholder code.*@
-
-@*<div class="jumbotron">
-        <h1>Welcome to Avatar Atendance</h1>
-        <p class="lead">Earn Points, Level up your Avatar all while attending class.</p>
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                Each student earns points while attending class, and can use the points to level up their personal Avatar, or shop for items to decorate the Avatar's house.
-            </p>
-            <p>
-                @Html.ActionLink("Login", "LoginExample", "AdminStudentContoller", null, new { @class = "btn btn-primary" })
-            </p>
-        </div>
-
-        <div class="col-md-4">
-            <h2>Level up</h2>
-            <p>Earn Bonus points to level up your Avatar. Higher level avatars can buy special items, as well as get daily discounts.</p>
-            <p>
-                @Html.ActionLink("Shop", "ShopExample", "Home", null, new { @class = "btn btn-primary" })
-            </p>
-        </div>
-
-        <div class="col-md-4">
-            <h2>Track your Progress</h2>
-            <p>View your attendance history, and track your progress over the school year.</p>
-            <p>
-                @Html.ActionLink("Show Me", "StudentExample", "Home", null, new { @class = "btn btn-primary" })
-            </p>
-        </div>
-    </div>*@
