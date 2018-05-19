@@ -329,7 +329,7 @@
     <Content Include="Views\KioskSignIn\Index.cshtml" />
     <Content Include="Views\StudentLogin\Index.cshtml" />
     <Content Include="Views\StudentHome\Index.cshtml" />
-    <Content Include="Views\KioskSignIn\Index - Copy.cshtml" />
+    <Content Include="Views\KioskSignIn\SignInNot.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
