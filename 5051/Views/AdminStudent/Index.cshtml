@@ -1,13 +1,18 @@
 ﻿
+@* Title of page, Index *@
 @{
     ViewBag.Title = "Index";
 }
 
+@* Title for the Admin page *@
 <center><h2>Admin Student Tab</h2></center>
 
+@* Image of Admin Student Wireframe *@
 <center><img src="~/Content/img/Admin_Student_Tab.png" alt="Admin Student" usemap="#AdminStudentMap"></center>
 
 
+@* Map of Admin Student Wireframe, each tab on the wireframe is a click-able link
+    and the Student's boxes link to AdminStudentExpanded *@
 <map name="AdminStudentMap">
     <area shape="rect" coords="167,14,272,60" alt="Reports" href="~/AdminReport/">
     <area shape="rect" coords="288,14,405,60" alt="Calendar" href="~/AdminCalendar/">
