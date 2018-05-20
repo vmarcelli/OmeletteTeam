@@ -31,17 +31,17 @@ namespace _5051.Controllers
             return View(StudentViewModel);
         }
 
-        public ActionResult SignInNot()
+        public ActionResult SignInNotification()
         {
             return View(StudentViewModel);
         }
 
-        public ActionResult ColoredNot()
+        public ActionResult SignInConfirmation()
         {
             return View(StudentViewModel);
         }
 
-        public ActionResult SignOutNot()
+        public ActionResult SignOutNotification()
         {
             return View(StudentViewModel);
         }
