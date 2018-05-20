@@ -8,7 +8,7 @@ namespace _5051.Controllers
 {
     public class StudentHomeController : Controller
     {
-        // GET: Admin
+        // returns view of the student home screen
         public ActionResult Index()
         {
             return View();

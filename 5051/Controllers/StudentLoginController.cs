@@ -8,7 +8,7 @@ namespace _5051.Controllers
 {
     public class StudentLoginController : Controller
     {
-        // GET: Student
+        // returns view of the student login page
         public ActionResult Index()
         {
             return View();
