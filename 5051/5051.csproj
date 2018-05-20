@@ -329,9 +329,9 @@
     <Content Include="Views\KioskSignIn\Index.cshtml" />
     <Content Include="Views\StudentLogin\Index.cshtml" />
     <Content Include="Views\StudentHome\Index.cshtml" />
-    <Content Include="Views\KioskSignIn\SignInNot.cshtml" />
-    <Content Include="Views\KioskSignIn\ColoredNot.cshtml" />
-    <Content Include="Views\KioskSignIn\SignOutNot.cshtml" />
+    <Content Include="Views\KioskSignIn\SignInNotification.cshtml" />
+    <Content Include="Views\KioskSignIn\SignInConfirmation.cshtml" />
+    <Content Include="Views\KioskSignIn\SignOutNotification.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
