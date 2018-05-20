@@ -1,14 +1,17 @@
-﻿
+﻿@*sets the title of the page*@
 @{
     ViewBag.Title = "Index";
 }
 
+@*page header*@
 <center><h2>Welcome to the Student Home Page</h2></center>
 
+@*wireframe png*@
 <div>
     <center><img src="~/Content/img/student_homepage.png" alt="Student Homepage Wireframe" usemap="#StudentHomeMap" class="center"></center>
 </div>
 
+@*hotspots on the wireframe image to link to other pages in the student section*@
 <map name="StudentHomeMap">
     <area shape="rect" coords="153,435,294,497" href="~/StudentBadges/Index" alt="Sun">
     <area shape="rect" coords="294,435,443,498" href="~/StudentData/Index" alt="Sun">
