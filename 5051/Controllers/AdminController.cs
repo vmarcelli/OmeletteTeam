@@ -13,5 +13,11 @@ namespace _5051.Controllers
         {
             return View();
         }
+
+        // GET: Admin
+        public ActionResult Calendar()
+        {
+            return View("Calendar");
+        }
     }
 }

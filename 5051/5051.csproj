@@ -196,7 +196,6 @@
     <Compile Include="Backend\AvatarDataSourceMock.cs" />
     <Compile Include="Backend\AvatarInterface.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AdminCalendarController.cs" />
     <Compile Include="Controllers\StudentLoginController.cs" />
     <Compile Include="Controllers\AdminSettingsController.cs" />
     <Compile Include="Controllers\AdminReportController.cs" />
@@ -319,7 +318,7 @@
     <Content Include="Views\Home\HouseExample.cshtml" />
     <Content Include="Views\AdminLogin\Index.cshtml" />
     <Content Include="Views\AdminReport\Index.cshtml" />
-    <Content Include="Views\AdminCalendar\Index.cshtml" />
+    <Content Include="Views\Admin\Calendar.cshtml" />
     <Content Include="Views\AdminReportPDF\Index.cshtml" />
     <Content Include="Views\AdminStudent\Index.cshtml" />
     <Content Include="Views\AdminExpandedStudent\Index.cshtml" />
@@ -363,7 +362,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>59052</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
