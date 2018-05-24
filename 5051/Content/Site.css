@@ -23,4 +23,9 @@ textarea {
     max-width: 280px;
 }
 
+about {
+    width: 200px;
+    word-break: break-all;
+}
+
 
