@@ -235,6 +235,7 @@
     <Content Include="Content\img\Admin_Settings_Tab.png" />
     <Content Include="Content\img\Admin_Student_Tab.png" />
     <Content Include="Content\img\Expanded_Student_View.png" />
+    <Content Include="Content\img\homepage.png" />
     <Content Include="Content\img\Kiosk.png" />
     <Content Include="Content\img\KioskLogin.png" />
     <Content Include="Content\img\Kiosk_Signed_In.png" />
@@ -243,6 +244,8 @@
     <Content Include="Content\img\Report PDF.png" />
     <Content Include="Content\img\StudentBadgeTab.jpg" />
     <Content Include="Content\img\StudentDataTab.jpg" />
+    <Content Include="Content\img\student_homepage.png" />
+    <Content Include="Content\img\student_login.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
