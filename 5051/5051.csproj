@@ -197,7 +197,6 @@
     <Compile Include="Backend\AvatarInterface.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminCalendarController.cs" />
-    <Compile Include="Controllers\StudentHomeController.cs" />
     <Compile Include="Controllers\StudentLoginController.cs" />
     <Compile Include="Controllers\AdminSettingsController.cs" />
     <Compile Include="Controllers\AdminReportController.cs" />
@@ -324,12 +323,12 @@
     <Content Include="Views\AdminSettings\Index.cshtml" />
     <Content Include="Views\KioskSignIn\Index.cshtml" />
     <Content Include="Views\StudentLogin\Index.cshtml" />
-    <Content Include="Views\StudentHome\Index.cshtml" />
     <Content Include="Views\KioskSignIn\SignInNotification.cshtml" />
     <Content Include="Views\KioskSignIn\SignInConfirmation.cshtml" />
     <Content Include="Views\KioskSignIn\SignOutNotification.cshtml" />
     <Content Include="Views\Student\StudentBadges.cshtml" />
     <Content Include="Views\Student\StudentData.cshtml" />
+    <Content Include="Views\Student\StudentHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
