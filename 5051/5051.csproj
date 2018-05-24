@@ -198,8 +198,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\StudentLoginController.cs" />
     <Compile Include="Controllers\AdminSettingsController.cs" />
-    <Compile Include="Controllers\AdminReportController.cs" />
-    <Compile Include="Controllers\AdminReportPDFController.cs" />
     <Compile Include="Controllers\KioskSignInController.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
@@ -308,9 +306,9 @@
     <Content Include="Views\Home\StudentExample.cshtml" />
     <Content Include="Views\Home\HouseExample.cshtml" />
     <Content Include="Views\AdminLogin\Index.cshtml" />
-    <Content Include="Views\AdminReport\Index.cshtml" />
+    <Content Include="Views\Admin\Report.cshtml" />
     <Content Include="Views\Admin\Calendar.cshtml" />
-    <Content Include="Views\AdminReportPDF\Index.cshtml" />
+    <Content Include="Views\Admin\ReportPDF.cshtml" />
     <Content Include="Views\Admin\Student.cshtml" />
     <Content Include="Views\Admin\ExpandedStudent.cshtml" />
     <Content Include="Views\AdminSettings\Index.cshtml" />

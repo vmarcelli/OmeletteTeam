@@ -31,5 +31,17 @@ namespace _5051.Controllers
         {
             return View("Student");
         }
+
+        // GET: Report
+        public ActionResult Report()
+        {
+            return View("Report");
+        }
+
+        // GET: ReportPDF
+        public ActionResult ReportPDF()
+        {
+            return View("ReportPDF");
+        }
     }
 }

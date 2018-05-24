@@ -1,11 +1,11 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "ReportPDF";
 }
 <!--Title text for report page-->
 <center><h2>Report PDF</h2></center>
     <!--button to take you back to admin report page-->
-@Html.ActionLink("Back", "Index", "AdminReport", null, new { @class = "btn btn-primary" })
+@Html.ActionLink("Back", "Index", "Admin/Report", null, new { @class = "btn btn-primary" })
 
     <!--Wireframe image of admin report sample-->
 <center><img src="~/Content/img/Report PDF.png" alt="Report PDF" usemap="#AdminReportPDFMap "></center>
@@ -13,5 +13,5 @@
 <!-- map for navigation -->
 <map name="AdminReportPDFMap">
     <!--Navigation to admin report.-->
-    <area shape="rect" coords="385,480,495,515" href="~/AdminReport/Index" alt="Sun">
+    <area shape="rect" coords="385,480,495,515" href="~/Admin/Report" alt="Sun">
 </map>
