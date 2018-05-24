@@ -27,6 +27,20 @@
                     <li>@Html.ActionLink("Student", "Index", "Student")</li>
                     <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
                     <li>@Html.ActionLink("Kiosk Mode", "Index", "Kiosk")</li>
+                    <li class="@Html.ActionLink("Test", "Index", "Admin") dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Test
+                            <span class="caret"></span>
+                        </a>
+                        <!--
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Storage", "Add", "Admin")</li>
+                            <li>@Html.ActionLink("Storage", "View", "Admin")</li>
+                        </ul>
+                         -->
+
+
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -41,7 +55,7 @@
         <footer>
             <div class="footer navbar-fixed-bottom">
                 <div style="background-color:grey">
-                    &nbsp;&nbsp;&copy; @DateTime.Now.Year - Avatar Attendance, all rights reserved
+                    &nbsp;&nbsp;&copy; @DateTime.Now.Year - SnapAttendance, all rights reserved
                     &nbsp;&nbsp;
                     @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
                     @Html.ActionLink("Privacy Policy", "Privacy", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })

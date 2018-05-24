@@ -32,12 +32,6 @@ namespace _5051.Controllers
             return View();
         }
 
-        // returns view of the shop example
-        public ActionResult ShopExample ()
-        {
-            return View();
-        }
-
         // returns view of the student example
         public ActionResult StudentExample()
         {
