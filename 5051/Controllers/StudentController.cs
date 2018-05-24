@@ -18,19 +18,19 @@ namespace _5051.Controllers
         private StudentBackend StudentBackend = StudentBackend.Instance;
 
 
-        // Student badges tab
+        // GET: Student badges tab
         public ActionResult StudentBadges()
         {
             return View();
         }
 
-        // Student data tab 
+        // GET: Student data tab 
         public ActionResult StudentData()
         {
             return View();
         }
 
-        // Student home tab 
+        // GET: Student home tab 
         public ActionResult StudentHome()
         {
             return View();

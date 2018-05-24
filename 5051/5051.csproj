@@ -235,6 +235,7 @@
     <Content Include="Content\img\Kiosk_Signed_In.png" />
     <Content Include="Content\img\Kiosk_Signed_In_Notification.png" />
     <Content Include="Content\img\Kiosk_Signed_Out_Notification.png" />
+    <Content Include="Content\img\Logo.png" />
     <Content Include="Content\img\Report PDF.png" />
     <Content Include="Content\img\StudentBadgeTab.jpg" />
     <Content Include="Content\img\StudentDataTab.jpg" />
