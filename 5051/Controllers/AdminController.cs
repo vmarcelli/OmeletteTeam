@@ -19,5 +19,17 @@ namespace _5051.Controllers
         {
             return View("Calendar");
         }
+
+        // GET: ExpandedStudent
+        public ActionResult ExpandedStudent()
+        {
+            return View("ExpandedStudent");
+        }
+
+        // GET: Student
+        public ActionResult Student()
+        {
+            return View("Student");
+        }
     }
 }
