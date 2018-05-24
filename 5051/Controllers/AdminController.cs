@@ -17,31 +17,37 @@ namespace _5051.Controllers
         // GET: Calendar
         public ActionResult Calendar()
         {
-            return View("Calendar");
+            return View();
         }
 
         // GET: ExpandedStudent
         public ActionResult ExpandedStudent()
         {
-            return View("ExpandedStudent");
+            return View();
         }
 
         // GET: Student
         public ActionResult Student()
         {
-            return View("Student");
+            return View();
         }
 
         // GET: Report
         public ActionResult Report()
         {
-            return View("Report");
+            return View();
         }
 
         // GET: ReportPDF
         public ActionResult ReportPDF()
         {
-            return View("ReportPDF");
+            return View();
+        }
+
+        // GET: Admin
+        public ActionResult Settings()
+        {
+            return View();
         }
     }
 }
