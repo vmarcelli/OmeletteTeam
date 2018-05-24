@@ -24,6 +24,11 @@ namespace _5051.Controllers
             return View();
         }
 
+        // Student data tab 
+        public ActionResult StudentData()
+        {
+            return View();
+        }
 
         // GET: Student
         /// <summary>
