@@ -17,6 +17,14 @@ namespace _5051.Controllers
         // The Backend Data source
         private StudentBackend StudentBackend = StudentBackend.Instance;
 
+
+        // Student badges tab
+        public ActionResult StudentBadges()
+        {
+            return View();
+        }
+
+
         // GET: Student
         /// <summary>
         /// Index, the page that shows all the Students

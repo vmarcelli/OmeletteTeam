@@ -317,7 +317,7 @@
     <Content Include="Views\Home\StudentExample.cshtml" />
     <Content Include="Views\Home\ShopExample.cshtml" />
     <Content Include="Views\Home\HouseExample.cshtml" />
-    <Content Include="Views\StudentBadges\Index.cshtml" />
+    <Content Include="Views\StudentBadges\StudentBadges.cshtml" />
     <Content Include="Views\StudentData\Index.cshtml" />
     <Content Include="Views\AdminLogin\Index.cshtml" />
     <Content Include="Views\AdminReport\Index.cshtml" />
@@ -332,6 +332,7 @@
     <Content Include="Views\KioskSignIn\SignInNotification.cshtml" />
     <Content Include="Views\KioskSignIn\SignInConfirmation.cshtml" />
     <Content Include="Views\KioskSignIn\SignOutNotification.cshtml" />
+    <Content Include="Views\Student\StudentBadges.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
