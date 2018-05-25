@@ -28,4 +28,32 @@ about {
     word-break: break-all;
 }
 
+.spacing {
+    padding: 50px;
+}
+
+.homepage-button {
+    border-radius: 6px;
+    background-color: #137f78;
+}
+
+.homepage-button {
+    border-radius: 6px;
+    background-color: #137f78;
+}
+
+.homepage-button, 
+.homepage-button:visited,
+.homepage-button:focus {
+    border-radius: 20px;
+    background-color: #137f78;
+    border-color: #137f78;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 20px;
+}
+
+.homepage-button:hover {
+    background-color: #0f7069;
+}
 
