@@ -229,12 +229,15 @@
     <Content Include="Content\img\Admin_Student_Tab.png" />
     <Content Include="Content\img\Expanded_Student_View.png" />
     <Content Include="Content\img\homepage.png" />
+    <Content Include="Content\img\homepage\apple.png" />
+    <Content Include="Content\img\homepage\pencil.png" />
     <Content Include="Content\img\Kiosk.png" />
     <Content Include="Content\img\KioskLogin.png" />
     <Content Include="Content\img\Kiosk_Signed_In.png" />
     <Content Include="Content\img\Kiosk_Signed_In_Notification.png" />
     <Content Include="Content\img\Kiosk_Signed_Out_Notification.png" />
     <Content Include="Content\img\Logo.png" />
+    <Content Include="Content\img\logos\logo_yellow.png" />
     <Content Include="Content\img\Report PDF.png" />
     <Content Include="Content\img\StudentBadgeTab.jpg" />
     <Content Include="Content\img\StudentDataTab.jpg" />
