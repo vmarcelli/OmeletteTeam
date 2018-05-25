@@ -32,16 +32,6 @@ about {
     padding: 50px;
 }
 
-.homepage-button {
-    border-radius: 6px;
-    background-color: #137f78;
-}
-
-.homepage-button {
-    border-radius: 6px;
-    background-color: #137f78;
-}
-
 .homepage-btn-student,
 .homepage-btn-student:visited,
 .homepage-btn-student:focus {
@@ -57,3 +47,29 @@ about {
     background-color: #0f7069;
 }
 
+.homepage-btn-admin,
+.homepage-btn-admin:visited,
+.homepage-btn-admin:focus {
+    border-radius: 20px;
+    background-color: #137f78;
+    border-color: #137f78;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 20px;
+}
+
+.homepage-btn-admin:hover {
+    background-color: #0f7069;
+}
+
+.logo {
+    padding: 50px;
+}
+
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
