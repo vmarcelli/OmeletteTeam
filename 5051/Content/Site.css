@@ -42,9 +42,9 @@ about {
     background-color: #137f78;
 }
 
-.homepage-button, 
-.homepage-button:visited,
-.homepage-button:focus {
+.homepage-btn-student,
+.homepage-btn-student:visited,
+.homepage-btn-student:focus {
     border-radius: 20px;
     background-color: #137f78;
     border-color: #137f78;
@@ -53,7 +53,7 @@ about {
     margin-top: 20px;
 }
 
-.homepage-button:hover {
+.homepage-btn-student:hover {
     background-color: #0f7069;
 }
 
