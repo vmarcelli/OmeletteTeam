@@ -3,6 +3,27 @@
     ViewBag.Title = "Index";
 }
 
+<head>
+    <!-- Link for the Roboto Thin style -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <!-- Style used for Student Page -->
+    <style>
+        /* Dark Teal background */
+        body {
+            background-color: #67C1C1;
+        }
+        /* Yellow Title */
+        h1 {
+            color: #FFC526;
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+        }
+        /* Container for each line of badges */
+        badgeRow {
+            color: #4DADAB;
+        }
+    </style>
+</head>
 
 
 <div class="text-center">
@@ -21,9 +42,9 @@
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-                <p>forgot password?</p>
-                <a href="#">Reset password</a>
+                <button class="btn homepage-button" type="submit">Login</button>
+                <p>Forgot Password?</p>
+                <a href="#">Reset Password</a>
                
             </form>
         </div>
