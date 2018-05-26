@@ -4,29 +4,35 @@
 }
 
 <head>
+    @*imports google roboto font*@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
-@*wireframe png*@
+@*The home screen*@
 <div class="text-center" style="max-width: 800px;">
         <div class="row">
+            @*SnapAttendance logo*@
             <img class="logo" src="~/Content/img/logos/logo_yellow.png" alt="SnapAttendanceLogo">
         </div>
         <div class="row">
             <div class="col-xs-6">
                 <div class="row">
+                    @*student icon*@
                     <img src="~/Content/img/homepage/pencil.png" alt="Student">
                 </div>
                 <div class="row">
-                    <button class="btn btn-info homepage-btn-student" onclick="window.location.href='/StudentLogin/Index'">Student</button>
+                    @*button directs to student login*@
+                    <button class="btn btn-info homepage-btn-student" onclick="window.location.href='/StudentLogin/'">Student</button>
                 </div>
             </div>
             <div class="col-xs-6">
                 <div class="row">
+                    @*admin icon*@
                     <img src="~/Content/img/homepage/apple.png" alt="Admin">
                 </div>
                 <div class="row">
-                    <button class="btn btn-info homepage-btn-admin" onclick="window.location.href='/AdminLogin/Index'">Administrator</button>
+                    @*button direct to admin login*@
+                    <button class="btn btn-info homepage-btn-admin" onclick="window.location.href='/AdminLogin/'">Administrator</button>
                 </div>
                 <div class="row">
                     <div class="spacing"></div>
