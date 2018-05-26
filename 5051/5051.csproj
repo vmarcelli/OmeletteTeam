@@ -248,6 +248,8 @@
     <Content Include="Content\img\StudentBadgeTab.jpg" />
     <Content Include="Content\img\StudentDataTab.jpg" />
     <Content Include="Content\img\Student\StudentBadges_HeadIcon.png" />
+    <Content Include="Content\img\Student\StudentBadges_HotStreak0.png" />
+    <Content Include="Content\img\Student\StudentBadges_HotStreak1.png" />
     <Content Include="Content\img\student_homepage.png" />
     <Content Include="Content\img\student_login.png" />
     <Content Include="favicon.ico" />
