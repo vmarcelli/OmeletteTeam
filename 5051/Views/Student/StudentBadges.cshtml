@@ -20,6 +20,7 @@
             font-size: 45px;
         }
 
+        /* Title for each badge row*/
         #rowTitle {
             color: #4dadab;
             font-family: 'Roboto', sans-serif;
@@ -34,12 +35,15 @@
             border-radius: 25px;
         }
 
+        /* Caption for Badges*/
         #badgeCaption {
             color: white;
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
             font-size: 20px;
         }
+
+        /* Navbar at bottom of page for navigating between student pages */
         #studentNavBar {
             font-family: 'Roboto', sans-serif;
             font-weight: 500;
@@ -47,28 +51,39 @@
             width: 100%;
             padding: 5px;
         }
+
+        /* Style for Navbar Badge Button*/
         #studentBadgesTab {
             background-color: #febc04;
             color: white;
             padding: 10px;
-            padding-left: 100px;
-            padding-right: 100px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-left: 3px;
+            margin-right: 3px;
         }
+
+        /* Style for Navbar Data Tab */
         #studentDataTab {
             background-color: #fcce00;
-            color:white;
+            color: white;
             padding: 10px;
-            padding-left: 100px;
-            padding-right: 100px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-left: 3px;
+            margin-right: 3px;
         }
+
+        /* Style for Navbar Profile Tab*/
         #studentProfileTab {
             background-color: #67dbdb;
             color: white;
             padding: 10px;
-            padding-left: 100px;
-            padding-right: 100px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-left: 3px;
+            margin-right: 3px;
         }
-
     </style>
 </head>
 
@@ -126,9 +141,18 @@
 <!-- Tab Buttons at the bottom of the page -->
 <center>
     <div class="navbar-btn" id="studentNavBar">
-        <a href="~/Student/StudentBadges" class="active" id="studentBadgesTab">Badges</a>
-        <a href="~/Student/StudentData" id="studentDataTab">Data</a>
-        <a href="~/Student/StudentHome" id="studentProfileTab">Profile</a>
+        <a href="~/Student/StudentBadges" class="active" id="studentBadgesTab">
+            Badges
+            <img src="~/Content/img/Student/StudentBadges_BadgesTab.png" style="padding-bottom:15px;"/>
+        </a>
+        <a href="~/Student/StudentData" id="studentDataTab">
+            Data
+            <img src="~/Content/img/Student/StudentBadges_DataTab.png" style="padding-bottom:15px;"/>
+        </a>
+        <a href="~/Student/StudentHome" id="studentProfileTab">
+            Profile
+            <img src="~/Content/img/Student/StudentBadges_ProfileTab.png" style="padding-bottom:15px;"/>
+        </a>
     </div>
 </center>
 
