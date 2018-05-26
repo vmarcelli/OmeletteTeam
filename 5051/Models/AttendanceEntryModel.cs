@@ -11,53 +11,37 @@ namespace _5051.Models
     /// <summary>
     /// Avatars for the system
     /// </summary>
-    public class AvatarModel
+    public class AttendanceEntryModel
     {
-        [Display(Name = "Id", Description = "Avatar Id")]
+
+        [Display(Name = "Id", Description = "AttendanceEntry Id")]
         [Required(ErrorMessage = "Id is required")]
         public string Id { get; set; }
 
-        [Display(Name = "Uri", Description = "Picture to Show")]
-        [Required(ErrorMessage = "Picture is required")]
-        public string Uri { get; set; }
+        [Display(Name = "TimeIn", Description = "Check in Time")]
+        ///[Required(ErrorMessage = "Check in time required")]
+        public string TimeIn { get; set; }
 
-        [Display(Name = "Name", Description = "Avatar Name")]
-        [Required(ErrorMessage = "Avatar Name is required")]
-        public string Name { get; set; }
-
-        [Display(Name = "Description", Description = "Avatar Description")]
-        [Required(ErrorMessage = "Avatar Description is required")]
-        public string Description { get; set; }
+        [Display(Name = "TimeOut", Description = "Check out Time")]
+        public string TimeOut { get; set; }
 
         /// <summary>
-        /// Create the default values
+        /// Create the default values, empty initially
         /// </summary>
         public void Initialize()
         {
             Id = Guid.NewGuid().ToString();
+            TimeIn = "";
+            TimeOut = "";
         }
 
         /// <summary>
         /// New Avatar
         /// </summary>
-        public AvatarModel()
+        public AttendanceEntryModel()
         {
             Initialize();
         }
 
-        /// <summary>
-        /// Make an Avatar from values passed in
-        /// </summary>
-        /// <param name="uri">The Picture path</param>
-        /// <param name="name">Avatar Name</param>
-        /// <param name="description">Avatar Description</param>
-        public AvatarModel(string uri, string name, string description)
-        {
-            Initialize();
-
-            Uri = uri;
-            Name = name;
-            Description = description;
-        }
     }
 }
