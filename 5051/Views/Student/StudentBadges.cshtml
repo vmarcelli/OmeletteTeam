@@ -19,8 +19,11 @@
             font-size: 48px;
         }
         /* Container for each line of badges */
-        badgeRow {
-            color: #4DADAB;
+        #badgeRow {
+            background-color: #4dadab;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 25px;
         }
         badgeIcon {
             width: 150px;
@@ -41,15 +44,26 @@
 </h1>
 
 <!-- Row of Badges go here -->
+<h3 style="color:#4dadab;">Early Bird</h3>
 <center>
-    <div class="row">
+    <!-- Early Bird Row -->
+    <div class="row" id="badgeRow">
         <div class="col-sm-3">
-            <img src="~/Content/img/Student/"
-            Badge 1
+            <img src="~/Content/img/Student/StudentBadges_HotStreak1.png" class="img-responsive" alt="Badge 1" />
+            Bronze Early Bird
         </div>
-        <div class="col-sm-3">Badge 2</div>
-        <div class="col-sm-3">Badge 3</div>
-        <div class="col-sm-3">Badge 4</div>
+        <div class="col-sm-3">
+            <img src="~/Content/img/Student/StudentBadges_HotStreak0.png" class="img-responsive" alt="Badge 2" />
+            ????
+        </div>
+        <div class="col-sm-3">
+            <img src="~/Content/img/Student/StudentBadges_HotStreak0.png" class="img-responsive" alt="Badge 3" />
+            ????
+        </div>
+        <div class="col-sm-3">
+            <img src="~/Content/img/Student/StudentBadges_HotStreak0.png" class="img-responsive" alt="Badge 4" />
+            ????
+        </div>
     </div>
 </center>
 
