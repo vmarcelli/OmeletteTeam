@@ -3,15 +3,14 @@
     ViewBag.Title = "Index";
 }
 
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
 @*wireframe png*@
-<div class="text-center">
+<div class="text-center" style="max-width: 800px;">
         <div class="row">
-            <div class="text-center">
-                <img src="~/Content/img/logos/logo_yellow.png" alt="SnapAttendanceLogo">
-            </div>
-        </div>
-        <div class="row">
-            <div class="spacing"></div>
+            <img class="logo" src="~/Content/img/logos/logo_yellow.png" alt="SnapAttendanceLogo">
         </div>
         <div class="row">
             <div class="col-xs-6">
@@ -19,17 +18,19 @@
                     <img src="~/Content/img/homepage/pencil.png" alt="Student">
                 </div>
                 <div class="row">
-                    <button class="btn btn-info homepage-button">Student</button>
+                    <button class="btn btn-info homepage-btn-student" onclick="window.location.href='/StudentLogin/Index'">Student</button>
                 </div>
             </div>
             <div class="col-xs-6">
-                <img src="~/Content/img/homepage/apple.png" alt="Admin">
+                <div class="row">
+                    <img src="~/Content/img/homepage/apple.png" alt="Admin">
+                </div>
+                <div class="row">
+                    <button class="btn btn-info homepage-btn-admin" onclick="window.location.href='/AdminLogin/Index'">Administrator</button>
+                </div>
+                <div class="row">
+                    <div class="spacing"></div>
+                </div>
             </div>
         </div>
 </div>
-
-@*hotspots on the wireframe image to link to the student and admin sections*@
-<map name="HomeMap">
-    <area shape="rect" coords="210,400,330,430" href="~/StudentLogin/Index" alt="Sun">
-    <area shape="rect" coords="490,400,680,430" href="~/AdminLogin/Index" alt="Sun">
-</map>

@@ -3,4 +3,52 @@
     ViewBag.Title = "Index";
 }
 
+<head>
+    <!-- Link for the Roboto Thin style -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <!-- Style used for Student Page -->
+    <style>
+        /* Dark Teal background */
+        body {
+            background-color: #67C1C1;
+        }
+        /* Yellow Title */
+        h1 {
+            color: #FFC526;
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+        }
+        /* Container for each line of badges */
+        badgeRow {
+            color: #4DADAB;
+        }
+    </style>
+</head>
 
+
+<div class="text-center">
+    <div class="row">
+        <div class="col-lg-12">
+            <img class="mb-4" src="~/Content/img/logos/logo_white.png" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <form class="form-signin">
+
+                <h1 class="h3 mb-3 font-weight-normal">Administrator Login</h1>
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <button class="btn homepage-button" type="submit">Login</button>
+                <p>Forgot Password?</p>
+                <a href="#">Reset Password</a>
+               
+            </form>
+        </div>
+        <div class="col-lg-4"></div>
+     
+    </div>
+</div>

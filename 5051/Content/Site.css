@@ -32,28 +32,50 @@ about {
     padding: 50px;
 }
 
-.homepage-button {
-    border-radius: 6px;
-    background-color: #137f78;
-}
-
-.homepage-button {
-    border-radius: 6px;
-    background-color: #137f78;
-}
-
-.homepage-button, 
-.homepage-button:visited,
-.homepage-button:focus {
+.homepage-btn-student,
+.homepage-btn-student:visited,
+.homepage-btn-student:focus {
     border-radius: 20px;
     background-color: #137f78;
     border-color: #137f78;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 37px;
+    padding-right: 37px;
     margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.homepage-button:hover {
+.homepage-btn-student:hover {
     background-color: #0f7069;
 }
 
+.homepage-btn-admin,
+.homepage-btn-admin:visited,
+.homepage-btn-admin:focus {
+    border-radius: 20px;
+    background-color: #137f78;
+    border-color: #137f78;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.homepage-btn-admin:hover {
+    background-color: #0f7069;
+}
+
+.logo {
+    padding: 50px;
+}
+
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
