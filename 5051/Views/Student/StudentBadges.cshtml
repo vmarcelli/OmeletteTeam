@@ -6,6 +6,22 @@
 <head>
     <!-- Link for the Roboto Thin style -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+
+    <!-- JS for popup container -->
+    <script>
+        $(window).load(function () {
+            $(".trigger_popup_fricc").click(function () {
+                $('.hover_bkgr_fricc').show();
+            });
+            $('.hover_bkgr_fricc').click(function () {
+                $('.hover_bkgr_fricc').hide();
+            });
+            $('.popupCloseButton').click(function () {
+                $('.hover_bkgr_fricc').hide();
+            });
+        });
+    </script>
+
     <!-- Style used for Student Page -->
     <style>
         /* Dark Teal background */
@@ -84,6 +100,60 @@
             margin-left: 3px;
             margin-right: 3px;
         }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .overlay:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            width: 30%;
+            position: relative;
+            transition: all 5s ease-in-out;
+        }
+
+        .popup h2 {
+            margin-top: 0;
+            color: #333;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .popup .close:hover {
+                color: #06D85F;
+            }
+
+        .popup .content {
+            font-size: 20px;
+            max-height: 30%;
+            overflow: auto;
+        }
     </style>
 </head>
 
@@ -102,60 +172,79 @@
 <center>
     <div class="row" id="badgeRow">
         <div class="col-sm-3">
-            <div class="container">
-                <img src="~/Content/img/Student/StudentBadges_HotStreak1.png" class="img-responsive" alt="Badge 1" />
-            </div>
-                <p id="badgeCaption">Bronze Early Bird</p>
+            <img src="~/Content/img/Student/StudentBadges_HotStreak1.png" class="img-responsive" alt="Badge 1" />
+            <a id="badgeCaption" href="#earlyBirdPop">Bronze Early Bird</a>
         </div>
         <div class="col-sm-3">
             <img src="~/Content/img/Student/StudentBadges_HotStreak0.png" class="img-responsive" alt="Badge 2" />
-            <p id="badgeCaption">????</p>
+            <a id="badgeCaption" href="#earlyBirdPop">????</a>
         </div>
         <div class="col-sm-3">
             <img src="~/Content/img/Student/StudentBadges_HotStreak0.png" class="img-responsive" alt="Badge 3" />
-            <p id="badgeCaption">????</p>
+            <a id="badgeCaption" href="#earlyBirdPop">????</a>
         </div>
         <div class="col-sm-3">
             <img src="~/Content/img/Student/StudentBadges_HotStreak0.png" class="img-responsive" alt="Badge 4" />
-            <p id="badgeCaption">????</p>
+            <a id="badgeCaption" href="#earlyBirdPop">????</a>
+        </div>
+    </div> 
+</center>
+<!-- Early Bird Information Popup-->
+<div id="earlyBirdPop" class="overlay">
+    <div class="popup">
+        <h2>Early Bird</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            Earn this badge by coming to class early!
         </div>
     </div>
-</center>
+</div>
 
-<!-- Streak Row -->
-<!-- Add the Streak badges or at least placeholders -->
-<h3 id="rowTitle">Streak</h3>
+
+<!-- Hot Streak Row -->
+<!-- TODO: Add the Streak badges or at least placeholders -->
+<h3 id="rowTitle">Hot Streak</h3>
 <center>
     <div class="row" id="badgeRow">
         <div class="col-sm-3">
-            <p id="badgeCaption">????</p>
+            <a id="badgeCaption" href="#hotStreakPop">????</a>
         </div>
         <div class="col-sm-3">
-            <p id="badgeCaption">????</p>
+            <a id="badgeCaption" href="#hotStreakPop">????</a>
         </div>
         <div class="col-sm-3">
-            <p id="badgeCaption">????</p>
+            <a id="badgeCaption" href="#hotStreakPop">????</a>
         </div>
         <div class="col-sm-3">
-            <p id="badgeCaption">????</p>
+            <a id="badgeCaption" href="#hotStreakPop">????</a>
         </div>
     </div>
 </center>
+<!-- Hot Streak Badge Popup-->
+<div id="hotStreakPop" class="overlay">
+    <div class="popup">
+        <h2>Hot Streak</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            Earn this badge by coming to class multiple days in a row!
+        </div>
+    </div>
+</div>
 
 <!-- Tab Buttons at the bottom of the page -->
 <center>
     <div class="navbar-btn" id="studentNavBar">
         <a href="~/Student/StudentBadges" class="active" id="studentBadgesTab">
             Badges
-            <img src="~/Content/img/Student/StudentBadges_BadgesTab.png" style="padding-bottom:15px;"/>
+            <img src="~/Content/img/Student/StudentBadges_BadgesTab.png" style="padding-bottom:15px;" />
         </a>
         <a href="~/Student/StudentData" id="studentDataTab">
             Data
-            <img src="~/Content/img/Student/StudentBadges_DataTab.png" style="padding-bottom:15px;"/>
+            <img src="~/Content/img/Student/StudentBadges_DataTab.png" style="padding-bottom:15px;" />
         </a>
         <a href="~/Student/StudentHome" id="studentProfileTab">
             Profile
-            <img src="~/Content/img/Student/StudentBadges_ProfileTab.png" style="padding-bottom:15px;"/>
+            <img src="~/Content/img/Student/StudentBadges_ProfileTab.png" style="padding-bottom:15px;" />
         </a>
     </div>
 </center>
