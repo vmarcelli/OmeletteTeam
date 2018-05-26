@@ -64,9 +64,22 @@
         /* Container Data Section */
         #dataBox {
             background-color: #58c4c2;
-            padding-top: 10px;
+            padding-top: 25px;
             padding-bottom: 10px;
             border-radius: 25px;
+        }
+
+        #dataText {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 25px;
+            color: #127f79;
+        }
+        #dataTitle {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 40px;
+            color:white;
         }
     </style>
 </head>
@@ -83,12 +96,23 @@
 <center>
     <div class="row" id="dataBox">
         <div class="col-sm-6">
-            <img src="~/Content/img/Student/StudentBadges_HotStreak1.png" class="img-responsive" alt="Badge 1" />
-            <a id="badgeCaption" href="#earlyBirdPop">Bronze Early Bird</a>
+            <img src="~/Content/img/Student/StudentData_Graph.png" class="img-responsive" alt="Graph Picture" />
+            <div id="dataText" style="padding-top:5px;">
+                +5% Avg!
+            </div>
         </div>
         <div class="col-sm-6">
-            <img src="~/Content/img/Student/StudentBadges_HotStreak1.png" class="img-responsive" alt="Badge 1" />
-            <a id="badgeCaption" href="#earlyBirdPop">Bronze Early Bird</a>
+            <div id="dataTitle">
+                Goals
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                     aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                </div>
+            </div>
+            <div id="dataText">
+                60% 9:00AM
+            </div>
         </div>
     </div>
 </center>
