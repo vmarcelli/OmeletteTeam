@@ -5,18 +5,26 @@
 
 <head>
     <!-- Link for the Roboto Thin style -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
     <!-- Style used for Student Page -->
     <style>
         /* Dark Teal background */
         body {
-            background-color: #127F7A;
+            background-color: #127f79;
         }
         /* Yellow Title */
-        h1 {
+        #pageTitle {
             color: #FFC526;
             font-family: 'Roboto', sans-serif;
-            font-size: 48px;
+            font-weight: 300;
+            font-size: 45px;
+        }
+
+        #rowTitle {
+            color: #4dadab;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 30px;
         }
         /* Container for each line of badges */
         #badgeRow {
@@ -25,44 +33,63 @@
             padding-bottom: 10px;
             border-radius: 25px;
         }
-        badgeIcon {
-            width: 150px;
-            height: 150px;
-            padding-right: 500px;
+
+        #badgeCaption {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 20px;
         }
     </style>
 </head>
 
 <!-- Title text for Student Badges Page -->
-<!-- TO-DO: Add Snap Attendance Logo -->
 <div>
-    <p>Snap Attendance Logo Goes Here</p>
+    <img src="~/Content/img/logos/logo_white.png" alt="Snap Attendance Logo" />
 </div>
-<h1>
+<h1 id="pageTitle">
     <img src="~/Content/img/Student/StudentBadges_HeadIcon.png" style="width: 50px; height: 50px; padding-right: 5px; padding-bottom: 5px;" />
     Badge Collection
 </h1>
 
-<!-- Row of Badges go here -->
-<h3 style="color:#4dadab;">Early Bird</h3>
+<!-- Rows of Badges start here -->
+<!-- Early Bird Row -->
+<h3 id="rowTitle">Early Bird</h3>
 <center>
-    <!-- Early Bird Row -->
     <div class="row" id="badgeRow">
         <div class="col-sm-3">
             <img src="~/Content/img/Student/StudentBadges_HotStreak1.png" class="img-responsive" alt="Badge 1" />
-            Bronze Early Bird
+            <p id="badgeCaption">Bronze Early Bird</p>
         </div>
         <div class="col-sm-3">
             <img src="~/Content/img/Student/StudentBadges_HotStreak0.png" class="img-responsive" alt="Badge 2" />
-            ????
+            <p id="badgeCaption">????</p>
         </div>
         <div class="col-sm-3">
             <img src="~/Content/img/Student/StudentBadges_HotStreak0.png" class="img-responsive" alt="Badge 3" />
-            ????
+            <p id="badgeCaption">????</p>
         </div>
         <div class="col-sm-3">
             <img src="~/Content/img/Student/StudentBadges_HotStreak0.png" class="img-responsive" alt="Badge 4" />
-            ????
+            <p id="badgeCaption">????</p>
+        </div>
+    </div>
+</center>
+<!-- Streak Row -->
+<h3 id="rowTitle">Streak</h3>
+<center>
+    <div class="row" id="badgeRow">
+        <div class="col-sm-3">
+            <p id="badgeCaption">????</p>
+        </div>
+        <div class="col-sm-3">
+            <p id="badgeCaption">????</p>
+        </div>
+        <div class="col-sm-3">
+            <p id="badgeCaption">????</p>
+        </div>
+        <div class="col-sm-3">
+            <p id="badgeCaption">????</p>
         </div>
     </div>
 </center>
