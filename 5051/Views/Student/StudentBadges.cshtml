@@ -101,6 +101,7 @@
             margin-right: 3px;
         }
 
+        /* Popup overlay darkens rest of screen, except the popup*/
         .overlay {
             position: absolute;
             top: 0;
@@ -113,11 +114,13 @@
             opacity: 0;
         }
 
+        /* Overlay opacity */
         .overlay:target {
             visibility: visible;
             opacity: 1;
         }
 
+        /* The Box that appears to display badge info */
         .popup {
             margin: 70px auto;
             padding: 20px;
@@ -128,12 +131,14 @@
             transition: all 5s ease-in-out;
         }
 
+        /* Popup Title */
         .popup h2 {
             margin-top: 0;
             color: #333;
             font-family: Tahoma, Arial, sans-serif;
         }
 
+        /* Close button for popups */
         .popup .close {
             position: absolute;
             top: 20px;
@@ -145,10 +150,12 @@
             color: #333;
         }
 
+        /* Close button color for hover */
         .popup .close:hover {
                 color: #06D85F;
             }
 
+        /* Text/Content inside of the popup */
         .popup .content {
             font-size: 20px;
             max-height: 30%;
