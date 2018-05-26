@@ -40,6 +40,35 @@
             font-weight: 300;
             font-size: 20px;
         }
+        #studentNavBar {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 45px;
+            width: 100%;
+            padding: 5px;
+        }
+        #studentBadgesTab {
+            background-color: #febc04;
+            color: white;
+            padding: 10px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        #studentDataTab {
+            background-color: #fcce00;
+            color:white;
+            padding: 10px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        #studentProfileTab {
+            background-color: #67dbdb;
+            color: white;
+            padding: 10px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
     </style>
 </head>
 
@@ -91,6 +120,15 @@
         <div class="col-sm-3">
             <p id="badgeCaption">????</p>
         </div>
+    </div>
+</center>
+
+<!-- Buttons at the bottom of the page -->
+<center>
+    <div class="navbar-btn" id="studentNavBar">
+        <a href="~/Views/Student/StudentBadges.cshtml" class="active" id="studentBadgesTab">Badges</a>
+        <a href="~/Views/Student/StudentData.cshtml" id="studentDataTab">Data</a>
+        <a href="~/Views/Student/StudentHome.cshtml" id="studentProfileTab">Profile</a>
     </div>
 </center>
 
