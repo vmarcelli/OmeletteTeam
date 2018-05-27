@@ -7,6 +7,10 @@
     <!-- Link for the Roboto Thin style -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
     <!-- Style used for Student Page -->
+    <script type="text/javascript">
+        $('.datepicker').datepicker();
+    </script>
+
     <style>
         /* light Teal background */
         body {
@@ -90,6 +94,33 @@
 
         #exportReport {
             margin-bottom: 20px; 
+        }
+
+        [type="date"] {
+            background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+        }
+
+            [type="date"]::-webkit-inner-spin-button {
+                display: none;
+            }
+
+            [type="date"]::-webkit-calendar-picker-indicator {
+                opacity: 0;
+            }
+
+        /* custom styles */
+        
+        label {
+            display: block;
+        }
+
+        input {
+            border: 1px solid #c4c4c4;
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 3px 5px;
+            box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+            width: 190px;
         }
     </style>
 </head>
@@ -241,6 +272,13 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                @*outside of inner container but within outer container*@
+                <div class="row leftmargin">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default">Start Date</button>
+                        <input type="date" name="dateofbirth" id="dateofbirth">
+                    </div>
                 </div>
             </div>
         </div>
