@@ -226,6 +226,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\homescreen.css" />
     <Content Include="Content\img\AdminReportCustomization.png" />
     <Content Include="Content\img\AdminCalender.png" />
     <Content Include="Content\img\AdminLogin.jpg" />
@@ -255,6 +256,7 @@
     <Content Include="Content\img\Student\StudentBadges_ProfileTab.png" />
     <Content Include="Content\img\student_homepage.png" />
     <Content Include="Content\img\student_login.png" />
+    <Content Include="Content\kiosk.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
