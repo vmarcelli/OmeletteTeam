@@ -3,8 +3,333 @@
     ViewBag.Title = "Report";
 }
 
+<head>
+    <!-- Link for the Roboto Thin style -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <!-- Style used for Student Page -->
+    <script type="text/javascript">
+        $('.datepicker').datepicker();
+    </script>
+
+    <style>
+        /* light Teal background */
+        body {
+            background-color: #67C1C1;
+        }
+        /* Yellow Title */
+        h1 {
+            color: #FFC526;
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+            display: inline-block;
+        }
+
+
+        .logo {
+            padding: 10px 0px 0px 0px;
+            display: inline-block;
+        }
+
+        .formPadding {
+            padding: 20px 0px 20px 0px;
+        }
+
+        .outerContainer {
+            background-color: #E0E0E0;
+            padding: 10px 10px 10px 10px;
+        }
+
+        .innerContainer {
+            background-color: #FFFFFF;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            border-radius: 5px;
+            padding: 10px 15px 10px 15px;
+        }
+
+        .content {
+            background-color: #FEBC04;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .titleAdmin {
+            color: #137F7A;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .trend {
+            float: right;
+            padding: 2px;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+        }
+
+
+        .search {
+            float: right;
+            padding: 2px;
+            margin-top: 8px;
+            margin-right: 16px;
+            border-style: solid;
+            border-color: #DDB36B;
+            border-radius: 25px;
+            font-size: 17px;
+        }
+
+        .dropdown{
+            margin-bottom: 10px;
+        }
+
+        .btn-primary {
+            background-color: #DDB36B;
+            outline-color: #DDB36B;
+            border: none;
+        }
+
+        .formSpacing {
+            margin-top: 10px; 
+
+        }
+
+        .checkMark {
+            
+            background-color: transparent;
+            padding: 3px 5px;
+            width: 100px;
+        }
+
+        .leftmargin{
+            margin-left: 10px; 
+        }
+
+        #exportReport {
+            margin-bottom: 20px; 
+        }
+
+        [type="date"] {
+            background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+        }
+
+            [type="date"]::-webkit-inner-spin-button {
+                display: none;
+            }
+
+            [type="date"]::-webkit-calendar-picker-indicator {
+                opacity: 0;
+            }
+
+        /* custom styles */
+        
+        label {
+            display: block;
+        }
+
+        input {
+            border: 1px solid #c4c4c4;
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 3px 5px;
+            box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+            width: 190px;
+        }
+
+
+    </style>
+</head>
+
+<div class="row">
+    <div class="center-block col-lg-12 logo">
+        <img src="~/Content/img/logos/logo_white.png" alt="">
+        <h1><b>Admin</b></h1>
+    </div>
+</div>
+<div class="container">
+
+    <ul class="nav nav-tabs">
+        <li><a href="~/Admin/Student/">Student</a></li>
+        <li class="active"><a href="~/Admin/Report/">Reporting</a></li>
+        <li><a href="~/Admin/Calendar/">Calendar</a></li>
+        <li><a href="~/Admin/Settings/">Settings</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <div class="outerContainer">
+                <div class="row leftmargin">
+                    <button type="button" id="exportReport" class="btn btn-primary">Export Report</button>
+                    <input class="search" type="text" placeholder="Search Report..">
+                </div>
+                <div class="row leftmargin">
+                    <div class="dropdown btn-group">
+                        <button type="button" class="btn btn-default">Student</button>
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                            Johnny Smith
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Jennifer Lawrence</a></li>
+                            <li><a href="#">Jose Garcia</a></li>
+                            <li><a href="#">Peter King</a></li>
+                            <li><a href="#">Erika Flores</a></li>
+                            <li><a href="#">Phil Peterson</a></li>
+                            <li><a href="#">Aaron Cuevas</a></li>
+                            <li><a href="#">Miguel Gomez</a></li>
+                            <li><a href="#">Tiffany Yue</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="innerContainer">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Time In</th>
+                                <th scope="col">Time Out</th>
+                                <th scope="col">Time Accrued (minutes)</th>
+                                <th scope="col">In Early</th>
+                                <th scope="col">Out Late</th>
+                                <th scope="col">Absent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">09/16/18</th>
+                                <td>8:55 am</td>
+                                <td>1:55 pm</td>
+                                <td>300</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">09/17/18</th>
+                                <td></td>
+                                <td></td>
+                                <td>0</td>
+                                <td></td>
+                                <td></td>
+                                <td>[x]</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">09/18/18</th>
+                                <td>9:05 am</td>
+                                <td>1:00 pm</td>
+                                <td>126</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">09/19/18</th>
+                                <td>8:45 am</td>
+                                <td>12:31 pm</td>
+                                <td>180</td>
+                                <td>[x]</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">09/20/18</th>
+                                <td>8:54 am</td>
+                                <td>3:05 pm</td>
+                                <td>306</td>
+                                <td></td>
+                                <td>[x]</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">.</th>
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">.</th>
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">.</th>
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">12/16/18</th>
+                                <td>8:50 am</td>
+                                <td>2:30 pm</td>
+                                <td>340</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Total</th>
+                                <td></td>
+                                <td></td>
+                                <td>232 hrs</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                @*outside of inner container but within outer container*@
+                <div class="row leftmargin">
+                    <div class="btn-group formSpacing">
+                        <button type="button" class="btn btn-default">Start Date</button>
+                        <input type="date" name="dateofbirth" id="dateofbirth">
+                    </div>
+                </div>
+                <div class="row leftmargin">
+                    <div class="btn-group formSpacing">
+                        <button type="button" class="btn btn-default">End Date</button>
+                        <input type="date" name="dateofbirth" id="dateofbirth">
+                    </div>
+                </div>
+                <div class="row leftmargin">
+                    <div class="input-group formSpacing">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Expected Time Multiplier</button>
+                        </span>
+                        <input type="text" class="form-control">
+                        <div class="trend">
+                            Show Expected Trend Line<input type="checkbox" name="trend" value="checkBox" class="checkMark">
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 <!-- Title text for Report page-->
+    <!--
 <header>
     <center><h2>Report Editor</h2></center>
 </header>
@@ -22,6 +347,7 @@
     </div>
 
     <!-- Wireframe image for admin reports -->
+    <!--
     <table class="table table-bordered table-striped table-hover">
         <thead>
             <tr>
@@ -130,13 +456,18 @@
 </body>
 <!--<center><img src="~/Content/img/AdminReportCustomization.png" alt="Admin Reports" usemap="#ReportMap"></center>-->
 <!-- map for navigation -->
+    <!--
 <map name="ReportMap">
     <!--Navigation to admin student page-->
+    <!--
     <area shape="rect" coords="22,6,81,27" alt="Students" href="~/Admin/Student">
     <!--Navigation to admin calendar page-->
+    <!--
     <area shape="rect" coords="149,6,207,27" alt="Calendar" href="~/Admin/Calendar">
     <!--Navigation to admin settings page-->
+    <!--
     <area shape="rect" coords="215,6,272,27" alt="Settings" href="~/Admin/Settings">
     <!--Navigation to admin reports page-->
+    <!--
     <area shape="rect" coords="60,48,163,69" alt="ReportPDF" href="~/Admin/ReportPDF">
-</map>
+</map> -->

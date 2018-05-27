@@ -1,18 +1,213 @@
-﻿@*sets the title of the page*@
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewBag.Title = "Student Profile";
 }
 
-@*page header*@
-<center><h2>Welcome to the Student Home Page</h2></center>
+<!-- MetaData -->
+<head>
+    <!-- Link for the Roboto Thin style -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+    <style>
+        body {
+            background-color: #127f79;
+        }
+        /* Yellow Title */
+        #pageTitle {
+            color: #FFC526;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 45px;
+        }
 
-@*wireframe png*@
+        /* Navbar at bottom of page for navigating between student pages */
+        #studentNavBar {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 45px;
+            width: 100%;
+            padding: 5px;
+        }
+
+        /* Style for Navbar Badge Button*/
+        #studentBadgesTab {
+            background-color: #febc04;
+            color: white;
+            padding: 10px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+        /* Style for Navbar Data Tab */
+        #studentDataTab {
+            background-color: #fcce00;
+            color: white;
+            padding: 10px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+        /* Style for Navbar Profile Tab*/
+        #studentProfileTab {
+            background-color: #67dbdb;
+            color: white;
+            padding: 10px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+        /* Container Data Section */
+        #profileBox {
+            background-color: #58c4c2;
+            padding-top: 25px;
+            padding-bottom: 10px;
+            border-radius: 25px;
+            margin-bottom: 10px;
+            height: 300px;
+            width: 470px;
+        }
+
+        /* This box allows for some space between columns*/
+        #spaceBox {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* General text for boxes*/
+        #profileText {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 25px;
+            color: #127f79;
+        }
+
+        /* Box titles */
+        #profileTitle {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 40px;
+            color: white;
+        }
+
+        /* Style for the small badges */
+        #miniBadges {
+            width: 90%;
+            height: 90%;
+        }
+    </style>
+</head>
+
+<!-- Snap Attendance Logo and Title-->
 <div>
-    <center><img src="~/Content/img/student_homepage.png" alt="Student Homepage Wireframe" usemap="#StudentHomeMap" class="center"></center>
+    <img src="~/Content/img/logos/logo_white.png" alt="Snap Attendance Logo" />
 </div>
+<h1 id="pageTitle">
+    Profile
+</h1>
 
-@*hotspots on the wireframe image to link to other pages in the student section*@
-<map name="StudentHomeMap">
-    <area shape="rect" coords="153,435,294,497" href="~/Student/StudentBadges" alt="Sun">
-    <area shape="rect" coords="294,435,443,498" href="~/Student/StudentData" alt="Sun">
-</map>
+<!-- Top Containers-->
+<!-- HEY, IF YOU WANT TO CHANGE THE STUDENT PICTURE CHANGE IT HERE-->
+<center>
+    <div class="container">
+        <div class="row">
+            <!-- Profile Picture Box-->
+            <div class="col-sm-5" id="profileBox">
+                <div style="color:#189088;">
+                    <!-- STUDENT PICTURE IS HERE-->
+                    <img src="~/Content/img/Student/StudentProfile_Picture.jpg"
+                         style="width:50%; height:50%;" />
+                </div>
+                <div style="color:white; margin-top: 20px; font-size: 50px;" id="profileTitle">
+                    Reggie
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+            <!-- Goals Box -->
+            <div class="col-sm-5" id="profileBox">
+                <div style="color:white;" id="profileTitle">
+                    Goals
+                </div>
+                <div id="profileText" style="margin-top: 20px;">
+                    Hot Streak Badge
+                </div>
+                <div class="progress" style="width:60%">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                         aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                    </div>
+                </div>
+                <div id="profileText" style="margin-top: 20px;">
+                    60%
+                </div>
+            </div>
+        </div>
+        </div>
+    <div class="container">
+        <div class="row">
+            <!-- Data Box -->
+            <div class="col-sm-5" style="color:white;" id="profileBox">
+                <div style="color:white;" id="profileTitle">
+                    Data
+                </div>
+                <img src="~/Content/img/Student/StudentData_Graph.png"
+                     style="width: 60%; height: 60%;" />
+                <div id="profileText" style="padding-top:15px; font-size: 30px;">
+                    +5% Avg!
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+            <!-- Badges Box -->
+            <div class="col-sm-5" style="color:white;" id="profileBox">
+                <div id="profileTitle">
+                    Badges
+                </div>
+                <div class="container" style="margin-top: 20px;">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="~/Content/img/Student/StudentBadges_EarlyB1.png"
+                                 id="miniBadges" />
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="~/Content/img/Student/StudentBadges_EarlyB0.png"
+                                 id="miniBadges" />
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="~/Content/img/Student/StudentBadges_HotStreak0.png"
+                                 id="miniBadges" />
+                        </div>
+                    </div>
+                </div>
+                <div id="profileText" style="padding-top:25px; font-size: 30px;">
+                    New Badge earned!
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+
+
+<!-- Tab Buttons at the bottom of the page -->
+<center>
+    <div class="navbar-btn" id="studentNavBar">
+        <a href="~/Student/StudentBadges" class="active" id="studentBadgesTab">
+            Badges
+            <img src="~/Content/img/Student/StudentBadges_BadgesTab.png" 
+                 style="padding-bottom:15px;" />
+        </a>
+        <a href="~/Student/StudentData" id="studentDataTab">
+            Data
+            <img src="~/Content/img/Student/StudentBadges_DataTab.png" 
+                 style="padding-bottom:15px;" />
+        </a>
+        <a href="~/Student/StudentHome" id="studentProfileTab">
+            Profile
+            <img src="~/Content/img/Student/StudentBadges_ProfileTab.png" 
+                 style="padding-bottom:15px;" />
+        </a>
+    </div>
+</center>
+
+

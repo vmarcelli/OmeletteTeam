@@ -1,18 +1,182 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Student Data";
 }
 
-<!-- Title text for student data page -->
-<center><h2>Welcome to the Student Data Page</h2></center>
+<head>
+    <!-- Link for the Roboto Thin style -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
 
-<!-- Wireframe image for student data page -->
-<center><img src="~/Content/img/StudentDataTab.jpg" alt="Student Data" usemap="#StudentDataMap" /></center>
+    <style>
+        body {
+            background-color: #127f79;
+        }
+        /* Yellow Title */
+        #pageTitle {
+            color: #FFC526;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 45px;
+        }
 
-<!-- use map to navigate from student data -->
-<map name="StudentDataMap">
-    <!-- Navigates to student home -->
-    <area shape="rect" coords="1,435,152,497" href="~/Student/StudentHome" alt="Sun">
-    <!-- Navigates to stuent Badges -->
-    <area shape="rect" coords="154,435,294,497" href="~/Student/StudentBadges" alt="Sun">
-</map>
+        /* Navbar at bottom of page for navigating between student pages */
+        #studentNavBar {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 45px;
+            width: 100%;
+            padding: 5px;
+        }
+
+        /* Style for Navbar Badge Button*/
+        #studentBadgesTab {
+            background-color: #febc04;
+            color: white;
+            padding: 10px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+        /* Style for Navbar Data Tab */
+        #studentDataTab {
+            background-color: #fcce00;
+            color: white;
+            padding: 10px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+        /* Style for Navbar Profile Tab*/
+        #studentProfileTab {
+            background-color: #67dbdb;
+            color: white;
+            padding: 10px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+        /* Container Data Section */
+        #dataBox {
+            background-color: #58c4c2;
+            padding-top: 25px;
+            padding-bottom: 10px;
+            border-radius: 25px;
+            margin-bottom: 10px;
+        }
+
+        /* Regular Text */
+        #dataText {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 25px;
+            color: #127f79;
+        }
+
+        /* Container Titles */
+        #dataTitle {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 40px;
+            color: white;
+        }
+
+        /* Grid Style */
+        .grid-container {
+            display: grid;
+            align-content: center;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+            background-color: #127f79;
+            padding: 5px;
+            width: 95%;
+        }
+
+        /* Box Style for each box in grid */
+        .grid-container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 15px 0;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<!-- Snap Attendance Logo and Title -->
+<div>
+    <img src="~/Content/img/logos/logo_white.png" alt="Snap Attendance Logo" />
+</div>
+<h1 id="pageTitle">
+    Student Data
+</h1>
+
+<!-- Top Data Box -->
+<center>
+    <div class="row" id="dataBox">
+        <!-- Data Section with Average increase of Student progress-->
+        <div class="col-sm-6">
+            <img src="~/Content/img/Student/StudentData_Graph.png" class="img-responsive" alt="Graph Picture" />
+            <div id="dataText" style="padding-top:5px;">
+                +5% Avg!
+            </div>
+        </div>
+        <!-- Goal section provides a progress bar for the next badge -->
+        <div class="col-sm-6">
+            <div id="dataTitle">
+                Goals
+            </div>
+            <div id="dataText">Hot Streak Badge</div>
+            <div class="progress" style="width:60%">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                     aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                </div>
+            </div>
+            <div id="dataText">
+                60% 9:00AM
+            </div>
+        </div>
+    </div>
+</center>
+
+<!-- Bottom Data Box -->
+<center>
+    <div class="row" id="dataBox" style="padding-bottom: 30px;">
+        <!-- Aesthetic grid for mockup purposes only, does not update -->
+        <div class="grid-container">
+            <div style="color:#189088;">Date</div>
+            <div style="color:#189088;">Check-In</div>
+            <div style="color:#189088;">Check-Out</div>
+            <div style="color:#189088;">Hours Attended</div>
+            <div>Day 1</div><div>8:00AM</div><div>8:40AM</div><div>0.4</div>
+            <div>Day 2</div><div>10:00AM</div><div>12:08PM</div><div>2.08</div>
+            <div>Day 3</div><div>12:00PM</div><div>4:00PM</div><div>4</div>
+            <div>Day 4</div><div>9:00AM</div><div>9:50AM</div><div>0.5</div>
+            <div>Day 5</div><div>8:30AM</div><div>12:30PM</div><div>4</div>
+        </div>
+    </div>
+</center>
+
+
+
+<!-- Tab Buttons at the bottom of the page -->
+<center>
+    <div class="navbar-btn" id="studentNavBar">
+        <a href="~/Student/StudentBadges" class="active" id="studentBadgesTab">
+            Badges
+            <img src="~/Content/img/Student/StudentBadges_BadgesTab.png" style="padding-bottom:15px;" />
+        </a>
+        <a href="~/Student/StudentData" id="studentDataTab">
+            Data
+            <img src="~/Content/img/Student/StudentBadges_DataTab.png" style="padding-bottom:15px;" />
+        </a>
+        <a href="~/Student/StudentHome" id="studentProfileTab">
+            Profile
+            <img src="~/Content/img/Student/StudentBadges_ProfileTab.png" style="padding-bottom:15px;" />
+        </a>
+    </div>
+</center>

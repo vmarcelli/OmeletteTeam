@@ -226,6 +226,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\homescreen.css" />
     <Content Include="Content\img\AdminReportCustomization.png" />
     <Content Include="Content\img\AdminCalender.png" />
     <Content Include="Content\img\AdminLogin.jpg" />
@@ -245,11 +246,29 @@
     <Content Include="Content\img\logos\logo_white.png" />
     <Content Include="Content\img\logos\logo_yellow.png" />
     <Content Include="Content\img\Report PDF.png" />
+    <Content Include="Content\img\student-John.jpg" />
+    <Content Include="Content\img\student-Daniel.jpg" />
+    <Content Include="Content\img\student-Dwayne.jpg" />
+    <Content Include="Content\img\student-Jason.jpg" />
+    <Content Include="Content\img\student-Jess.jpg" />
+    <Content Include="Content\img\student-Korina.jpg" />
+    <Content Include="Content\img\student-Reggie.jpg" />
+    <Content Include="Content\img\student-Sarah.jpg" />
+    <Content Include="Content\img\student-Taylor.jpg" />
     <Content Include="Content\img\StudentBadgeTab.jpg" />
     <Content Include="Content\img\StudentDataTab.jpg" />
+    <Content Include="Content\img\Student\StudentBadges_BadgesTab.png" />
+    <Content Include="Content\img\Student\StudentBadges_DataTab.png" />
+    <Content Include="Content\img\Student\StudentBadges_EarlyB0.png" />
+    <Content Include="Content\img\Student\StudentBadges_EarlyB1.png" />
     <Content Include="Content\img\Student\StudentBadges_HeadIcon.png" />
+    <Content Include="Content\img\Student\StudentBadges_HotStreak0.png" />
+    <Content Include="Content\img\Student\StudentBadges_ProfileTab.png" />
+    <Content Include="Content\img\Student\StudentData_Graph.png" />
+    <Content Include="Content\img\Student\StudentProfile_Picture.jpg" />
     <Content Include="Content\img\student_homepage.png" />
     <Content Include="Content\img\student_login.png" />
+    <Content Include="Content\kiosk.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

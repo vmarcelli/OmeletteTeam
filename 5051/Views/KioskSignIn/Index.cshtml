@@ -4,15 +4,70 @@
     ViewBag.Title = "Index";
 }
 
-<!-- Title of Kiosk Sign in page-->
-<center><h2>Kiosk Sign In Page</h2></center>
+<!-- Link for the Roboto Thin style -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+<!-- Style used for Student Page -->
+<style>
+    /* light Teal background */
+    body {
+        background-color: #EDC51D;
+    }
+    /* Yellow Title */
+    h1 {
+        color: #FFC526;
+        font-family: 'Roboto', sans-serif;
+        font-size: 48px;
+    }
 
-<!-- Wireframe of main Kiosk Sign In page-->
-<center><img src="~/Content/img/Kiosk.png" alt="Kiosk Sign In" usemap="#KioskSignInMap"></center>
 
-<!-- Button around student 'Daniel' on top right, click to 'sign-in'-->
-<map name="KioskSignInMap">
-    <area shape="rect" coords="524,138,591,206" href="SignInNotification" alt="Sun">
 
-</map>
+    .logo {
+        padding: 50px 0px 0px 0px;
+    }
+
+    .formPadding {
+        padding: 20px 0px 20px 0px;
+    }
+
+    .content {
+        background-color: #67C1C1;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .titleAdmin {
+        color: #137F7A;
+        font-family: 'Roboto', sans-serif;
+    }
+</style>
+</head>
+
+<div class="row">
+    <div class="center-block col-lg-12 logo">
+        <center><img src="~/Content/img/logos/logo_white.png" alt=""></center>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <form class="form-signin" action="~/Kiosk/">
+            <center>
+                <h2 class="titleAdmin"><b>Kiosk Login</b></h2>
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+                <button class="btn content" type="submit">Login</button>
+                <p>Forgot Password?</p>
+                <a href="#">Reset Password</a>
+            </center>
+        </form>
+    </div>
+</div>
 

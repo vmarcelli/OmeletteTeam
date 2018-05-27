@@ -4,20 +4,319 @@
     ViewBag.Title = "Student";
 }
 
-@* Title for the Admin page *@
-<center><h2>Admin Student Tab</h2></center>
+<head>
+    <!-- Link for the Roboto Thin style -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <!-- Style used for Student Page -->
 
-@* Image of Admin Student Wireframe *@
-<center><img src="~/Content/img/Admin_Student_Tab.png" alt="Admin Student" usemap="#AdminStudentMap"></center>
+    <style>
+        /* light Teal background */
+        body {
+            background-color: #67C1C1;
+        }
+
+        /* Yellow Title */
+        h1 {
+            color: #FFC526;
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+            display: inline-block;
+        }
+
+        /* logo formatting */
+        .logo {
+            padding: 10px 0px 0px 0px;
+            display: inline-block;
+        }
+
+        /* grey outer box formatting */
+        .outerContainer {
+            background-color: #E0E0E0;
+            padding: 10px 10px 10px 10px;
+        }
+
+        /* white inner box formatting */
+        .innerContainer {
+            background-color: #FFFFFF;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            border-radius: 5px;
+        }
+
+        /* search bar formatting */
+        .search {
+            float: right;
+            padding: 2px;
+            margin-top: 8px;
+            margin-right: 16px;
+            border-style: solid;
+            border-color: #DDB36B;
+            border-radius: 25px;
+            font-size: 17px;
+           
+        }
+
+        /* add student remove student formatting */
+        .btn-primary {
+            background-color: #DDB36B;
+            outline-color: #DDB36B;
+            border: none;
+        }
 
 
-@* Map of Admin Student Wireframe, each tab on the wireframe is a click-able link
-    and the Student's boxes link to AdminStudentExpanded *@
-<map name="AdminStudentMap">
-    <area shape="rect" coords="167,14,272,60" alt="Reports" href="~/Admin/Report/">
-    <area shape="rect" coords="288,14,405,60" alt="Calendar" href="~/Admin/Calendar">
-    <area shape="rect" coords="420,15, 555, 60" alt="Settings" href="~/Admin/Settings">
-    <area shape="rect" coords="100,195,1118,508" alt="Settings" href="~/Admin/ExpandedStudent">
-</map>
+    </style>
+</head>
 
+<!-- logo image -->
+<div class="row">
+    <div class="center-block col-lg-12 logo">
+        <img src="~/Content/img/logos/logo_white.png" alt="">
+        <h1><b>Admin</b></h1>
+    </div>
+</div>
 
+<div class="container">
+    
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Student</a></li>
+        <li><a href="~/Admin/Report/">Reporting</a></li>
+        <li><a href="~/Admin/Calendar/">Calendar</a></li>
+        <li><a href="~/Admin/Settings/">Settings</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <div class="outerContainer">
+
+                <button type="button" class="btn btn-primary">Add Student</button>
+                <button type="button" class="btn btn-primary">Remove Student</button>
+                <input class="search" type="text" placeholder="Search Students..">
+
+                <div class="innerContainer">
+
+                    <h3>Students</h3>
+
+                    <div class="container">
+                        <!-- row 1 -->
+                        <div class="row">
+                            <!-- John: row 1, column 1 -->
+                            <div class="col-md-4">
+
+                                <div class="row">
+                                    <!-- Image and name area -->
+                                    <div class="col-md-6">
+                                        <p><b>John</b></p>
+                                        <img src="~/Content/img/student-John.jpg" alt="John" height=100px>
+                                    </div>
+
+                                    <!-- Student attendance area-->
+                                    <div class="col-md-6">
+                                        <p>
+                                            <br /> <br />
+                                            Time in:
+                                            <br />
+                                            Time out:
+                                        </p>
+                                    </div>
+                                 </div>
+
+                            </div>
+
+                            <!-- Jess: row 1, column 2 -->
+                            <div class="col-md-4">
+
+                                <div class="row">
+                                    <!-- Image and name area -->
+                                    <div class="col-md-6">
+                                        <p><b>Jes</b></p>
+                                        <img src="~/Content/img/student-Jess.jpg" alt="Jess" height=100px>
+                                    </div>
+
+                                    <!-- Student attendance area-->
+                                    <div class="col-md-6">
+                                        <p>
+                                            <br /> <br />
+                                            Time in:
+                                            <br />
+                                            Time out:
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Daniel: row 1, column 3 -->
+                            <div class="col-md-4">
+
+                                <div class="row">
+                                    <!-- Image and name area -->
+                                    <div class="col-md-6">
+                                        <p><b>Daniel</b></p>
+                                        <img src="~/Content/img/student-Daniel.jpg" alt="Daniel" height=100px>
+                                    </div>
+
+                                    <!-- Student attendance area-->
+                                    <div class="col-md-6">
+                                        <p>
+                                            <br /> <br />
+                                            Time in:
+                                            <br />
+                                            Time out:
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- row 2 -->
+                        <div class="row">
+                            <!-- Jason: row 2, column 1 -->
+                            <div class="col-md-4">
+
+                                <div class="row">
+                                    <!-- Image and name area -->
+                                    <div class="col-md-6">
+                                        <p><b>Jason</b></p>
+                                        <img src="~/Content/img/student-Jason.jpg" alt="Jason" height=100px>
+                                    </div>
+
+                                    <!-- Student attendance area-->
+                                    <div class="col-md-6">
+                                        <p>
+                                            <br /> <br />
+                                            Time in:
+                                            <br />
+                                            Time out:
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Dwayne: row 2, column 2 -->
+                            <div class="col-md-4">
+
+                                <div class="row">
+                                    <!-- Image and name area -->
+                                    <div class="col-md-6">
+                                        <p><b>Dwayne</b></p>
+                                        <img src="~/Content/img/student-Dwayne.jpg" alt="Dwayne" height=100px>
+                                    </div>
+
+                                    <!-- Student attendance area-->
+                                    <div class="col-md-6">
+                                        <p>
+                                            <br /> <br />
+                                            Time in:
+                                            <br />
+                                            Time out:
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Reggie: row 2, column 3 -->
+                            <div class="col-md-4">
+
+                                <div class="row">
+                                    <!-- Image and name area -->
+                                    <div class="col-md-6">
+                                        <p><b>Reggie</b></p>
+                                        <img src="~/Content/img/student-Reggie.jpg" alt="Reggie" height=100px>
+                                    </div>
+
+                                    <!-- Student attendance area-->
+                                    <div class="col-md-6">
+                                        <p>
+                                            <br /> <br />
+                                            Time in:
+                                            <br />
+                                            Time out:
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- row 3 -->
+                        <div class="row">
+                            <!-- Sarah: row 3, column 1 -->
+                            <div class="col-md-4">
+
+                                <div class="row">
+                                    <!-- Image and name area -->
+                                    <div class="col-md-6">
+                                        <p><b>Sarah</b></p>
+                                        <img src="~/Content/img/student-Sarah.jpg" alt="Sarah" height=100px>
+                                    </div>
+
+                                    <!-- Student attendance area-->
+                                    <div class="col-md-6">
+                                        <p>
+                                            <br /> <br />
+                                            Time in:
+                                            <br />
+                                            Time out:
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Taylor: row 3, column 2 -->
+                            <div class="col-md-4">
+
+                                <div class="row">
+                                    <!-- Image and name area -->
+                                    <div class="col-md-6">
+                                        <p><b>Taylor</b></p>
+                                        <img src="~/Content/img/student-Taylor.jpg" alt="Taylor" height=100px>
+                                    </div>
+
+                                    <!-- Student attendance area-->
+                                    <div class="col-md-6">
+                                        <p>
+                                            <br /> <br />
+                                            Time in:
+                                            <br />
+                                            Time out:
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Korina: row 3, column 3 -->
+                            <div class="col-md-4">
+
+                                <div class="row">
+                                    <!-- Image and name area -->
+                                    <div class="col-md-6">
+                                        <p><b>Korina</b></p>
+                                        <img src="~/Content/img/student-Korina.jpg" alt="Korina" height=100px>
+                                    </div>
+
+                                    <!-- Student attendance area-->
+                                    <div class="col-md-6">
+                                        <p>
+                                            <br /> <br />
+                                            Time in:
+                                            <br />
+                                            Time out:
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+</div>

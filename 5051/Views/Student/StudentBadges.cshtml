@@ -1,52 +1,260 @@
 ﻿
 @{
-    ViewBag.Title = "StudentBadges";
+    ViewBag.Title = "Student Badges";
 }
 
 <head>
     <!-- Link for the Roboto Thin style -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+
+    <!-- JS for POPUP container -->
+    <script>
+        $(window).load(function () {
+            $(".trigger_popup_fricc").click(function () {
+                $('.hover_bkgr_fricc').show();
+            });
+            $('.hover_bkgr_fricc').click(function () {
+                $('.hover_bkgr_fricc').hide();
+            });
+            $('.popupCloseButton').click(function () {
+                $('.hover_bkgr_fricc').hide();
+            });
+        });
+    </script>
+
     <!-- Style used for Student Page -->
     <style>
         /* Dark Teal background */
         body {
-            background-color: #127F7A;
+            background-color: #127f79;
         }
         /* Yellow Title */
-        h1 {
+        #pageTitle {
             color: #FFC526;
             font-family: 'Roboto', sans-serif;
-            font-size: 48px;
+            font-weight: 300;
+            font-size: 45px;
+        }
+
+        /* Title for each badge row*/
+        #rowTitle {
+            color: #58c4c2;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 30px;
         }
         /* Container for each line of badges */
-        badgeRow {
-            color: #4DADAB;
+        #badgeRow {
+            background-color: #58c4c2;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 25px;
         }
-        badgeIcon {
-            width: 150px;
-            height: 150px;
-            padding-right: 500px;
+
+        /* Caption for Badges*/
+        #badgeCaption {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+        }
+
+        /* Navbar at bottom of page for navigating between student pages */
+        #studentNavBar {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 45px;
+            width: 100%;
+            padding: 5px;
+        }
+
+        /* Style for Navbar Badge Button*/
+        #studentBadgesTab {
+            background-color: #febc04;
+            color: white;
+            padding: 10px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+        /* Style for Navbar Data Tab */
+        #studentDataTab {
+            background-color: #fcce00;
+            color: white;
+            padding: 10px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+        /* Style for Navbar Profile Tab*/
+        #studentProfileTab {
+            background-color: #67dbdb;
+            color: white;
+            padding: 10px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+        /* Popup overlay darkens rest of screen, except the popup*/
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        /* Overlay opacity */
+        .overlay:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* The Box that appears to display badge info */
+        .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            width: 30%;
+            position: relative;
+            transition: all 5s ease-in-out;
+        }
+
+        /* Popup Title */
+        .popup h2 {
+            margin-top: 0;
+            color: #333;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        /* Close button for popups */
+        .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Close button color for hover */
+        .popup .close:hover {
+                color: #06D85F;
+            }
+
+        /* Text/Content inside of the popup */
+        .popup .content {
+            font-size: 20px;
+            max-height: 30%;
+            overflow: auto;
         }
     </style>
 </head>
 
 <!-- Title text for Student Badges Page -->
-<!-- TO-DO: Add Snap Attendance Logo -->
 <div>
-    <p>Snap Attendance Logo Goes Here</p>
+    <img src="~/Content/img/logos/logo_white.png" alt="Snap Attendance Logo" />
 </div>
-<h1>
+<h1 id="pageTitle">
     <img src="~/Content/img/Student/StudentBadges_HeadIcon.png" style="width: 50px; height: 50px; padding-right: 5px; padding-bottom: 5px;" />
     Badge Collection
 </h1>
 
-<!-- Row Badges go here -->
+<!-- Rows of Badges start here -->
+<!-- Early Bird Row -->
+<h3 id="rowTitle">Early Bird</h3>
+<center>
+    <div class="row" id="badgeRow">
+        <div class="col-sm-3">
+            <img src="~/Content/img/Student/StudentBadges_EarlyB1.png" class="img-responsive" alt="Badge 1" />
+            <a id="badgeCaption" href="#earlyBirdPop">Bronze Early Bird</a>
+        </div>
+        <div class="col-sm-3">
+            <img src="~/Content/img/Student/StudentBadges_EarlyB0.png" class="img-responsive" alt="Badge 2" />
+            <a id="badgeCaption" href="#earlyBirdPop">????</a>
+        </div>
+        <div class="col-sm-3">
+            <img src="~/Content/img/Student/StudentBadges_EarlyB0.png" class="img-responsive" alt="Badge 3" />
+            <a id="badgeCaption" href="#earlyBirdPop">????</a>
+        </div>
+        <div class="col-sm-3">
+            <img src="~/Content/img/Student/StudentBadges_EarlyB0.png" class="img-responsive" alt="Badge 4" />
+            <a id="badgeCaption" href="#earlyBirdPop">????</a>
+        </div>
+    </div> 
+</center>
+<!-- Early Bird Information POPUP-->
+<div id="earlyBirdPop" class="overlay">
+    <div class="popup">
+        <h2>Early Bird</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            Earn this badge by coming to class early!
+        </div>
+    </div>
+</div>
 
 
-<!-- Usemap to navigate from student badges -->
-<map name="StudentBadgesMap">
-    <!-- Navigates to student Home page -->
-    <area shape="rect" coords="1,435,152,497" href="~/Student/StudentHome" alt="Sun">
-    <!-- Navigates to student data page -->
-    <area shape="rect" coords="297,435,423,498" href="~/Student/StudentData" alt="Sun">
-</map>
+<!-- Hot Streak Row -->
+<h3 id="rowTitle">Hot Streak</h3>
+<center>
+    <div class="row" id="badgeRow">
+        <div class="col-sm-3">
+            <img src="~/Content/img/Student/StudentBadges_HotStreak0.png" class="img-responsive" alt="Badge 3" />
+            <a id="badgeCaption" href="#hotStreakPop">????</a>
+        </div>
+        <div class="col-sm-3">
+            <img src="~/Content/img/Student/StudentBadges_HotStreak0.png" class="img-responsive" alt="Badge 3" />
+            <a id="badgeCaption" href="#hotStreakPop">????</a>
+        </div>
+        <div class="col-sm-3">
+            <img src="~/Content/img/Student/StudentBadges_HotStreak0.png" class="img-responsive" alt="Badge 3" />
+            <a id="badgeCaption" href="#hotStreakPop">????</a>
+        </div>
+        <div class="col-sm-3">
+            <img src="~/Content/img/Student/StudentBadges_HotStreak0.png" class="img-responsive" alt="Badge 3" />
+            <a id="badgeCaption" href="#hotStreakPop">????</a>
+        </div>
+    </div>
+</center>
+<!-- Hot Streak Badge Popup-->
+<div id="hotStreakPop" class="overlay">
+    <div class="popup">
+        <h2>Hot Streak</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            Earn this badge by coming to class multiple days in a row!
+        </div>
+    </div>
+</div>
+
+<!-- Tab Buttons at the bottom of the page -->
+<center>
+    <div class="navbar-btn" id="studentNavBar">
+        <a href="~/Student/StudentBadges" class="active" id="studentBadgesTab">
+            Badges
+            <img src="~/Content/img/Student/StudentBadges_BadgesTab.png" style="padding-bottom:15px;" />
+        </a>
+        <a href="~/Student/StudentData" id="studentDataTab">
+            Data
+            <img src="~/Content/img/Student/StudentBadges_DataTab.png" style="padding-bottom:15px;" />
+        </a>
+        <a href="~/Student/StudentHome" id="studentProfileTab">
+            Profile
+            <img src="~/Content/img/Student/StudentBadges_ProfileTab.png" style="padding-bottom:15px;" />
+        </a>
+    </div>
+</center>
