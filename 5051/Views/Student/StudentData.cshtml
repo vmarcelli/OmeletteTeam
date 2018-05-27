@@ -83,6 +83,21 @@
             font-size: 40px;
             color: white;
         }
+        .grid-container {
+            display: grid;
+            align-content: center;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+            background-color: #127f79;
+            padding: 5px;
+            width: 95%;
+        }
+        .grid-container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 15px 0;
+            font-size: 30px;
+        }
     </style>
 </head>
 
@@ -123,8 +138,18 @@
 
 <!-- Bottom Data Box -->
 <center>
-    <div class="row" id="dataBox">
-        Data Grid Goes Here
+    <div class="row" id="dataBox" style="padding-bottom: 30px;">
+        <div class="grid-container">
+            <div style="color:#189088;">Date</div>
+            <div style="color:#189088;">Check-In</div>
+            <div style="color:#189088;">Check-Out</div>
+            <div style="color:#189088;">Hours Attended</div>
+            <div>Day 1</div><div>8:00AM</div><div>8:40AM</div><div>0.4</div>
+            <div>Day 2</div><div>10:00AM</div><div>12:08PM</div><div>2.08</div>
+            <div>Day 3</div><div>12:00PM</div><div>4:00PM</div><div>4</div>
+            <div>Day 4</div><div>9:00AM</div><div>9:50AM</div><div>0.5</div>
+            <div>Day 5</div><div>8:30AM</div><div>12:30PM</div><div>4</div>
+        </div>
     </div>
 </center>
 
