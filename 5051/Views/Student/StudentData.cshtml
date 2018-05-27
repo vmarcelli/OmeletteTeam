@@ -70,6 +70,7 @@
             margin-bottom: 10px;
         }
 
+        /* Regular Text */
         #dataText {
             font-family: 'Roboto', sans-serif;
             font-weight: 500;
@@ -77,12 +78,15 @@
             color: #127f79;
         }
 
+        /* Container Titles */
         #dataTitle {
             font-family: 'Roboto', sans-serif;
             font-weight: 500;
             font-size: 40px;
             color: white;
         }
+
+        /* Grid Style */
         .grid-container {
             display: grid;
             align-content: center;
@@ -92,6 +96,8 @@
             padding: 5px;
             width: 95%;
         }
+
+        /* Box Style for each box in grid */
         .grid-container > div {
             background-color: rgba(255, 255, 255, 0.8);
             text-align: center;
@@ -101,11 +107,10 @@
     </style>
 </head>
 
-<!-- Snap Attendance Logo -->
+<!-- Snap Attendance Logo and Title -->
 <div>
     <img src="~/Content/img/logos/logo_white.png" alt="Snap Attendance Logo" />
 </div>
-
 <h1 id="pageTitle">
     Student Data
 </h1>
@@ -113,12 +118,14 @@
 <!-- Top Data Box -->
 <center>
     <div class="row" id="dataBox">
+        <!-- Data Section with Average increase of Student progress-->
         <div class="col-sm-6">
             <img src="~/Content/img/Student/StudentData_Graph.png" class="img-responsive" alt="Graph Picture" />
             <div id="dataText" style="padding-top:5px;">
                 +5% Avg!
             </div>
         </div>
+        <!-- Goal section provides a progress bar for the next badge -->
         <div class="col-sm-6">
             <div id="dataTitle">
                 Goals
@@ -139,6 +146,7 @@
 <!-- Bottom Data Box -->
 <center>
     <div class="row" id="dataBox" style="padding-bottom: 30px;">
+        <!-- Aesthetic grid for mockup purposes only, does not update -->
         <div class="grid-container">
             <div style="color:#189088;">Date</div>
             <div style="color:#189088;">Check-In</div>
