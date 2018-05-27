@@ -67,6 +67,7 @@
             padding-top: 25px;
             padding-bottom: 10px;
             border-radius: 25px;
+            margin-bottom: 10px;
         }
 
         #dataText {
@@ -75,11 +76,12 @@
             font-size: 25px;
             color: #127f79;
         }
+
         #dataTitle {
             font-family: 'Roboto', sans-serif;
             font-weight: 500;
             font-size: 40px;
-            color:white;
+            color: white;
         }
     </style>
 </head>
@@ -93,6 +95,7 @@
     Student Data
 </h1>
 
+<!-- Top Data Box -->
 <center>
     <div class="row" id="dataBox">
         <div class="col-sm-6">
@@ -105,7 +108,8 @@
             <div id="dataTitle">
                 Goals
             </div>
-            <div class="progress">
+            <div id="dataText">Hot Streak Badge</div>
+            <div class="progress" style="width:60%">
                 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
                      aria-valuemin="0" aria-valuemax="100" style="width:60%">
                 </div>
@@ -117,6 +121,12 @@
     </div>
 </center>
 
+<!-- Bottom Data Box -->
+<center>
+    <div class="row" id="dataBox">
+        Data Grid Goes Here
+    </div>
+</center>
 
 
 
