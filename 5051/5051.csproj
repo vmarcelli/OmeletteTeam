@@ -249,9 +249,10 @@
     <Content Include="Content\img\StudentDataTab.jpg" />
     <Content Include="Content\img\Student\StudentBadges_BadgesTab.png" />
     <Content Include="Content\img\Student\StudentBadges_DataTab.png" />
+    <Content Include="Content\img\Student\StudentBadges_EarlyB0.png" />
+    <Content Include="Content\img\Student\StudentBadges_EarlyB1.png" />
     <Content Include="Content\img\Student\StudentBadges_HeadIcon.png" />
     <Content Include="Content\img\Student\StudentBadges_HotStreak0.png" />
-    <Content Include="Content\img\Student\StudentBadges_HotStreak1.png" />
     <Content Include="Content\img\Student\StudentBadges_ProfileTab.png" />
     <Content Include="Content\img\Student\StudentData_Graph.png" />
     <Content Include="Content\img\student_homepage.png" />
