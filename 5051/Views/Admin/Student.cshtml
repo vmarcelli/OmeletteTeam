@@ -8,35 +8,34 @@
     <!-- Link for the Roboto Thin style -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
     <!-- Style used for Student Page -->
+
     <style>
         /* light Teal background */
         body {
             background-color: #67C1C1;
         }
+
         /* Yellow Title */
         h1 {
             color: #FFC526;
             font-family: 'Roboto', sans-serif;
             font-size: 48px;
             display: inline-block;
-           
         }
 
-
+        /* logo formatting */
         .logo {
             padding: 10px 0px 0px 0px;
             display: inline-block;
         }
 
-        .formPadding {
-            padding: 20px 0px 20px 0px;
-        }
-
+        /* grey outer box formatting */
         .outerContainer {
             background-color: #E0E0E0;
             padding: 10px 10px 10px 10px;
         }
 
+        /* white inner box formatting */
         .innerContainer {
             background-color: #FFFFFF;
             padding-right: 15px;
@@ -46,24 +45,7 @@
             border-radius: 5px;
         }
 
-        .content {
-            background-color: #FEBC04;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-
-        .titleAdmin {
-            color: #137F7A;
-            font-family: 'Roboto', sans-serif;
-        }
-
+        /* search bar formatting */
         .search {
             float: right;
             padding: 2px;
@@ -76,6 +58,7 @@
            
         }
 
+        /* add student remove student formatting */
         .btn-primary {
             background-color: #DDB36B;
             outline-color: #DDB36B;
@@ -84,12 +67,14 @@
     </style>
 </head>
 
+<!-- logo image -->
 <div class="row">
     <div class="center-block col-lg-12 logo">
         <img src="~/Content/img/logos/logo_white.png" alt="">
         <h1><b>Admin</b></h1>
     </div>
 </div>
+
 <div class="container">
     
     <ul class="nav nav-tabs">
@@ -102,14 +87,58 @@
     <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
             <div class="outerContainer">
+
                 <button type="button" class="btn btn-primary">Add Student</button>
                 <button type="button" class="btn btn-primary">Remove Student</button>
                 <input class="search" type="text" placeholder="Search Students..">
+
                 <div class="innerContainer">
+
                     <h3>Student</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                    <div class="container">
+                        <!-- row 1 -->
+                        <div class="row">
+                            <!-- John: row 1, column 1 -->
+                            <div class="col-md-4">
+
+                            </div>
+
+                            <!-- Jess: row 1, column 2 -->
+                            <div class="col-md-4">
+
+                            </div>
+
+                            <!-- Daniel: row 1, column 3 -->
+                            <div class="col-md-4">
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Jason: row 2, column 1 -->
+                            <div class="col-md-4">1</div>
+
+                            <!-- Dwayne: row 2, column 2 -->
+                            <div class="col-md-4">2</div>
+
+                            <!-- Reggie: row 2, column 3 -->
+                            <div class="col-md-4">3</div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Sarah: row 3, column 1 -->
+                            <div class="col-md-4">1</div>
+
+                            <!-- Taylor: row 3, column 2 -->
+                            <div class="col-md-4">2</div>
+
+                            <!-- Korina: row 3, column 3 -->
+                            <div class="col-md-4">3</div>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
         </div>
     </div>
 </div>
