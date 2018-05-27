@@ -4,20 +4,70 @@
     ViewBag.Title = "Student";
 }
 
-@* Title for the Admin page *@
-<center><h2>Admin Student Tab</h2></center>
+<head>
+    <!-- Link for the Roboto Thin style -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <!-- Style used for Student Page -->
+    <style>
+        /* light Teal background */
+        body {
+            background-color: #67C1C1;
+        }
+        /* Yellow Title */
+        h1 {
+            color: #FFC526;
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+        }
 
-@* Image of Admin Student Wireframe *@
-<center><img src="~/Content/img/Admin_Student_Tab.png" alt="Admin Student" usemap="#AdminStudentMap"></center>
 
 
-@* Map of Admin Student Wireframe, each tab on the wireframe is a click-able link
-    and the Student's boxes link to AdminStudentExpanded *@
-<map name="AdminStudentMap">
-    <area shape="rect" coords="167,14,272,60" alt="Reports" href="~/Admin/Report/">
-    <area shape="rect" coords="288,14,405,60" alt="Calendar" href="~/Admin/Calendar">
-    <area shape="rect" coords="420,15, 555, 60" alt="Settings" href="~/Admin/Settings">
-    <area shape="rect" coords="100,195,1118,508" alt="Settings" href="~/Admin/ExpandedStudent">
-</map>
+        .logo {
+            padding: 10px 0px 0px 0px;
+        }
 
+        .formPadding {
+            padding: 20px 0px 20px 0px;
+        }
 
+        .content {
+            background-color: #FEBC04;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .titleAdmin {
+            color: #137F7A;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<div class="row">
+    <div class="center-block col-lg-12 logo">
+        <img src="~/Content/img/logos/logo_white.png" alt="">
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <form class="form-signin" action="~/Admin/Student">
+            <center>
+                <h2 class="titleAdmin"><b>Administrator Login</b></h2>
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <button class="btn content" type="submit">Login</button>
+                <p>Forgot Password?</p>
+                <a href="#">Reset Password</a>
+            </center>
+        </form>
+    </div>
+</div>
