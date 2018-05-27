@@ -67,6 +67,15 @@
             font-family: 'Roboto', sans-serif;
         }
 
+        .trend {
+            float: right;
+            padding: 2px;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+        }
+
+
         .search {
             float: right;
             padding: 2px;
@@ -86,6 +95,13 @@
             background-color: #DDB36B;
             outline-color: #DDB36B;
             border: none;
+        }
+
+        .checkMark {
+            
+            background-color: transparent;
+            padding: 3px 5px;
+            width: 100px;
         }
 
         .leftmargin{
@@ -122,6 +138,8 @@
             box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
             width: 190px;
         }
+
+
     </style>
 </head>
 
@@ -280,6 +298,23 @@
                         <input type="date" name="dateofbirth" id="dateofbirth">
                     </div>
                 </div>
+                <div class="row leftmargin">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default">End Date</button>
+                        <input type="date" name="dateofbirth" id="dateofbirth">
+                    </div>
+                </div>
+                <div class="row leftmargin">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Expected Time Multiplier</button>
+                        </span>
+                        <input type="text" class="form-control">
+                        <div class="trend">
+                            Show Expected Trend Line<input type="checkbox" name="trend" value="checkBox" class="checkMark">
+                        </div>
+                    </div>
+
             </div>
         </div>
     </div>
