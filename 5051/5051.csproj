@@ -246,6 +246,15 @@
     <Content Include="Content\img\logos\logo_white.png" />
     <Content Include="Content\img\logos\logo_yellow.png" />
     <Content Include="Content\img\Report PDF.png" />
+    <Content Include="Content\img\student-John.jpg" />
+    <Content Include="Content\img\student-Daniel.jpg" />
+    <Content Include="Content\img\student-Dwayne.jpg" />
+    <Content Include="Content\img\student-Jason.jpg" />
+    <Content Include="Content\img\student-Jess.jpg" />
+    <Content Include="Content\img\student-Korina.jpg" />
+    <Content Include="Content\img\student-Reggie.jpg" />
+    <Content Include="Content\img\student-Sarah.jpg" />
+    <Content Include="Content\img\student-Taylor.jpg" />
     <Content Include="Content\img\StudentBadgeTab.jpg" />
     <Content Include="Content\img\StudentDataTab.jpg" />
     <Content Include="Content\img\Student\StudentBadges_BadgesTab.png" />
