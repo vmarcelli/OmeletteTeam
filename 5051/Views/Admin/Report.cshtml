@@ -74,10 +74,18 @@
             font-size: 17px;
         }
 
+        .dropdown{
+            margin-bottom: 10px;
+        }
+
         .btn-primary {
             background-color: #DDB36B;
             outline-color: #DDB36B;
             border: none;
+        }
+
+        .leftmargin{
+            margin-left: 10px; 
         }
 
         #exportReport {
@@ -104,8 +112,29 @@
     <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
             <div class="outerContainer">
-                <button type="button" id="exportReport" class="btn btn-primary">Export Report</button>
-                <input class="search" type="text" placeholder="Search Report..">
+                <div class="row leftmargin">
+                    <button type="button" id="exportReport" class="btn btn-primary">Export Report</button>
+                    <input class="search" type="text" placeholder="Search Report..">
+                </div>
+                <div class="row leftmargin">
+                    <div class="dropdown btn-group">
+                        <button type="button" class="btn btn-default">Student</button>
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                            Johnny Smith
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Jennifer Lawrence</a></li>
+                            <li><a href="#">Jose Garcia</a></li>
+                            <li><a href="#">Peter King</a></li>
+                            <li><a href="#">Erika Flores</a></li>
+                            <li><a href="#">Phil Peterson</a></li>
+                            <li><a href="#">Aaron Cuevas</a></li>
+                            <li><a href="#">Miguel Gomez</a></li>
+                            <li><a href="#">Tiffany Yue</a></li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="innerContainer">
                     <table class="table table-striped table-hover">
                         <thead>
