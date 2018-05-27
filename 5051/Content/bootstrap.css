@@ -3874,17 +3874,17 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #dddddd;
+    border-color: #FEBC04 #FEBC04 #dddddd;
 }
 
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #555555;
-  cursor: default;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-bottom-color: transparent;
+    color: #FFF;
+    cursor: default;
+    background-color: #FEBC04;
+    border: 1px solid #FEBC04;
+    border-bottom-color: transparent;
 }
 
 .nav-tabs.nav-justified {
