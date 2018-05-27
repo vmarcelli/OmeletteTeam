@@ -65,6 +65,10 @@
             border: none;
         }
 
+        [type="date"] {
+            background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;     
+        }
+
 
     </style>
 </head>
@@ -96,9 +100,21 @@
 
                 <div class="innerContainer">
 
-                    <h3>Students</h3>
+                    
 
                     <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <h3>Students</h3>
+                            </div>
+
+                            <div class="col-md-10">
+                                <br />
+                                <input type="date" name="dateofbirth" id="dateofbirth">
+                            </div>
+                        </div>
+
                         <!-- row 1 -->
                         <div class="row">
                             <!-- John: row 1, column 1 -->
@@ -120,7 +136,7 @@
                                             Time out:
                                         </p>
                                     </div>
-                                 </div>
+                                </div>
 
                             </div>
 
@@ -130,7 +146,7 @@
                                 <div class="row">
                                     <!-- Image and name area -->
                                     <div class="col-md-6">
-                                        <p><b>Jes</b></p>
+                                        <p><b>Jess</b></p>
                                         <img src="~/Content/img/student-Jess.jpg" alt="Jess" height=100px>
                                     </div>
 
