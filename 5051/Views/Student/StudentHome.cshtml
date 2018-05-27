@@ -1,6 +1,6 @@
 ﻿@*sets the title of the page*@
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Student Profile";
 }
 
 <!-- MetaData -->
@@ -98,7 +98,7 @@
     </style>
 </head>
 
-<!-- Snap Attendance Logo -->
+<!-- Snap Attendance Logo and Title-->
 <div>
     <img src="~/Content/img/logos/logo_white.png" alt="Snap Attendance Logo" />
 </div>
@@ -146,9 +146,12 @@
         <div class="row">
             <!-- Data Box -->
             <div class="col-sm-5" style="color:white;" id="profileBox">
+                <div style="color:white;" id="profileTitle">
+                    Data
+                </div>
                 <img src="~/Content/img/Student/StudentData_Graph.png"
                      style="width: 60%; height: 60%;" />
-                <div id="profileText" style="padding-top:25px; font-size: 30px;">
+                <div id="profileText" style="padding-top:15px; font-size: 30px;">
                     +5% Avg!
                 </div>
             </div>
