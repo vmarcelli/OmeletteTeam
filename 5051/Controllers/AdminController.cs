@@ -63,8 +63,8 @@ namespace _5051.Controllers
         // GET: Avatar/Edit/5
         public ActionResult Update(string id = null)
         {
-            
-            return View();
+            var myData = attendanceDataSource.Read(id);
+            return View(myData);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace _5051.Controllers
             }
 
             //Update
-
+            attendanceDataSource.Update(data);
             return RedirectToAction("Student");
         }
     }

@@ -154,35 +154,18 @@
                                         @Html.AntiForgeryToken()
                                         @Html.HiddenFor(m => Model[0].Id)
 
-                                        <div class="row">
-                                            <div class="col-sm-3 text-right">
-                                                @Html.DisplayNameFor(m => Model[0].TimeIn)
-                                            </div>
-                                            <div class="col-sm-4">
-                                                @Html.EditorFor(m => Model[0].TimeIn)
-                                                @Html.ValidationMessageFor(m => Model[0].TimeIn)
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3 text-right">
-                                                @Html.DisplayNameFor(m => Model[0].TimeOut)
-                                            </div>
-                                            <div class="col-sm-4">
-                                                @Html.EditorFor(m => Model[0].TimeOut)
-                                                @Html.ValidationMessageFor(m => Model[0].TimeOut);
-                                            </div>
-                                        </div>
 
                                         <br />
                                         <br />
-                                        <div class="row">
-                                            <div class="col-sm-3 text-right">
+
+                                            <div class="row">
+                                                <div class="col-sm-3 text-right">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    @Html.ActionLink("Cancel", "Student", new { id = Model[0].Id }, new { @class = "btn btn-success" })
+                                                    @Html.ActionLink("Update", "Update", new { id = Model[0].Id }, new { @class = "btn btn-primary" })
+                                                </div>
                                             </div>
-                                            <div class="col-sm-4">
-                                                @Html.ActionLink("Cancel", "Index", new { id = Model[0].Id }, new { @class = "btn btn-success" })
-                                                <input type="submit" value="Update" class="btn btn-primary">
-                                            </div>
-                                        </div>
                                         }
                                     </div>
                                 </div>
