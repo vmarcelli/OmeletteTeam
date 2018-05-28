@@ -25,11 +25,11 @@
             opacity: 0;
         }
 
-        /* Overlay opacity */
-        .overlay:target {
-            visibility: visible;
-            opacity: 1;
-        }
+            /* Overlay opacity */
+            .overlay:target {
+                visibility: visible;
+                opacity: 1;
+            }
 
         /* The Box that appears to display badge info */
         .popup {
@@ -42,39 +42,38 @@
             transition: all 5s ease-in-out;
         }
 
-        /* Popup Title */
-        .popup h2 {
-            margin-top: 0;
-            color: #333;
-            font-family: Tahoma, Arial, sans-serif;
-        }
+            /* Popup Title */
+            .popup h2 {
+                margin-top: 0;
+                color: #333;
+                font-family: Tahoma, Arial, sans-serif;
+            }
 
-        /* Close button for popups */
-        .popup .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            transition: all 200ms;
-            font-size: 30px;
-            font-weight: bold;
-            text-decoration: none;
-            color: #333;
-        }
+            /* Close button for popups */
+            .popup .close {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                transition: all 200ms;
+                font-size: 30px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #333;
+            }
 
-        /* Close button color for hover */
-        .popup .close:hover {
-            color: #06D85F;
-        }
+                /* Close button color for hover */
+                .popup .close:hover {
+                    color: #06D85F;
+                }
 
-        /* Text/Content inside of the popup */
-        .popup .content {
-            font-size: 20px;
-            max-height: 30%;
-            overflow: auto;
-        }
+            /* Text/Content inside of the popup */
+            .popup .content {
+                font-size: 20px;
+                max-height: 30%;
+                overflow: auto;
+            }
+    </style>
 
-    </style> 
-    
 
 
 </head>
@@ -98,19 +97,13 @@
                     <div class="box">
                         <img class="photo" src="~/Content/img/student-Jess.jpg" alt="Jess">
                         <p>Jess</p>
-                    </div>  
+                    </div>
                 </div>
-<<<<<<< HEAD
                 <div class="col-md-4">
                     <div class="box">
-                        <img class="photo" src="~/Content/img/student-Daniel.jpg" alt="Daniel">
+                        <a id="danielClick" href="#clickNotification"><img src="~/Content/img/student-Daniel.jpg" alt="Daniel"></a>
                         <p>Daniel</p>
                     </div>
-=======
-                <div class="col-md-4 column">
-                    <a id="danielClick" href="#clickNotification"><img src="~/Content/img/student-Daniel.jpg" alt="Daniel"></a>
-                    <p>Daniel</p>
->>>>>>> 1794cba02e04cc5b7cac59cd3d9f6cf4d8a11b97
                 </div>
             </div>
             <div class="row">
@@ -118,7 +111,7 @@
                     <div class="box">
                         <img class="photo" src="~/Content/img/student-Jason.jpg" alt="Jason">
                         <p>Jason</p>
-                    </div>       
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <div class="box">
@@ -130,7 +123,7 @@
                     <div class="box">
                         <img class="photo" src="~/Content/img/student-Reggie.jpg" alt="Reggie">
                         <p>Reggie</p>
-                    </div>           
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -138,7 +131,7 @@
                     <div class="box">
                         <img class="photo" src="~/Content/img/student-Sarah.jpg" alt="Sarah">
                         <p>Sarah</p>
-                    </div>   
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <div class="box">
@@ -150,26 +143,9 @@
                     <div class="box">
                         <img class="photo" src="~/Content/img/student-Korina.jpg" alt="Korina">
                         <p>Korina</p>
-                    </div>    
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Early Bird Information POPUP-->
-    <div id="clickNotification" class="overlay">
-
-            <div class="popup">
-                <h2>Signed in!</h2>
-                <a class="close" href="#">&times;</a>
-                <div class="content">
-                    <img src="~/Content/img/SignInMessage.png" alt="ClickIn" width="300">
-                </div>
-            </div>
- 
-    </div>
-
 </body>
-
-
-
