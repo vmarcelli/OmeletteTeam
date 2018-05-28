@@ -234,6 +234,7 @@
     <Content Include="Content\img\Admin_Settings_Tab.png" />
     <Content Include="Content\img\Admin_Student_Tab.png" />
     <Content Include="Content\img\Expanded_Student_View.png" />
+    <Content Include="Content\img\greenUp.png" />
     <Content Include="Content\img\homepage.png" />
     <Content Include="Content\img\homepage\apple.png" />
     <Content Include="Content\img\homepage\pencil.png" />
@@ -245,6 +246,7 @@
     <Content Include="Content\img\Logo.png" />
     <Content Include="Content\img\logos\logo_white.png" />
     <Content Include="Content\img\logos\logo_yellow.png" />
+    <Content Include="Content\img\redDown.png" />
     <Content Include="Content\img\Report PDF.png" />
     <Content Include="Content\img\student-John.jpg" />
     <Content Include="Content\img\student-Daniel.jpg" />
