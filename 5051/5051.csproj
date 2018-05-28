@@ -246,6 +246,8 @@
     <Content Include="Content\img\logos\logo_white.png" />
     <Content Include="Content\img\logos\logo_yellow.png" />
     <Content Include="Content\img\Report PDF.png" />
+    <Content Include="Content\img\Report\Report_ProgressGraph.png" />
+    <Content Include="Content\img\Report\Report_YearGraph.png" />
     <Content Include="Content\img\student-John.jpg" />
     <Content Include="Content\img\student-Daniel.jpg" />
     <Content Include="Content\img\student-Dwayne.jpg" />
