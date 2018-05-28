@@ -43,5 +43,10 @@ namespace _5051.Controllers
             return View();
         }
 
+        public ActionResult EditMe()
+        {
+            return View();
+        }
+
     }
 }
