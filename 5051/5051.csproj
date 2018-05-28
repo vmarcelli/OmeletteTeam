@@ -189,7 +189,6 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Backend\contactInfoBackend.cs" />
     <Compile Include="Backend\StudentInterface.cs" />
     <Compile Include="Backend\StudentDataSourceMock.cs" />
     <Compile Include="Backend\StudentBackend.cs" />
@@ -197,7 +196,6 @@
     <Compile Include="Backend\AvatarDataSourceMock.cs" />
     <Compile Include="Backend\AvatarInterface.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\StudentLoginController.cs" />
     <Compile Include="Controllers\KioskSignInController.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
@@ -214,7 +212,6 @@
     <Compile Include="Models\AttendanceEntryModel.cs" />
     <Compile Include="Models\AvatarModel.cs" />
     <Compile Include="Models\AttendanceViewModel.cs" />
-    <Compile Include="Models\ContactInfo.cs" />
     <Compile Include="Models\StudentViewModel.cs" />
     <Compile Include="Models\AvatarViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -360,7 +357,6 @@
     <Content Include="Views\Student\StudentBadges.cshtml" />
     <Content Include="Views\Student\StudentData.cshtml" />
     <Content Include="Views\Student\StudentHome.cshtml" />
-    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
