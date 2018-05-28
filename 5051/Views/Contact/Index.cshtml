@@ -1,0 +1,18 @@
+﻿@model _5051.Models.ContactInfo
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@Model.Name</h2>
+<p>Message ID is @Model.Id</p>
+<p>This is the message body: @Model.Message</p>
+@using (Html.BeginForm())
+{
+    @Html.DisplayNameFor(m => m.Id)
+    @Html.DisplayNameFor(m => m.Name)
+    @Html.DisplayNameFor(m => m.Message)
+    @Html.EditorFor(m => m.Message)
+@Html.ActionLink("Cancel", "Index", new { id = Model.Id }, new { @class = "btn btn-success" })
+    <input type="submit" value="Update" class="btn btn-primary">
+}
+
