@@ -7,8 +7,29 @@
     <!--button to take you back to admin report page-->
 @Html.ActionLink("Back", "Index", "Admin/Report", null, new { @class = "btn btn-primary" })
 
-    <!--Wireframe image of admin report sample-->
-<center><img src="~/Content/img/Report PDF.png" alt="Report PDF" usemap="#AdminReportPDFMap "></center>
+<!-- Title text for Report PDF -->
+<h1 id="pageTitle">
+    Johnny Smith
+</h1>
+
+<div class="container">
+    <div>
+        Teacher's Notes
+    </div>
+</div>
+
+<center>
+    <div class="container">
+        <div class="container">
+            <div class="col-sm-6">
+                Image 1
+            </div>
+            <div class="col-sm-6">
+                Image 2
+            </div>
+        </div>
+    </div>
+</center>
 
 <!-- map for navigation -->
 <map name="AdminReportPDFMap">
