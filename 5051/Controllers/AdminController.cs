@@ -9,7 +9,7 @@ namespace _5051.Controllers
 {
     public class AdminController : Controller
     {
-       
+        AttendanceEntryModel attendanceEntry = new AttendanceEntryModel("11:00 am", "2:00 pm");
         // GET: Admin
         public ActionResult Index()
         {
@@ -31,7 +31,6 @@ namespace _5051.Controllers
         // GET: Student
         public ActionResult Student()
         {
-            AttendanceEntryModel attendanceEntry = new AttendanceEntryModel("11:00 am", "2:00 pm");   
             return View(attendanceEntry);
         }
 
@@ -51,6 +50,50 @@ namespace _5051.Controllers
         public ActionResult Settings()
         {
             return View();
+        }
+
+        /// <summary>
+        /// This will show the details of the avatar to update
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        // GET: Avatar/Edit/5
+        public ActionResult Update(string id = null)
+        {
+            var temp = attendanceEntry;
+            return View(temp);
+        }
+
+        /// <summary>
+        /// This updates the avatar based on the information posted from the udpate page
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        // POST: Avatar/Update/5
+        [HttpPost]
+        public ActionResult Update([Bind(Include=
+                                        "Id,"+
+                                        "TimeIn,"+
+                                        "TimeOut,"+
+                                        "")] AttendanceEntryModel data)
+        {
+
+            if (data == null)
+            {
+                // Send to error page
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+            }
+
+            if (string.IsNullOrEmpty(data.Id))
+            {
+                // Send back for Edit
+                return View(data);
+            }
+
+            attendanceEntry.TimeIn = data.TimeIn;
+            attendanceEntry.TimeOut = data.TimeOut;
+
+            return RedirectToAction("Student");
         }
     }
 }

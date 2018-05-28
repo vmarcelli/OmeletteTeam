@@ -135,10 +135,39 @@
                                     <div class="col-md-6">
                                         <p>
                                         <br /> <br /> <br />
-                                        TimeIn: @Model.TimeOut
+                                        Time In: @Model.TimeIn
                                         <br />
                                         Time out: @Model.TimeOut
-                                       
+                                        <br />
+
+
+                                            @using (Html.BeginForm())
+                                            {
+                                            @Html.AntiForgeryToken()
+                                            @Html.HiddenFor(m => m.Id)
+
+                                            <div class="row">
+                                                <div class="col-sm-3 text-right">
+                                                    @Html.DisplayNameFor(m => m.TimeIn)
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    @Html.EditorFor(m => m.TimeIn)
+                                                    @Html.ValidationMessageFor(m => m.TimeIn)
+                                                </div>
+                                            </div>
+
+                                            <br />
+                                            <br />
+
+                                            <div class="row">
+                                                <div class="col-sm-3 text-right">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    @Html.ActionLink("Cancel", "Student", new { id = Model.Id }, new { @class = "btn btn-success" })
+                                                    <input type="submit" value="Update" class="btn btn-primary">
+                                                </div>
+                                            </div>
+                                        }
                                     <!-- photo of up or down arrow  -->
                                     <br />
                                      <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
@@ -400,4 +429,5 @@
                 </div>
         </div>
     </div>
+</div>
 </div>
