@@ -8,6 +8,7 @@
     @*imports google roboto font*@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="~/Content/kiosk.css">
+
 </head>
 
 <body class="kiosk-body">
@@ -28,7 +29,7 @@
                     <p>Jess</p>
                 </div>
                 <div class="col-md-4 column">
-                    <img src="~/Content/img/student-Daniel.jpg" alt="Daniel">
+                    <a id="danielClick" href="#clickNotification"><img src="~/Content/img/student-Daniel.jpg" alt="Daniel"></a>
                     <p>Daniel</p>
                 </div>
             </div>
@@ -62,6 +63,14 @@
             </div>
         </div>
     </div>
+
+    <!-- Early Bird Information POPUP-->
+    <div id="clickNotification" class="ClickOverlay">
+        <div class="ClickPopup">
+            <img src="~/Content/img/" alt="Reggie">
+        </div>
+    </div>
+
 </body>
 
 
