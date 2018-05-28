@@ -7,6 +7,7 @@ namespace _5051.Models
 {
     public class AttendanceViewModel
     {
+        //List of Attendance Entries
         public List<AttendanceEntryModel> AttendanceList = new List<AttendanceEntryModel>();
     }
 }
