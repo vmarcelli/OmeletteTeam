@@ -44,41 +44,14 @@
             border-radius: 5px;
         }
 
-        .content {
-            background-color: #FEBC04;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-
-        .titleAdmin {
-            color: #137F7A;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .search {
-            float: right;
-            padding: 2px;
-            margin-top: 8px;
-            margin-right: 16px;
-            border-style: solid;
-            border-color: #DDB36B;
-            border-radius: 25px;
-            font-size: 17px;
-        }
-
         .btn-primary {
             background-color: #DDB36B;
             outline-color: #DDB36B;
             border: none;
         }
+
     </style>
+
 </head>
 
 <div class="row">
@@ -100,9 +73,54 @@
         <div id="home" class="tab-pane fade in active">
             <div class="outerContainer">
                 <button type="button" class="btn btn-primary">Add Administrator Account</button>
+                
                 <div class="innerContainer">
+                    <br />
                     <h3>Settings</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <br />
+
+                    <!-- reset calender year -->
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            <p>Reset calender year</p>
+                        </div>
+
+                        <div class="col-md-9">
+                            <button type="button" class="btn btn-primary">Reset</button>
+                        </div>
+                        <br />
+
+                    </div>
+                    <br />
+
+                    <!-- add admin -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Add administrator</p>
+                        </div>
+
+                        <div class="col-md-9">
+                            <button type="button" class="btn btn-primary">+</button>
+                        </div>
+                        <br />
+
+                    </div>
+                    <br />
+
+                    <!-- remove admin -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Remove administrator</p>
+                        </div>
+
+                        <div class="col-md-9">
+                            <button type="button" class="btn btn-primary">-</button>
+                        </div>
+                        <br />
+                    </div>
+                    <br />
+
                 </div>
             </div>
         </div>
