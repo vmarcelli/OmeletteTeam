@@ -1,35 +1,25 @@
 ﻿.kiosk-body {
     background-color: #EBC41C;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
 }
 
-@media screen and (min-device-width:698px) {
-    div#showgrid {
-        width: 698px;
-        margin: auto;
-    }
+.box {
+    padding-top: 10px;
+    background-color: #66C1C1;
+    border-radius: 30px;
+    width: 190px;
+    height: 240px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-div.column {
-    border-style: solid;
-    border-width: 1px;
+.photo {
+    border-radius: 20px;
 }
 
-.row {
-    width: 100%;
-    margin: auto;
-}
-
-@media (min-device-width: 698px) {
-    .column {
-        width: 230px;
-        height: 230px;
-        display: inline;
-        float: left;
-    }
-}
-
-.column {
-    width: 230px;
-    height: 230px;
-    margin: auto;
+p {
+    padding-top: 30px;
 }

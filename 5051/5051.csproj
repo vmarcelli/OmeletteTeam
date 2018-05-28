@@ -248,6 +248,8 @@
     <Content Include="Content\img\Report PDF.png" />
     <Content Include="Content\img\Report\Report_ProgressGraph.png" />
     <Content Include="Content\img\Report\Report_YearGraph.png" />
+    <Content Include="Content\img\SignedOutMessage.png" />
+    <Content Include="Content\img\SignInMessage.png" />
     <Content Include="Content\img\student-John.jpg" />
     <Content Include="Content\img\student-Daniel.jpg" />
     <Content Include="Content\img\student-Dwayne.jpg" />
