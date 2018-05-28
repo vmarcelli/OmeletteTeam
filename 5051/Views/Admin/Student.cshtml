@@ -1,4 +1,5 @@
 ﻿@model _5051.Models.AttendanceEntryModel
+
 @* Title of page, Student *@
 @{
     ViewBag.Title = "Student";
@@ -84,6 +85,7 @@
 
 <div class="container">
     
+    <!-- admin tabs -->
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#home">Student</a></li>
         <li><a href="~/Admin/Report/">Reporting</a></li>
@@ -95,6 +97,7 @@
         <div id="home" class="tab-pane fade in active">
             <div class="outerContainer">
 
+                <!--buttons to add and remove student -->
                 <button type="button" class="btn btn-primary">Add Student</button>
                 <button type="button" class="btn btn-primary">Remove Student</button>
                 <input class="search" type="text" placeholder="Search Students..">
@@ -127,24 +130,22 @@
                                         <br /><p><b>John</b></p>
 
                                         <a href="~/Admin/Report/">
-                                             <img src="~/Content/img/student-John.jpg" alt="John" height=100px>
+                                            <img src="~/Content/img/student-John.jpg" alt="John" height=100px>
                                         </a>
                                     </div>
-
                                     <!-- Student attendance area-->
                                     <div class="col-md-6">
                                         <p>
-
-                                            <br /> <br /> <br />
-                                            Time in: 2:05
-                                            <br />
-                                            Time out: 3:40PM
-
-                                            <!-- photo of up or down arrow  -->
-                                            <br />
-                                            <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
-                                        </p>
-                                    </div>
+                                        <br /> <br /> <br />
+                                        TimeIn: @Model.TimeOut
+                                        <br />
+                                        Time out: @Model.TimeOut
+                                       
+                                    <!-- photo of up or down arrow  -->
+                                    <br />
+                                     <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
+                                </p>
+                            </div>
                                 </div>
 
                             </div>
