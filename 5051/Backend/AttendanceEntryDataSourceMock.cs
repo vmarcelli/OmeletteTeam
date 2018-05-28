@@ -115,6 +115,11 @@ namespace _5051.Backend
             Create(new AttendanceEntryModel("8:54 am", "2:05 pm"));
             Create(new AttendanceEntryModel("8:59 am", "3:00 pm"));
             Create(new AttendanceEntryModel("10:00 am", "1:00 pm"));
+            Create(new AttendanceEntryModel("1:00 pm", "1:55 pm"));
+            Create(new AttendanceEntryModel("11:54 am", "2:05 pm"));
+            Create(new AttendanceEntryModel("9:59 am", "3:00 pm"));
+            Create(new AttendanceEntryModel("10:00 am", "1:03 pm"));
+            Create(new AttendanceEntryModel("12:00 pm", "2:00 pm"));
         }
     }
 }
