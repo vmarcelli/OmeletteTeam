@@ -1,13 +1,19 @@
-﻿window.onload = function () {
+﻿// javascript for kiosk page
+
+window.onload = function () {
+    // gets daniel box
     var daniel = document.getElementById("daniel");
 
     daniel.onclick = function () {
-        // Get the modal
+        // gets signin/signout modal
         var signin = document.getElementById('in');
         var signout = document.getElementById('out');
+
+        // gets signin/ signout close buttons
         var inSpan = document.getElementsByClassName("close")[0];
         var outSpan = document.getElementsByClassName("close")[1];
 
+        // sets opacity of image and displays correct signin/signout message
         if (this.style.opacity == 0.5) {
             this.style.opacity = 1;   
             signout.style.display = "block";
@@ -16,19 +22,18 @@
             signin.style.display = "block";
         }   
 
-        // When the user clicks on <span> (x), close the modal
+        // closes when user clicks the signin or signout 'x'
         inSpan.onclick = function () {
             signin.style.display = "none";
         }
 
-        // When the user clicks on <span> (x), close the modal
         outSpan.onclick = function () {
             signout.style.display = "none";
         }
 
 
 
-        // When the user clicks anywhere outside of the modal, close it
+        // closes modal if user clicks anywhere outside of modal
         window.onclick = function (event) {
             if (event.target == signin) {
                 signin.style.display = "none";
@@ -36,7 +41,6 @@
                 signout.style.display = "none";
             }
         }
-
     } 
 };
 
