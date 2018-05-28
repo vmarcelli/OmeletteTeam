@@ -8,6 +8,75 @@
     @*imports google roboto font*@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="~/Content/kiosk.css">
+
+
+    <style>
+
+        /* Popup overlay darkens rest of screen, except the popup*/
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        /* Overlay opacity */
+        .overlay:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* The Box that appears to display badge info */
+        .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            width: 30%;
+            position: relative;
+            transition: all 5s ease-in-out;
+        }
+
+        /* Popup Title */
+        .popup h2 {
+            margin-top: 0;
+            color: #333;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        /* Close button for popups */
+        .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Close button color for hover */
+        .popup .close:hover {
+            color: #06D85F;
+        }
+
+        /* Text/Content inside of the popup */
+        .popup .content {
+            font-size: 20px;
+            max-height: 30%;
+            overflow: auto;
+        }
+
+    </style> 
+    
+
+
 </head>
 
 <body class="kiosk-body">
@@ -31,11 +100,17 @@
                         <p>Jess</p>
                     </div>  
                 </div>
+<<<<<<< HEAD
                 <div class="col-md-4">
                     <div class="box">
                         <img class="photo" src="~/Content/img/student-Daniel.jpg" alt="Daniel">
                         <p>Daniel</p>
                     </div>
+=======
+                <div class="col-md-4 column">
+                    <a id="danielClick" href="#clickNotification"><img src="~/Content/img/student-Daniel.jpg" alt="Daniel"></a>
+                    <p>Daniel</p>
+>>>>>>> 1794cba02e04cc5b7cac59cd3d9f6cf4d8a11b97
                 </div>
             </div>
             <div class="row">
@@ -80,6 +155,20 @@
             </div>
         </div>
     </div>
+
+    <!-- Early Bird Information POPUP-->
+    <div id="clickNotification" class="overlay">
+
+            <div class="popup">
+                <h2>Signed in!</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    <img src="~/Content/img/SignInMessage.png" alt="ClickIn" width="300">
+                </div>
+            </div>
+ 
+    </div>
+
 </body>
 
 
