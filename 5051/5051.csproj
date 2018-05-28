@@ -234,6 +234,7 @@
     <Content Include="Content\img\Admin_Settings_Tab.png" />
     <Content Include="Content\img\Admin_Student_Tab.png" />
     <Content Include="Content\img\Expanded_Student_View.png" />
+    <Content Include="Content\img\greenUp.png" />
     <Content Include="Content\img\homepage.png" />
     <Content Include="Content\img\homepage\apple.png" />
     <Content Include="Content\img\homepage\pencil.png" />
@@ -245,7 +246,10 @@
     <Content Include="Content\img\Logo.png" />
     <Content Include="Content\img\logos\logo_white.png" />
     <Content Include="Content\img\logos\logo_yellow.png" />
+    <Content Include="Content\img\redDown.png" />
     <Content Include="Content\img\Report PDF.png" />
+    <Content Include="Content\img\Report\Report_ProgressGraph.png" />
+    <Content Include="Content\img\Report\Report_YearGraph.png" />
     <Content Include="Content\img\student-John.jpg" />
     <Content Include="Content\img\student-Daniel.jpg" />
     <Content Include="Content\img\student-Dwayne.jpg" />
@@ -278,6 +282,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\PDF\JohnnySmithAttendanceReport.pdf" />
     <None Include="Properties\PublishProfiles\505120180517030019 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
