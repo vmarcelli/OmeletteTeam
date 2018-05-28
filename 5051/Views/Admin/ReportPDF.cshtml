@@ -2,13 +2,35 @@
 @{
     ViewBag.Title = "ReportPDF";
 }
+
+<head>
+    <style>
+        #pdfTitle {
+            font-family:Arial, sans-serif;
+            font-size: 48px;
+        }
+        #pdfCaption {
+            font-family: Arial, sans-serif;
+            font-size: 28px;
+        }
+        #pdfBox {
+            border-color:black;
+            width: 80%;
+            height: 150px;
+        }
+    </style>
+</head>
+
 <!--Title text for report page-->
 <center><h2>Report PDF</h2></center>
     <!--button to take you back to admin report page-->
 @Html.ActionLink("Back", "Index", "Admin/Report", null, new { @class = "btn btn-primary" })
 
-    <!--Wireframe image of admin report sample-->
-<center><img src="~/Content/img/Report PDF.png" alt="Report PDF" usemap="#AdminReportPDFMap "></center>
+<!-- Title text for Report PDF -->
+<h1 id="pdfTitle">
+    If you are seeing this page instead of having a downloaded
+    PDF, something went wrong.
+</h1>
 
 <!-- map for navigation -->
 <map name="AdminReportPDFMap">
