@@ -31,16 +31,26 @@ namespace _5051.Models
         public void Initialize()
         {
             Id = Guid.NewGuid().ToString();
+        }
+
+        /// <summary>
+        /// New Attendance Entry
+        /// </summary>
+        public AttendanceEntryModel()
+        {
+            Initialize();
             TimeIn = "";
             TimeOut = "";
         }
 
         /// <summary>
-        /// New Avatar
+        /// New Attendance Entry with parameters for check-in and check-out time
         /// </summary>
-        public AttendanceEntryModel()
+        public AttendanceEntryModel(string timeIn, string timeOut)
         {
             Initialize();
+            TimeIn = timeIn;
+            TimeOut = timeOut;
         }
 
     }
