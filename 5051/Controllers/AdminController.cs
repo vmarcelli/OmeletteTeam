@@ -4,12 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using _5051.Models;
+using _5051.Backend;
 
 namespace _5051.Controllers
 {
     public class AdminController : Controller
     {
-        AttendanceEntryModel attendanceEntry = new AttendanceEntryModel("11:00 am", "2:00 pm");
+        private AttendanceEntryDataSourceMock attendanceDataSource = AttendanceEntryDataSourceMock.Instance;
+        //AttendanceEntryModel attendanceEntry = new AttendanceEntryModel("11:00 am", "2:00 pm");
         // GET: Admin
         public ActionResult Index()
         {
@@ -31,7 +33,8 @@ namespace _5051.Controllers
         // GET: Student
         public ActionResult Student()
         {
-            return View(attendanceEntry);
+            var list = attendanceDataSource.Index();
+            return View(list);
         }
 
         // GET: Report
@@ -60,8 +63,8 @@ namespace _5051.Controllers
         // GET: Avatar/Edit/5
         public ActionResult Update(string id = null)
         {
-            var temp = attendanceEntry;
-            return View(temp);
+            
+            return View();
         }
 
         /// <summary>
@@ -90,8 +93,7 @@ namespace _5051.Controllers
                 return View(data);
             }
 
-            attendanceEntry.TimeIn = data.TimeIn;
-            attendanceEntry.TimeOut = data.TimeOut;
+            //Update
 
             return RedirectToAction("Student");
         }

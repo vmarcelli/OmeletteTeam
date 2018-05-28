@@ -112,13 +112,13 @@ namespace _5051.Backend
         /// </summary>
         public void Initialize()
         {
+            Create(new AttendanceEntryModel("8:00 am", "11:00 am"));
+            Create(new AttendanceEntryModel("8:05 am", "11:00 am"));
+            Create(new AttendanceEntryModel("9:00 am", "11:00 am"));
             Create(new AttendanceEntryModel("10:00 am", "11:00 am"));
-            Create(new AttendanceEntryModel("10:00 am", "11:00 am"));
-            Create(new AttendanceEntryModel("10:00 am", "11:00 am"));
-            Create(new AttendanceEntryModel("10:00 am", "11:00 am"));
-            Create(new AttendanceEntryModel("10:00 am", "11:00 am"));
-            Create(new AttendanceEntryModel("10:00 am", "11:00 am"));
-            Create(new AttendanceEntryModel("10:00 am", "11:00 am"));
+            Create(new AttendanceEntryModel("12:00 pm", "11:00 am"));
+            Create(new AttendanceEntryModel("1:00 pm", "11:00 am"));
+            Create(new AttendanceEntryModel("2:00 pm", "11:00 am"));
         }
     }
 }
