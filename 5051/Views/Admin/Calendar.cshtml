@@ -39,9 +39,11 @@
             background-color: #FFFFFF;
             padding-right: 15px;
             padding-left: 15px;
+            padding-top: 20px; 
             margin-right: auto;
             margin-left: auto;
             border-radius: 5px;
+            margin-top: 20px; 
         }
 
         .content {
@@ -99,11 +101,23 @@
     <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
             <div class="outerContainer">
-                <button type="button" class="btn btn-primary">Import Calendar</button>
+                <button type="button" class="btn btn-primary">Edit Calendar</button>
                 <input class="search" type="text" placeholder="Search Calendar..">
                 <div class="innerContainer">
-                    <h3>Calendar</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <center>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <p><b>First Day Of Class:</b> March 2, 2017</p>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <p><b>Last Day of Class:</b> March 3, 2018</p>
+                            </div>
+
+                        </div>
+                    </center>
+                    <center>
+                        <iframe src="https://calendar.google.com/calendar/embed?src=egjtv6tqan0c5t5sscthrlumik%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                    </center>
                 </div>
             </div>
         </div>
