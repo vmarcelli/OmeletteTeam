@@ -8,81 +8,14 @@
     @*imports google roboto font*@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="~/Content/kiosk.css">
-
-
-    <style>
-
-        /* Popup overlay darkens rest of screen, except the popup*/
-        .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            transition: opacity 500ms;
-            visibility: hidden;
-            opacity: 0;
-        }
-
-            /* Overlay opacity */
-            .overlay:target {
-                visibility: visible;
-                opacity: 1;
-            }
-
-        /* The Box that appears to display badge info */
-        .popup {
-            margin: 70px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 5px;
-            width: 30%;
-            position: relative;
-            transition: all 5s ease-in-out;
-        }
-
-            /* Popup Title */
-            .popup h2 {
-                margin-top: 0;
-                color: #333;
-                font-family: Tahoma, Arial, sans-serif;
-            }
-
-            /* Close button for popups */
-            .popup .close {
-                position: absolute;
-                top: 20px;
-                right: 30px;
-                transition: all 200ms;
-                font-size: 30px;
-                font-weight: bold;
-                text-decoration: none;
-                color: #333;
-            }
-
-                /* Close button color for hover */
-                .popup .close:hover {
-                    color: #06D85F;
-                }
-
-            /* Text/Content inside of the popup */
-            .popup .content {
-                font-size: 20px;
-                max-height: 30%;
-                overflow: auto;
-            }
-    </style>
-
-
-
+    <script type="text/javascript" src="~/Content/js/kiosk.js"></script>
 </head>
 
 <body class="kiosk-body">
     <div class="text-center">
         <div class="row">
             @*SnapAttendance logo*@
-            <img src="~/Content/img/logos/logo_white.png" alt="SnapAttendanceLogo">
+            <img class="logo" src="~/Content/img/logos/logo_white.png" alt="SnapAttendanceLogo">
         </div>
 
         <div id="showgrid">
@@ -101,7 +34,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="box">
-                        <a id="danielClick" href="#clickNotification"><img class="photo" src="~/Content/img/student-Daniel.jpg" alt="Daniel"></a>
+                        <img class="photo" id="daniel" src="~/Content/img/student-Daniel.jpg" alt="Daniel">
                         <p>Daniel</p>
                     </div>
                 </div>
@@ -150,19 +83,26 @@
     </div>
 </body>
 
+<!-- Sign In Modal -->
+<div id="in" class="modal">
 
-<!-- Early Bird Information POPUP-->
-<div id="clickNotification" class="overlay">
-
-    <div class="popup">
-        <h2>Signed in!</h2>
-        <a class="close" href="#">&times;</a>
-        <div class="content">
-            <img src="~/Content/img/SignInMessage.png" alt="ClickIn" width="300">
-        </div>
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img class="img-responsive" src="~/Content/img/SignInMessage.png" alt="ClickIn" width="300">
     </div>
 
 </div>
+
+<!-- Sign Out Modal -->
+<div id="out" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img class="img-responsive" src="~/Content/img/SignedOutMessage.png" alt="ClickIn" width="300">
+    </div>
+
 
 
 
