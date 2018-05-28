@@ -6,6 +6,10 @@
     color: white;
 }
 
+.logo {
+    padding-top: 50px;
+}
+
 .box {
     padding-top: 10px;
     background-color: #66C1C1;
@@ -22,4 +26,58 @@
 
 p {
     padding-top: 30px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px;
+    height: 435px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+/* The Close Button */
+.close {
+    color: #137F78;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #137F78;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.img-responsive {
+    width: 350px; /* This value will depend on what size you want for your loading image, let's say it's 50px */
+    height: 350px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -160px; /* This needs to be half of the height */
+    margin-left: -175px; /* This needs to be half of the width */
 }

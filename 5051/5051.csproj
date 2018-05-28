@@ -233,6 +233,8 @@
     <Content Include="Content\img\AdminReports.png" />
     <Content Include="Content\img\Admin_Settings_Tab.png" />
     <Content Include="Content\img\Admin_Student_Tab.png" />
+    <Content Include="Content\img\SignedOutMessage.png" />
+    <Content Include="Content\img\SignInMessage.png" />
     <Content Include="Content\img\Expanded_Student_View.png" />
     <Content Include="Content\img\greenUp.png" />
     <Content Include="Content\img\homepage.png" />
@@ -274,6 +276,7 @@
     <Content Include="Content\img\Student\StudentProfile_Picture.jpg" />
     <Content Include="Content\img\student_homepage.png" />
     <Content Include="Content\img\student_login.png" />
+    <Content Include="Content\js\kiosk.js" />
     <Content Include="Content\kiosk.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
