@@ -144,13 +144,48 @@
                                         <br />
                                         Time out: @entry.TimeOut
                                         <br />
-                                    <!-- photo of up or down arrow  -->
-                                    <br />
-                                     <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
-                                </p>
-                            </div>
-                                </div>
+                                        <!-- photo of up or down arrow  -->
+                                        <br />
+                                        <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
+                                        </p>
 
+                                        @using (Html.BeginForm())
+                                        {
+                                        @Html.AntiForgeryToken()
+                                        @Html.HiddenFor(m => Model[0].Id)
+
+                                        <div class="row">
+                                            <div class="col-sm-3 text-right">
+                                                @Html.DisplayNameFor(m => Model[0].TimeIn)
+                                            </div>
+                                            <div class="col-sm-4">
+                                                @Html.EditorFor(m => Model[0].TimeIn)
+                                                @Html.ValidationMessageFor(m => Model[0].TimeIn)
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-3 text-right">
+                                                @Html.DisplayNameFor(m => Model[0].TimeOut)
+                                            </div>
+                                            <div class="col-sm-4">
+                                                @Html.EditorFor(m => Model[0].TimeOut)
+                                                @Html.ValidationMessageFor(m => Model[0].TimeOut);
+                                            </div>
+                                        </div>
+
+                                        <br />
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-sm-3 text-right">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                @Html.ActionLink("Cancel", "Index", new { id = Model[0].Id }, new { @class = "btn btn-success" })
+                                                <input type="submit" value="Update" class="btn btn-primary">
+                                            </div>
+                                        </div>
+                                        }
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Jess: row 1, column 2 -->
@@ -169,10 +204,10 @@
                                     <div class="col-md-6">
                                         <p>
                                             <br /> <br /> <br />
-                                            Time in: 11:26 AM
+                                            Time In: @Model[1].TimeIn
                                             <br />
-                                            Time out: 2:45 PM
-
+                                            Time out: @Model[1].TimeOut
+                                            <br />
                                             <!-- photo of up or down arrow  -->
                                             <br />
                                             <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
@@ -199,10 +234,10 @@
                                     <div class="col-md-6">
                                         <p>
                                             <br /> <br /> <br />
-                                            Time in: 9:23 AM
+                                            Time In: @Model[2].TimeIn
                                             <br />
-                                            Time out: 11:35 AM
-
+                                            Time out: @Model[2].TimeOut
+                                            <br />
                                             <!-- photo of up or down arrow  -->
                                             <br />
                                             <center><img src="~/Content/img/redDown.png" alt="red" height=50px></center>
