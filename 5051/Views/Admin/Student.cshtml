@@ -6,72 +6,15 @@
     ViewBag.Title = "Student";
     }
 
-    <head>
-        <!-- Link for the Roboto Thin style -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
-        <!-- Style used for Student Page -->
+<head>
 
-        <style>
-            /* light Teal background */
-            body {
-                background-color: #67C1C1;
-            }
+    <!-- Link for the Roboto Thin style -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 
-            /* Yellow Title */
-            h1 {
-                color: #FFC526;
-                font-family: 'Roboto', sans-serif;
-                font-size: 48px;
-                display: inline-block;
-            }
+    <!--Link to adminStudent.css-->
+    <link rel="stylesheet" type="text/css" href="~/Content/adminStudent.css">
 
-            /* logo formatting */
-            .logo {
-                padding: 10px 0px 0px 0px;
-                display: inline-block;
-            }
-
-            /* grey outer box formatting */
-            .outerContainer {
-                background-color: #E0E0E0;
-                padding: 10px 10px 10px 10px;
-            }
-
-            /* white inner box formatting */
-            .innerContainer {
-                background-color: #FFFFFF;
-                padding-right: 15px;
-                padding-left: 15px;
-                margin-right: auto;
-                margin-left: auto;
-                margin-top: 20px;
-                border-radius: 5px;
-            }
-
-            /* search bar formatting */
-            .search {
-                float: right;
-                padding: 2px;
-                margin-top: 8px;
-                margin-right: 16px;
-                border-style: solid;
-                border-color: #DDB36B;
-                border-radius: 25px;
-                font-size: 17px;
-            }
-
-            /* add student remove student formatting */
-            .btn-primary {
-                background-color: #DDB36B;
-                outline-color: #DDB36B;
-                border: none;
-            }
-
-            [type="date"] {
-                background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
-            }
-        </style>
-    </head>
+</head>
 
 @{
     if (Model == null || !Model.Any())
