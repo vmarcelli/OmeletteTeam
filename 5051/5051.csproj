@@ -356,7 +356,6 @@
     <Content Include="Views\Student\StudentBadges.cshtml" />
     <Content Include="Views\Student\StudentData.cshtml" />
     <Content Include="Views\Student\StudentHome.cshtml" />
-    <Content Include="Views\Home\EditMe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
