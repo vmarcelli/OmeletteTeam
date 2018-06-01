@@ -71,7 +71,6 @@
         /* Style for Navbar Badge Button*/
         #studentBadgesTab {
             background-color: #febc04;
-            width: 50%;
             color: white;
             padding: 10px;
             padding-left: 80px;
@@ -102,66 +101,26 @@
             margin-right: 3px;
         }
 
-        /* Popup overlay darkens rest of screen, except the popup*/
-        .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            transition: opacity 500ms;
-            visibility: hidden;
-            opacity: 0;
-        }
-
-            /* Overlay opacity */
-            .overlay:target {
-                visibility: visible;
-                opacity: 1;
-            }
-
-        /* The Box that appears to display badge info */
-        .popup {
-            margin: 70px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 5px;
-            width: 30%;
+        .dropdown {
             position: relative;
-            transition: all 5s ease-in-out;
+            display: inline-block;
         }
 
-            /* Popup Title */
-            .popup h2 {
-                margin-top: 0;
-                color: #333;
-                font-family: Tahoma, Arial, sans-serif;
-            }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
 
-            /* Close button for popups */
-            .popup .close {
-                position: absolute;
-                top: 20px;
-                right: 30px;
-                transition: all 200ms;
-                font-size: 30px;
-                font-weight: bold;
-                text-decoration: none;
-                color: #333;
-            }
-
-                /* Close button color for hover */
-                .popup .close:hover {
-                    color: #06D85F;
-                }
-
-            /* Text/Content inside of the popup */
-            .popup .content {
-                font-size: 20px;
-                max-height: 30%;
-                overflow: auto;
-            }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            border: 2px solid red;
+            padding: 10px;
+            border-radius: 25px;
+        }
     </style>
 </head>
 
@@ -194,7 +153,12 @@
 <center>
     <div class="row" id="badgeRow">
         <div class="col-sm-3">
-            <img src="~/Content/img/Student/StudentBadges_EarlyB1.png" class="img-responsive" alt="Badge 1" />
+            <div class="dropdown">
+                <img src="~/Content/img/Student/StudentBadges_EarlyB1.png" class="img-responsive" alt="Badge 1" />
+                <div class="dropdown-content">
+                    <div>Earn this badge by coming early to class!</div>
+                </div>
+            </div>
             <a id="badgeCaption" href="#earlyBirdPop">Bronze Early Bird</a>
         </div>
         <div class="col-sm-3">
