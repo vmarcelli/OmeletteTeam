@@ -117,13 +117,16 @@
 
         .dropdown:hover .dropdown-content {
             display: block;
-            border: 2px solid brown;
+            border: 4px solid #f2c924;
             padding: 10px;
             border-radius: 25px;
         }
 
         #dropDownText {
-
+            color: cadetblue;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -160,7 +163,9 @@
             <div class="dropdown">
                 <img src="~/Content/img/Student/StudentBadges_EarlyB1.png" class="img-responsive" alt="Badge 1" />
                 <div class="dropdown-content">
-                    <div>Earn this badge by coming early to class!</div>
+                    <div id="dropDownText">
+                        Earn this badge by coming early to class!
+                    </div>
                 </div>
             </div>
             <a id="badgeCaption" href="#earlyBirdPop">Bronze Early Bird</a>
