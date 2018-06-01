@@ -189,6 +189,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Backend\AttendanceEntryDataSourceMock.cs" />
+    <Compile Include="Backend\AttendanceEntryInterface.cs" />
     <Compile Include="Backend\StudentInterface.cs" />
     <Compile Include="Backend\StudentDataSourceMock.cs" />
     <Compile Include="Backend\StudentBackend.cs" />
@@ -208,10 +210,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\AttendanceModel.cs" />
     <Compile Include="Models\AttendanceEntryModel.cs" />
     <Compile Include="Models\AvatarModel.cs" />
-    <Compile Include="Models\AttendanceViewModel.cs" />
     <Compile Include="Models\StudentViewModel.cs" />
     <Compile Include="Models\AvatarViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -231,6 +231,8 @@
     <Content Include="Content\img\AdminReports.png" />
     <Content Include="Content\img\Admin_Settings_Tab.png" />
     <Content Include="Content\img\Admin_Student_Tab.png" />
+    <Content Include="Content\img\SignedOutMessage.png" />
+    <Content Include="Content\img\SignInMessage.png" />
     <Content Include="Content\img\Expanded_Student_View.png" />
     <Content Include="Content\img\greenUp.png" />
     <Content Include="Content\img\homepage.png" />
@@ -356,6 +358,7 @@
     <Content Include="Views\Student\StudentBadges.cshtml" />
     <Content Include="Views\Student\StudentData.cshtml" />
     <Content Include="Views\Student\StudentHome.cshtml" />
+    <Content Include="Views\Admin\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
