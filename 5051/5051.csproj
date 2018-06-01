@@ -326,6 +326,7 @@
     <Content Include="bin\System.Web.WebPages.Razor.xml" />
     <Content Include="bin\System.Web.WebPages.xml" />
     <Content Include="bin\WebGrease.dll" />
+    <Content Include="Content\adminSettings.css" />
     <Content Include="Content\adminReportPDF.css" />
     <Content Include="Content\adminReport.css" />
     <Content Include="Content\bootstrap.css" />
