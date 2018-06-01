@@ -274,6 +274,7 @@
     <Content Include="Content\img\Student\StudentProfile_Picture.jpg" />
     <Content Include="Content\img\student_homepage.png" />
     <Content Include="Content\img\student_login.png" />
+    <Content Include="Content\img\temp.gif" />
     <Content Include="Content\js\kiosk.js" />
     <Content Include="Content\kiosk.css" />
     <Content Include="favicon.ico" />
@@ -356,7 +357,6 @@
     <Content Include="Views\KioskSignIn\SignOutNotification.cshtml" />
     <Content Include="Views\Student\StudentBadges.cshtml" />
     <Content Include="Views\Student\StudentData.cshtml" />
-    <Content Include="Views\Student\StudentHome.cshtml" />
     <Content Include="Views\Admin\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
