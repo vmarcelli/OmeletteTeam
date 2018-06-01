@@ -1,0 +1,15 @@
+﻿#pdfTitle {
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+}
+
+#pdfCaption {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+}
+
+#pdfBox {
+    border-color: black;
+    width: 80%;
+    height: 150px;
+}
