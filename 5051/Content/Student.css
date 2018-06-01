@@ -105,3 +105,47 @@ body {
     font-weight: 500;
     font-size: 18px;
 }
+
+/* Container Data Section */
+#dataBox {
+    background-color: #58c4c2;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+/* Regular Text */
+#dataText {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: #127f79;
+}
+
+/* Container Titles */
+#dataTitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: white;
+}
+
+/* Grid Style */
+.grid-container {
+    display: grid;
+    align-content: center;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    background-color: #127f79;
+    padding: 5px;
+    width: 95%;
+}
+
+/* Box Style for each box in grid */
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 30px;
+}
