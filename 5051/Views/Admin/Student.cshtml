@@ -1,162 +1,168 @@
 ﻿@model IList<_5051.Models.AttendanceEntryModel>
+    @using system.linq
 
-@* Title of page, Student *@
-@{
+    @* Title of page, Student *@
+    @{
     ViewBag.Title = "Student";
-}
+    }
 
-<head>
-    <!-- Link for the Roboto Thin style -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
-    <!-- Style used for Student Page -->
+    <head>
+        <!-- Link for the Roboto Thin style -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+        <!-- Style used for Student Page -->
 
-    <style>
-        /* light Teal background */
-        body {
-            background-color: #67C1C1;
-        }
+        <style>
+            /* light Teal background */
+            body {
+                background-color: #67C1C1;
+            }
 
-        /* Yellow Title */
-        h1 {
-            color: #FFC526;
-            font-family: 'Roboto', sans-serif;
-            font-size: 48px;
-            display: inline-block;
-        }
+            /* Yellow Title */
+            h1 {
+                color: #FFC526;
+                font-family: 'Roboto', sans-serif;
+                font-size: 48px;
+                display: inline-block;
+            }
 
-        /* logo formatting */
-        .logo {
-            padding: 10px 0px 0px 0px;
-            display: inline-block;
-        }
+            /* logo formatting */
+            .logo {
+                padding: 10px 0px 0px 0px;
+                display: inline-block;
+            }
 
-        /* grey outer box formatting */
-        .outerContainer {
-            background-color: #E0E0E0;
-            padding: 10px 10px 10px 10px;
-        }
+            /* grey outer box formatting */
+            .outerContainer {
+                background-color: #E0E0E0;
+                padding: 10px 10px 10px 10px;
+            }
 
-        /* white inner box formatting */
-        .innerContainer {
-            background-color: #FFFFFF;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto;
-            margin-top: 20px; 
-            border-radius: 5px;
-        }
+            /* white inner box formatting */
+            .innerContainer {
+                background-color: #FFFFFF;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 20px;
+                border-radius: 5px;
+            }
 
-        /* search bar formatting */
-        .search {
-            float: right;
-            padding: 2px;
-            margin-top: 8px;
-            margin-right: 16px;
-            border-style: solid;
-            border-color: #DDB36B;
-            border-radius: 25px;
-            font-size: 17px;
-           
-        }
+            /* search bar formatting */
+            .search {
+                float: right;
+                padding: 2px;
+                margin-top: 8px;
+                margin-right: 16px;
+                border-style: solid;
+                border-color: #DDB36B;
+                border-radius: 25px;
+                font-size: 17px;
+            }
 
-        /* add student remove student formatting */
-        .btn-primary {
-            background-color: #DDB36B;
-            outline-color: #DDB36B;
-            border: none;
-        }
+            /* add student remove student formatting */
+            .btn-primary {
+                background-color: #DDB36B;
+                outline-color: #DDB36B;
+                border: none;
+            }
 
-        [type="date"] {
-            background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;     
-        }
+            [type="date"] {
+                background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+            }
+        </style>
+    </head>
 
+@{
+    if (Model == null || !Model.Any())
+    {
+    <div> No Students</div>
+    }
 
-    </style>
-</head>
+    else{
 
-<!-- logo image -->
-<div class="row">
-    <div class="center-block col-lg-12 logo">
-        <img src="~/Content/img/logos/logo_white.png" alt="">
-        <h1><b>Admin</b></h1>
+    <!-- logo image -->
+    <div class="row">
+        <div class="center-block col-lg-12 logo">
+            <img src="~/Content/img/logos/logo_white.png" alt="">
+            <h1><b>Admin</b></h1>
+        </div>
     </div>
-</div>
 
-<div class="container">
-    
-    <!-- admin tabs -->
-    <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#home">Student</a></li>
-        <li><a href="~/Admin/Report/">Reporting</a></li>
-        <li><a href="~/Admin/Calendar/">Calendar</a></li>
-        <li><a href="~/Admin/Settings/">Settings</a></li>
-    </ul>
+    <div class="container">
 
-    <div class="tab-content">
-        <div id="home" class="tab-pane fade in active">
-            <div class="outerContainer">
+        <!-- admin tabs -->
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Student</a></li>
+            <li><a href="~/Admin/Report/">Reporting</a></li>
+            <li><a href="~/Admin/Calendar/">Calendar</a></li>
+            <li><a href="~/Admin/Settings/">Settings</a></li>
+        </ul>
 
-                <!--buttons to add and remove student -->
-                <button type="button" class="btn btn-primary">Add Student</button>
-                <button type="button" class="btn btn-primary">Remove Student</button>
-                <input class="search" type="text" placeholder="Search Students..">
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <div class="outerContainer">
 
-                <div class="innerContainer">
+                    <!--buttons to add and remove student -->
+                    <button type="button" class="btn btn-primary">Add Student</button>
+                    <button type="button" class="btn btn-primary">Remove Student</button>
+                    <input class="search" type="text" placeholder="Search Students..">
 
-                    
+                    <div class="innerContainer">
 
-                    <div class="container">
 
-                        <div class="row">
-                            <div class="col-md-2">
-                                <h3>Students</h3>
+
+                        <div class="container">
+
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <h3>Students</h3>
+                                </div>
+
+                                <div class="col-md-10">
+                                    <br />
+                                    <input type="date" name="dateofbirth" id="dateofbirth">
+                                </div>
                             </div>
 
-                            <div class="col-md-10">
-                                <br />
-                                <input type="date" name="dateofbirth" id="dateofbirth">
-                            </div>
-                        </div>
+                            <!-- row 1 -->
+                            <div class="row">
+                                <!-- John: row 1, column 1 -->
+                                <div class="col-md-4">
 
-                        <!-- row 1 -->
-                        <div class="row">
-                            <!-- John: row 1, column 1 -->
-                            <div class="col-md-4">
+                                    <div class="row">
+                                        <!-- Image and name area -->
+                                        <div class="col-md-6">
+                                            <br /><p><b>John</b></p>
 
-                                <div class="row">
-                                    <!-- Image and name area -->
-                                    <div class="col-md-6">
-                                        <br /><p><b>John</b></p>
+                                            <a href="~/Admin/Report/">
+                                                <img src="~/Content/img/student-John.jpg" alt="John" height=100px>
+                                            </a>
+                                        </div>
+                                        <!-- Student attendance area-->
+                                        <div class="col-md-6">
+                                            <p>
+                                                <br /> <br /> <br />
+                                                @{
+                                                var entry = Model[0];
+                                                }
+                                                Time In: @entry.TimeIn
+                                                <br />
+                                                Time out: @entry.TimeOut
+                                                <br />
+                                                <!-- photo of up or down arrow  -->
+                                                <br />
+                                                <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
+                                            </p>
 
-                                        <a href="~/Admin/Report/">
-                                            <img src="~/Content/img/student-John.jpg" alt="John" height=100px>
-                                        </a>
-                                    </div>
-                                    <!-- Student attendance area-->
-                                    <div class="col-md-6">
-                                        <p>
-                                        <br /> <br /> <br />
-                                        @{
-                                            var entry = Model[0];
-                                         }
-                                        Time In: @entry.TimeIn
-                                        <br />
-                                        Time out: @entry.TimeOut
-                                        <br />
-                                        <!-- photo of up or down arrow  -->
-                                        <br />
-                                        <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
-                                        </p>
-
-                                        @using (Html.BeginForm())
-                                        {
-                                        @Html.AntiForgeryToken()
-                                        @Html.HiddenFor(m => Model[0].Id)
+                                            @using (Html.BeginForm())
+                                            {
+                                            @Html.AntiForgeryToken()
+                                            @Html.HiddenFor(m => Model[0].Id)
 
 
-                                        <br />
-                                        <br />
+                                            <br />
+                                            <br />
 
                                             <div class="row">
                                                 <div class="col-sm-3 text-right">
@@ -166,262 +172,264 @@
                                                     @Html.ActionLink("Update", "Update", new { id = Model[0].Id }, new { @class = "btn btn-primary" })
                                                 </div>
                                             </div>
-                                        }
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Jess: row 1, column 2 -->
-                            <div class="col-md-4">
-
-                                <div class="row">
-                                    <!-- Image and name area -->
-                                    <div class="col-md-6">
-                                        <br /><p><b>Jess</b></p>
-                                        <a href="~/Admin/Report/">
-                                            <img src="~/Content/img/student-Jess.jpg" alt="Jess" height=100px>
-                                        </a>
-                                    </div>
-
-                                    <!-- Student attendance area-->
-                                    <div class="col-md-6">
-                                        <p>
-                                            <br /> <br /> <br />
-                                            Time In: @Model[1].TimeIn
-                                            <br />
-                                            Time out: @Model[1].TimeOut
-                                            <br />
-                                            <!-- photo of up or down arrow  -->
-                                            <br />
-                                            <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
-
-                                        </p>
+                                            }
+                                        </div>
                                     </div>
                                 </div>
 
-                            </div>
+                                <!-- Jess: row 1, column 2 -->
+                                <div class="col-md-4">
 
-                            <!-- Daniel: row 1, column 3 -->
-                            <div class="col-md-4">
+                                    <div class="row">
+                                        <!-- Image and name area -->
+                                        <div class="col-md-6">
+                                            <br /><p><b>Jess</b></p>
+                                            <a href="~/Admin/Report/">
+                                                <img src="~/Content/img/student-Jess.jpg" alt="Jess" height=100px>
+                                            </a>
+                                        </div>
 
-                                <div class="row">
-                                    <!-- Image and name area -->
-                                    <div class="col-md-6">
-                                        <br /><p><b>Daniel</b></p>
-                                        <a href="~/Admin/Report/">
-                                            <img src="~/Content/img/student-Daniel.jpg" alt="Daniel" height=100px>
-                                        </a>
+                                        <!-- Student attendance area-->
+                                        <div class="col-md-6">
+                                            <p>
+                                                <br /> <br /> <br />
+                                                Time In: @Model[1].TimeIn
+                                                <br />
+                                                Time out: @Model[1].TimeOut
+                                                <br />
+                                                <!-- photo of up or down arrow  -->
+                                                <br />
+                                                <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
+
+                                            </p>
+                                        </div>
                                     </div>
 
-                                    <!-- Student attendance area-->
-                                    <div class="col-md-6">
-                                        <p>
-                                            <br /> <br /> <br />
-                                            Time In: @Model[2].TimeIn
-                                            <br />
-                                            Time out: @Model[2].TimeOut
-                                            <br />
-                                            <!-- photo of up or down arrow  -->
-                                            <br />
-                                            <center><img src="~/Content/img/redDown.png" alt="red" height=50px></center>
-
-                                        </p>
-                                    </div>
                                 </div>
 
+                                <!-- Daniel: row 1, column 3 -->
+                                <div class="col-md-4">
+
+                                    <div class="row">
+                                        <!-- Image and name area -->
+                                        <div class="col-md-6">
+                                            <br /><p><b>Daniel</b></p>
+                                            <a href="~/Admin/Report/">
+                                                <img src="~/Content/img/student-Daniel.jpg" alt="Daniel" height=100px>
+                                            </a>
+                                        </div>
+
+                                        <!-- Student attendance area-->
+                                        <div class="col-md-6">
+                                            <p>
+                                                <br /> <br /> <br />
+                                                Time In: @Model[2].TimeIn
+                                                <br />
+                                                Time out: @Model[2].TimeOut
+                                                <br />
+                                                <!-- photo of up or down arrow  -->
+                                                <br />
+                                                <center><img src="~/Content/img/redDown.png" alt="red" height=50px></center>
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
+
+                            <!-- row 2 -->
+                            <div class="row">
+                                <!-- Jason: row 2, column 1 -->
+                                <div class="col-md-4">
+
+                                    <div class="row">
+                                        <!-- Image and name area -->
+                                        <div class="col-md-6">
+                                            <br /><p><b>Jason</b></p>
+                                            <a href="~/Admin/Report/">
+                                                <img src="~/Content/img/student-Jason.jpg" alt="Jason" height=100px>
+                                            </a>
+                                        </div>
+
+                                        <!-- Student attendance area-->
+                                        <div class="col-md-6">
+                                            <p>
+                                                <br /> <br /> <br />
+                                                Time in: 9:02 AM
+                                                <br />
+                                                Time out: 12:23 PM
+
+                                                <!-- photo of up or down arrow  -->
+                                                <br />
+                                                <center><img src="~/Content/img/redDown.png" alt="red" height=50px></center>
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Dwayne: row 2, column 2 -->
+                                <div class="col-md-4">
+
+                                    <div class="row">
+                                        <!-- Image and name area -->
+                                        <div class="col-md-6">
+                                            <br /><p><b>Dwayne</b></p>
+                                            <a href="~/Admin/Report/">
+                                                <img src="~/Content/img/student-Dwayne.jpg" alt="Dwayne" height=100px>
+                                            </a>
+                                        </div>
+
+                                        <!-- Student attendance area-->
+                                        <div class="col-md-6">
+                                            <p>
+                                                <br /> <br /> <br />
+                                                Time in: 8:35 AM
+                                                <br />
+                                                Time out: 1:43 PM
+
+                                                <!-- photo of up or down arrow  -->
+                                                <br />
+                                                <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Reggie: row 2, column 3 -->
+                                <div class="col-md-4">
+
+                                    <div class="row">
+                                        <!-- Image and name area -->
+                                        <div class="col-md-6">
+                                            <br /><p><b>Reggie</b></p>
+                                            <a href="~/Admin/Report/">
+                                                <img src="~/Content/img/student-Reggie.jpg" alt="Reggie" height=100px>
+                                            </a>
+                                        </div>
+
+                                        <!-- Student attendance area-->
+                                        <div class="col-md-6">
+                                            <p>
+                                                <br /> <br /> <br />
+                                                Time in: 12:30 PM
+                                                <br />
+                                                Time out: 4:00 PM
+
+                                                <!-- photo of up or down arrow  -->
+                                                <br />
+                                                <center><img src="~/Content/img/redDown.png" alt="red" height=50px></center>
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- row 3 -->
+                            <div class="row">
+                                <!-- Sarah: row 3, column 1 -->
+                                <div class="col-md-4">
+
+                                    <div class="row">
+                                        <!-- Image and name area -->
+                                        <div class="col-md-6">
+                                            <br /><p><b>Sarah</b></p>
+                                            <a href="~/Admin/Report/">
+                                                <img src="~/Content/img/student-Sarah.jpg" alt="Sarah" height=100px>
+                                            </a>
+                                        </div>
+
+                                        <!-- Student attendance area-->
+                                        <div class="col-md-6">
+                                            <p>
+                                                <br /> <br /> <br />
+                                                Time in: 10:30 AM
+                                                <br />
+                                                Time out: 2:30 PM
+
+                                                <!-- photo of up or down arrow  -->
+                                                <br />
+                                                <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Taylor: row 3, column 2 -->
+                                <div class="col-md-4">
+
+                                    <div class="row">
+                                        <!-- Image and name area -->
+                                        <div class="col-md-6">
+                                            <br /><p><b>Taylor</b></p>
+                                            <a href="~/Admin/Report/">
+                                                <img src="~/Content/img/student-Taylor.jpg" alt="Taylor" height=100px>
+                                            </a>
+                                        </div>
+
+                                        <!-- Student attendance area-->
+                                        <div class="col-md-6">
+                                            <p>
+                                                <br /> <br /> <br />
+                                                Time in: 1:09 PM
+                                                <br />
+                                                Time out: 3:50 PM
+
+                                                <!-- photo of up or down arrow  -->
+                                                <br />
+                                                <center><img src="~/Content/img/redDown.png" alt="red" height=50px></center>
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Korina: row 3, column 3 -->
+                                <div class="col-md-4">
+
+                                    <div class="row">
+                                        <!-- Image and name area -->
+                                        <div class="col-md-6">
+                                            <br /><p><b>Korina</b></p>
+                                            <a href="~/Admin/Report/">
+                                                <img src="~/Content/img/student-Korina.jpg" alt="Korina" height=100px>
+                                            </a>
+                                        </div>
+
+                                        <!-- Student attendance area-->
+                                        <div class="col-md-6">
+                                            <p>
+                                                <br /> <br /> <br />
+                                                Time in: 8:56
+                                                <br />
+                                                Time out: 2:05
+
+                                                <!-- photo of up or down arrow  -->
+                                                <br />
+                                                <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br /> <br />
                         </div>
 
-                        <!-- row 2 -->
-                        <div class="row">
-                            <!-- Jason: row 2, column 1 -->
-                            <div class="col-md-4">
-
-                                <div class="row">
-                                    <!-- Image and name area -->
-                                    <div class="col-md-6">
-                                        <br /><p><b>Jason</b></p>
-                                        <a href="~/Admin/Report/">
-                                            <img src="~/Content/img/student-Jason.jpg" alt="Jason" height=100px>
-                                        </a>
-                                    </div>
-
-                                    <!-- Student attendance area-->
-                                    <div class="col-md-6">
-                                        <p>
-                                            <br /> <br /> <br />
-                                            Time in: 9:02 AM
-                                            <br />
-                                            Time out: 12:23 PM
-
-                                            <!-- photo of up or down arrow  -->
-                                            <br />
-                                            <center><img src="~/Content/img/redDown.png" alt="red" height=50px></center>
-
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <!-- Dwayne: row 2, column 2 -->
-                            <div class="col-md-4">
-
-                                <div class="row">
-                                    <!-- Image and name area -->
-                                    <div class="col-md-6">
-                                        <br /><p><b>Dwayne</b></p>
-                                        <a href="~/Admin/Report/">
-                                            <img src="~/Content/img/student-Dwayne.jpg" alt="Dwayne" height=100px>
-                                        </a>
-                                    </div>
-
-                                    <!-- Student attendance area-->
-                                    <div class="col-md-6">
-                                        <p>
-                                            <br /> <br /> <br />
-                                            Time in: 8:35 AM
-                                            <br />
-                                            Time out: 1:43 PM
-
-                                            <!-- photo of up or down arrow  -->
-                                            <br />
-                                            <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
-
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <!-- Reggie: row 2, column 3 -->
-                            <div class="col-md-4">
-
-                                <div class="row">
-                                    <!-- Image and name area -->
-                                    <div class="col-md-6">
-                                        <br /><p><b>Reggie</b></p>
-                                        <a href="~/Admin/Report/">
-                                            <img src="~/Content/img/student-Reggie.jpg" alt="Reggie" height=100px>
-                                        </a>
-                                    </div>
-
-                                    <!-- Student attendance area-->
-                                    <div class="col-md-6">
-                                        <p>
-                                            <br /> <br /> <br />
-                                            Time in: 12:30 PM
-                                            <br />
-                                            Time out: 4:00 PM
-
-                                            <!-- photo of up or down arrow  -->
-                                            <br />
-                                            <center><img src="~/Content/img/redDown.png" alt="red" height=50px></center>
-
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- row 3 -->
-                        <div class="row">
-                            <!-- Sarah: row 3, column 1 -->
-                            <div class="col-md-4">
-
-                                <div class="row">
-                                    <!-- Image and name area -->
-                                    <div class="col-md-6">
-                                        <br /><p><b>Sarah</b></p>
-                                        <a href="~/Admin/Report/">
-                                            <img src="~/Content/img/student-Sarah.jpg" alt="Sarah" height=100px>
-                                        </a>
-                                    </div>
-
-                                    <!-- Student attendance area-->
-                                    <div class="col-md-6">
-                                        <p>
-                                            <br /> <br /> <br />
-                                            Time in: 10:30 AM
-                                            <br />
-                                            Time out: 2:30 PM
-
-                                            <!-- photo of up or down arrow  -->
-                                            <br />
-                                            <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
-
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <!-- Taylor: row 3, column 2 -->
-                            <div class="col-md-4">
-
-                                <div class="row">
-                                    <!-- Image and name area -->
-                                    <div class="col-md-6">
-                                        <br /><p><b>Taylor</b></p>
-                                        <a href="~/Admin/Report/">
-                                            <img src="~/Content/img/student-Taylor.jpg" alt="Taylor" height=100px>
-                                        </a>
-                                    </div>
-
-                                    <!-- Student attendance area-->
-                                    <div class="col-md-6">
-                                        <p>
-                                            <br /> <br /> <br />
-                                            Time in: 1:09 PM
-                                            <br />
-                                            Time out: 3:50 PM
-
-                                            <!-- photo of up or down arrow  -->
-                                            <br />
-                                            <center><img src="~/Content/img/redDown.png" alt="red" height=50px></center>
-
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <!-- Korina: row 3, column 3 -->
-                            <div class="col-md-4">
-
-                                <div class="row">
-                                    <!-- Image and name area -->
-                                    <div class="col-md-6">
-                                        <br /><p><b>Korina</b></p>
-                                        <a href="~/Admin/Report/">
-                                            <img src="~/Content/img/student-Korina.jpg" alt="Korina" height=100px>
-                                        </a>
-                                    </div>
-
-                                    <!-- Student attendance area-->
-                                    <div class="col-md-6">
-                                        <p>
-                                            <br /> <br /> <br />
-                                            Time in: 8:56
-                                            <br />
-                                            Time out: 2:05
-
-                                            <!-- photo of up or down arrow  -->
-                                            <br />
-                                            <center><img src="~/Content/img/greenUp.png" alt="green" height=50px></center>
-
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <br /> <br />
                     </div>
-
                 </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
+    }
+}
