@@ -30,12 +30,6 @@ namespace _5051.Controllers
             return View();
         }
 
-        // GET: Student home tab 
-        public ActionResult StudentHome()
-        {
-            return View();
-        }
-
         // GET: Student
         /// <summary>
         /// Index, the page that shows all the Students
