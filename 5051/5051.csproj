@@ -277,6 +277,7 @@
     <Content Include="Content\img\temp.gif" />
     <Content Include="Content\js\kiosk.js" />
     <Content Include="Content\kiosk.css" />
+    <Content Include="Content\Student.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
