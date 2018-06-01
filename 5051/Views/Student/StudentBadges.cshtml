@@ -71,6 +71,7 @@
         /* Style for Navbar Badge Button*/
         #studentBadgesTab {
             background-color: #febc04;
+            width: 50%;
             color: white;
             padding: 10px;
             padding-left: 80px;
@@ -114,11 +115,11 @@
             opacity: 0;
         }
 
-        /* Overlay opacity */
-        .overlay:target {
-            visibility: visible;
-            opacity: 1;
-        }
+            /* Overlay opacity */
+            .overlay:target {
+                visibility: visible;
+                opacity: 1;
+            }
 
         /* The Box that appears to display badge info */
         .popup {
@@ -131,38 +132,52 @@
             transition: all 5s ease-in-out;
         }
 
-        /* Popup Title */
-        .popup h2 {
-            margin-top: 0;
-            color: #333;
-            font-family: Tahoma, Arial, sans-serif;
-        }
-
-        /* Close button for popups */
-        .popup .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            transition: all 200ms;
-            font-size: 30px;
-            font-weight: bold;
-            text-decoration: none;
-            color: #333;
-        }
-
-        /* Close button color for hover */
-        .popup .close:hover {
-                color: #06D85F;
+            /* Popup Title */
+            .popup h2 {
+                margin-top: 0;
+                color: #333;
+                font-family: Tahoma, Arial, sans-serif;
             }
 
-        /* Text/Content inside of the popup */
-        .popup .content {
-            font-size: 20px;
-            max-height: 30%;
-            overflow: auto;
-        }
+            /* Close button for popups */
+            .popup .close {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                transition: all 200ms;
+                font-size: 30px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #333;
+            }
+
+                /* Close button color for hover */
+                .popup .close:hover {
+                    color: #06D85F;
+                }
+
+            /* Text/Content inside of the popup */
+            .popup .content {
+                font-size: 20px;
+                max-height: 30%;
+                overflow: auto;
+            }
     </style>
 </head>
+
+<!-- Tab Buttons at the Top of the page -->
+<center>
+    <div class="navbar-btn" id="studentNavBar">
+        <a href="~/Student/StudentBadges" class="active" id="studentBadgesTab">
+            Badges
+            <img src="~/Content/img/Student/StudentBadges_BadgesTab.png" style="padding-bottom:15px;" />
+        </a>
+        <a href="~/Student/StudentData" id="studentDataTab">
+            Data
+            <img src="~/Content/img/Student/StudentBadges_DataTab.png" style="padding-bottom:15px;" />
+        </a>
+    </div>
+</center>
 
 <!-- Title text for Student Badges Page -->
 <div>
@@ -194,7 +209,7 @@
             <img src="~/Content/img/Student/StudentBadges_EarlyB0.png" class="img-responsive" alt="Badge 4" />
             <a id="badgeCaption" href="#earlyBirdPop">????</a>
         </div>
-    </div> 
+    </div>
 </center>
 <!-- Early Bird Information POPUP-->
 <div id="earlyBirdPop" class="overlay">
@@ -241,20 +256,3 @@
     </div>
 </div>
 
-<!-- Tab Buttons at the bottom of the page -->
-<center>
-    <div class="navbar-btn" id="studentNavBar">
-        <a href="~/Student/StudentBadges" class="active" id="studentBadgesTab">
-            Badges
-            <img src="~/Content/img/Student/StudentBadges_BadgesTab.png" style="padding-bottom:15px;" />
-        </a>
-        <a href="~/Student/StudentData" id="studentDataTab">
-            Data
-            <img src="~/Content/img/Student/StudentBadges_DataTab.png" style="padding-bottom:15px;" />
-        </a>
-        <a href="~/Student/StudentHome" id="studentProfileTab">
-            Profile
-            <img src="~/Content/img/Student/StudentBadges_ProfileTab.png" style="padding-bottom:15px;" />
-        </a>
-    </div>
-</center>

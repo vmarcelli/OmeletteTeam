@@ -97,15 +97,29 @@
             width: 95%;
         }
 
-        /* Box Style for each box in grid */
-        .grid-container > div {
-            background-color: rgba(255, 255, 255, 0.8);
-            text-align: center;
-            padding: 15px 0;
-            font-size: 30px;
-        }
+            /* Box Style for each box in grid */
+            .grid-container > div {
+                background-color: rgba(255, 255, 255, 0.8);
+                text-align: center;
+                padding: 15px 0;
+                font-size: 30px;
+            }
     </style>
 </head>
+
+<!-- Tab Buttons at the bottom of the page -->
+<center>
+    <div class="navbar-btn" id="studentNavBar">
+        <a href="~/Student/StudentBadges" class="active" id="studentBadgesTab">
+            Badges
+            <img src="~/Content/img/Student/StudentBadges_BadgesTab.png" style="padding-bottom:15px;" />
+        </a>
+        <a href="~/Student/StudentData" id="studentDataTab">
+            Data
+            <img src="~/Content/img/Student/StudentBadges_DataTab.png" style="padding-bottom:15px;" />
+        </a>
+    </div>
+</center>
 
 <!-- Snap Attendance Logo and Title -->
 <div>
@@ -163,20 +177,3 @@
 
 
 
-<!-- Tab Buttons at the bottom of the page -->
-<center>
-    <div class="navbar-btn" id="studentNavBar">
-        <a href="~/Student/StudentBadges" class="active" id="studentBadgesTab">
-            Badges
-            <img src="~/Content/img/Student/StudentBadges_BadgesTab.png" style="padding-bottom:15px;" />
-        </a>
-        <a href="~/Student/StudentData" id="studentDataTab">
-            Data
-            <img src="~/Content/img/Student/StudentBadges_DataTab.png" style="padding-bottom:15px;" />
-        </a>
-        <a href="~/Student/StudentHome" id="studentProfileTab">
-            Profile
-            <img src="~/Content/img/Student/StudentBadges_ProfileTab.png" style="padding-bottom:15px;" />
-        </a>
-    </div>
-</center>
