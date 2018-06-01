@@ -276,6 +276,7 @@
     <Content Include="Content\img\student_login.png" />
     <Content Include="Content\img\temp.gif" />
     <Content Include="Content\js\kiosk.js" />
+    <Content Include="Content\admin.css" />
     <Content Include="Content\kiosk.css" />
     <Content Include="Content\Student.css" />
     <Content Include="favicon.ico" />
