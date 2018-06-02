@@ -8,7 +8,7 @@
     @*imports google roboto font*@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="~/Content/kiosk.css">
-    <script type="text/javascript" src="~/Content/js/kiosk.js"></script>
+    <script type="text/javascript" src="~/Scripts/kiosk.js"></script>
 </head>
 
 <body class="kiosk-body">
@@ -18,7 +18,7 @@
             <img class="logo" src="~/Content/img/logos/logo_white.png" alt="SnapAttendanceLogo">
         </div>
 
-        @*grid of students, daniel is clickable*@
+        @*grid of students, image is clickable*@
         <div id="showgrid">
 
 
@@ -29,7 +29,7 @@
                     {
                         <div class="col-md-3">
                             <div class="box">
-                                <img class="photo" src="~/Content/img/@item.AvatarId" alt="Taylor">
+                                <img class="photo" src="~/Content/img/@item.AvatarId" alt="Student Image">
                                 <p>@item.Name</p>
                             </div>
                         </div> 
