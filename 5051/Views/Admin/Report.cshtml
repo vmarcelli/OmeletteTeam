@@ -1,4 +1,4 @@
-﻿
+﻿@model _5051.Models.AttendanceEntryViewModel
 @using system.linq
 @{
     ViewBag.Title = "Report";
@@ -168,6 +168,10 @@
                     </table>
                 </div>
                 @*outside of inner container but within outer container*@
+                @foreach (var item in Model.AttendanceList)
+                {
+                    @item.TimeIn
+                }
                 <div class="row leftmargin">
                     <div class="btn-group formSpacing">
                         <button type="button" class="btn btn-default">Start Date</button>
