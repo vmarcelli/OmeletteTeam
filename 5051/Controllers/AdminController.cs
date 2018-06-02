@@ -39,8 +39,9 @@ namespace _5051.Controllers
         // GET: Student
         public ActionResult Student()
         {
-            var list = attendanceDataSource.Index();
-            return View(list);
+            var myDataList = StudentBackend.Index();
+            var StudentViewModel = new StudentViewModel(myDataList);
+            return View(StudentViewModel);
         }
 
         // GET: Report
