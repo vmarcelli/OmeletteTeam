@@ -395,7 +395,6 @@
     <Content Include="Content\img\student_homepage.png" />
     <Content Include="Content\img\student_login.png" />
     <Content Include="Content\img\temp.gif" />
-    <Content Include="Content\js\kiosk.js" />
     <Content Include="Content\adminCalendar.css" />
     <Content Include="Content\kiosk.css" />
     <Content Include="Content\Student.css" />
@@ -833,6 +832,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\kiosk.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
