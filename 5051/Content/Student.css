@@ -153,3 +153,9 @@ body {
     padding: 15px 0;
     font-size: 30px;
 }
+
+/* Image size fix due to different image resolution sizes*/
+#imageFix {
+    height: 82%;
+    width: 82%;
+}
