@@ -10,6 +10,12 @@ namespace _5051.Controllers
 {
     public class AdminController : Controller
     {
+        //A ViewModel used for the Student that contains the StudentList
+        private StudentViewModel StudentViewModel = new StudentViewModel();
+
+        //The Backend Data source
+        private StudentBackend StudentBackend = StudentBackend.Instance;
+
         private AttendanceEntryDataSourceMock attendanceDataSource = AttendanceEntryDataSourceMock.Instance;
         //AttendanceEntryModel attendanceEntry = new AttendanceEntryModel("11:00 am", "2:00 pm");
         // GET: Admin
@@ -33,8 +39,9 @@ namespace _5051.Controllers
         // GET: Student
         public ActionResult Student()
         {
-            var list = attendanceDataSource.Index();
-            return View(list);
+            var myDataList = StudentBackend.Index();
+            var StudentViewModel = new StudentViewModel(myDataList);
+            return View(StudentViewModel);
         }
 
         // GET: Report
