@@ -381,6 +381,16 @@
     <Content Include="Content\img\Student\StudentBadges_ProfileTab.png" />
     <Content Include="Content\img\Student\StudentData_Graph.png" />
     <Content Include="Content\img\Student\StudentProfile_Picture.jpg" />
+    <Content Include="Content\img\Student\Student_EarlyB2.png" />
+    <Content Include="Content\img\Student\Student_EarlyB3.png" />
+    <Content Include="Content\img\Student\Student_HotStreak1.png" />
+    <Content Include="Content\img\Student\Student_HotStreak2.png" />
+    <Content Include="Content\img\Student\Student_HotStreak3.png" />
+    <Content Include="Content\img\Student\Student_HotStreak4.png" />
+    <Content Include="Content\img\Student\Student_OnARoll1.png" />
+    <Content Include="Content\img\Student\Student_OnARoll2.png" />
+    <Content Include="Content\img\Student\Student_OnARoll3.png" />
+    <Content Include="Content\img\Student\Student_OnARoll4.png" />
     <Content Include="Content\img\student_homepage.png" />
     <Content Include="Content\img\student_login.png" />
     <Content Include="Content\img\temp.gif" />
