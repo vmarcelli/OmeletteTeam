@@ -20,10 +20,12 @@ namespace _5051.Models
         [Required(ErrorMessage = "Id is required")]
         public string Id { get; set; }
 
+
         [Display(Name = "Name", Description = "Student Name")]
         [Required(ErrorMessage = "Name is required")]
         public string Name { get; set; }
 
+        // photo of student 
         [Display(Name = "AvatarId", Description = "Avatar")]
         [Required(ErrorMessage = "Avatar is required")]
         public string AvatarId { get; set; }
@@ -31,6 +33,16 @@ namespace _5051.Models
         [Display(Name = "Current Status", Description = "Status of the Student")]
         [Required(ErrorMessage = "Status is required")]
         public StudentStatusEnum Status { get; set; }
+
+        // student time in 
+        [Display(Name = "TimeIn", Description = "Check in time")]
+        [Required(ErrorMessage = "time in is required")]
+        public string TimeIn { get; set; }
+
+        // student time out
+        [Display(Name = "TimeOut", Description = "Check out time")]
+        [Required(ErrorMessage = "time out is required")]
+        public string TimeOut { get; set; }
 
         /// <summary>
         /// The defaults for a new student
@@ -54,7 +66,7 @@ namespace _5051.Models
         /// </summary>
         /// <param name="name">The Name to call the student</param>
         /// <param name="avatarId">The avatar to use, if not specified, will call the backend to get an ID</param>
-        public StudentModel(string name, string avatarId)
+        public StudentModel(string name, string avatarId, string timeIn, string timeOut)
         {
             Initialize();
 
@@ -66,6 +78,9 @@ namespace _5051.Models
                 avatarId = AvatarBackend.Instance.GetFirstAvatarId();
             }
             AvatarId = avatarId;
+
+            TimeIn = timeIn;
+            TimeOut = timeOut; 
         }
 
         /// <summary>
@@ -78,6 +93,9 @@ namespace _5051.Models
             Name = data.Name;
             AvatarId = data.AvatarId;
             Status = data.Status;
+
+            TimeIn = data.TimeIn;       // set time in 
+            TimeOut = data.TimeOut;     // set time out 
         }
 
         /// <summary>
@@ -95,6 +113,8 @@ namespace _5051.Models
             Name = data.Name;
             AvatarId = data.AvatarId;
             Status = data.Status;
+            TimeIn = data.TimeIn;       // set time in 
+            TimeOut = data.TimeOut;     // set time out 
 
             return true;
         }
@@ -126,6 +146,8 @@ namespace _5051.Models
             Name = data.Name;
             AvatarId = data.AvatarId;
             Status = data.Status;
+            TimeIn = data.TimeIn;       // set time in 
+            TimeOut = data.TimeOut;     // set time out 
 
             //Use this template for including other objects in View Model
 
