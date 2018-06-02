@@ -20,10 +20,10 @@ window.onload = function () {
             // sets opacity of photo and displays correct signin/signout message
             if (photo.style.opacity == 0.5) {
                 photo.style.opacity = 1;
-                signout.style.display = "block";
+                signin.style.display = "block";
             } else {
                 photo.style.opacity = 0.5;
-                signin.style.display = "block";
+                signout.style.display = "block";
             }
 
             // closes when user clicks the signin or signout 'x'
