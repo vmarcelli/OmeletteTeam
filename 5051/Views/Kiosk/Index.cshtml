@@ -124,6 +124,22 @@
                 <div class="col-md-1"></div>
 
             </div>
+
+            @{
+
+
+
+                foreach (var item in Model.StudentList)
+                {
+                    <div class="col-md-3">
+                        <div class="box">
+                            <img class="photo" src="~/Content/img/@item.AvatarId" alt="Taylor">
+                            <p>@item.Name</p>
+                        </div>
+                    </div>
+
+                }
+            }
         </div>
     </div>
 </body>
@@ -148,28 +164,5 @@
         <img class="img-responsive" src="~/Content/img/SignedOutMessage.png" alt="ClickIn" width="300">
     </div>
 </div>
-
-@{
-
-    foreach (var item in Model.StudentList)
-    {
-        <div class="row">
-
-            <!--buffer column-->
-            <div class="col-md-1"></div>
-
-            <div class="col-md-3">
-                <div class="box">
-                    <img class="photo" src="~/Content/img/student-Taylor.jpg" alt="Taylor">
-                    <p>@item.Name</p>
-                </div>
-            </div>
-
-            <!--buffer column-->
-            <div class="col-md-1"></div>
-
-        </div>
-    }
-}
 
 

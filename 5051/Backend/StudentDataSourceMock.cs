@@ -111,15 +111,15 @@ namespace _5051.Backend
         /// </summary>
         public void Initialize()
         {
-            Create(new StudentModel("John", null));
-            Create(new StudentModel("Jess",null));
-            Create(new StudentModel("Daniel", null));
-            Create(new StudentModel("Jason", null));
-            Create(new StudentModel("Dwayne", null));
-            Create(new StudentModel("Reggie", null));
-            Create(new StudentModel("Sarah", null));
-            Create(new StudentModel("Taylor", null));
-            Create(new StudentModel("Korina", null));
+            Create(new StudentModel("John", "student-John.jpg"));
+            Create(new StudentModel("Jess", "student-Jess.jpg"));
+            Create(new StudentModel("Daniel", "student-Daniel.jpg"));
+            Create(new StudentModel("Jason", "student-Jason.jpg"));
+            Create(new StudentModel("Dwayne", "student-Dwayne.jpg"));
+            Create(new StudentModel("Reggie", "student-Reggie.jpg"));
+            Create(new StudentModel("Sarah", "student-Sarah.jpg"));
+            Create(new StudentModel("Taylor", "student-Taylor.jpg"));
+            Create(new StudentModel("Korina", "student-Korina.jpg"));
         }
     }
 }
