@@ -128,17 +128,15 @@
             @{
 
 
-
-                foreach (var item in Model.StudentList)
-                {
-                    <div class="col-md-3">
-                        <div class="box">
-                            <img class="photo" src="~/Content/img/@item.AvatarId" alt="Taylor">
-                            <p>@item.Name</p>
-                        </div>
-                    </div>
-
-                }
+                    foreach (var item in Model.StudentList)
+                    {
+                        <div class="col-md-3">
+                            <div class="box">
+                                <img class="photo" src="~/Content/img/@item.AvatarId" alt="Taylor">
+                                <p>@item.Name</p>
+                            </div>
+                        </div> 
+                    }
             }
         </div>
     </div>
