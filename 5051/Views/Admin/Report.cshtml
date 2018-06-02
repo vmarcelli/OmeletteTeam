@@ -60,6 +60,7 @@
                         </ul>
                     </div>
                 </div>
+                @*outside of inner container but within outer container*@
                 <div class="innerContainer">
                     <table class="table table-striped table-hover">
                         <thead>
@@ -74,104 +75,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">09/16/18</th>
-                                <td><div contenteditable>8:55 am</div></td>
-                                <td>1:55 pm</td>
-                                <td>300</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">09/17/18</th>
-                                <td></td>
-                                <td></td>
-                                <td>0</td>
-                                <td></td>
-                                <td></td>
-                                <td>[x]</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">09/18/18</th>
-                                <td>9:05 am</td>
-                                <td>1:00 pm</td>
-                                <td>126</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">09/19/18</th>
-                                <td>8:45 am</td>
-                                <td>12:31 pm</td>
-                                <td>180</td>
-                                <td>[x]</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">09/20/18</th>
-                                <td>8:54 am</td>
-                                <td>3:05 pm</td>
-                                <td>306</td>
-                                <td></td>
-                                <td>[x]</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">.</th>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">.</th>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">.</th>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">12/16/18</th>
-                                <td>8:50 am</td>
-                                <td>2:30 pm</td>
-                                <td>340</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Total</th>
-                                <td></td>
-                                <td></td>
-                                <td>232 hrs</td>
-                                <td>4</td>
-                                <td>1</td>
-                                <td>7</td>
-                            </tr>
+                            @foreach (var item in Model.AttendanceList)
+                            {
+                                <tr>
+                                    <td></td>
+                                    <td>@item.TimeIn</td>
+                                    <td>@item.TimeOut</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            }
                         </tbody>
                     </table>
                 </div>
-                @*outside of inner container but within outer container*@
-                @foreach (var item in Model.AttendanceList)
-                {
-                    @item.TimeIn
-                }
                 <div class="row leftmargin">
                     <div class="btn-group formSpacing">
                         <button type="button" class="btn btn-default">Start Date</button>
