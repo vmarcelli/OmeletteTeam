@@ -47,7 +47,9 @@ namespace _5051.Controllers
         // GET: Report
         public ActionResult Report()
         {
-            return View();
+            var myDataList = attendanceDataSource.Index();
+
+            return View(myDataList);
         }
 
         // GET: ReportPDF

@@ -74,9 +74,8 @@ namespace _5051.Backend
                 return null;
             }
             var myReturn = attendanceList.Find(n => n.Id == data.Id);
-            myReturn.Id = data.Id;
-            myReturn.TimeIn = data.TimeIn;
-            myReturn.TimeOut = data.TimeOut;
+
+            myReturn.Update(data);
 
             return myReturn;
         }
