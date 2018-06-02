@@ -53,5 +53,23 @@ namespace _5051.Models
             TimeOut = timeOut;
         }
 
+        /// <summary>
+        /// Updates the Attendance Entry
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public bool Update(AttendanceEntryModel data)
+        {
+            if (data == null)
+            {
+                return false;
+            }
+
+            TimeIn = data.TimeIn;
+            TimeOut = data.TimeOut;
+
+            return true;
+        }
     }
+
 }

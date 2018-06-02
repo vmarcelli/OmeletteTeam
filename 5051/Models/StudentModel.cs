@@ -20,21 +20,13 @@ namespace _5051.Models
         [Required(ErrorMessage = "Id is required")]
         public string Id { get; set; }
 
-        [Display(Name = "Name", Description = "Nick Name")]
+        [Display(Name = "Name", Description = "Student Name")]
         [Required(ErrorMessage = "Name is required")]
         public string Name { get; set; }
 
         [Display(Name = "AvatarId", Description = "Avatar")]
         [Required(ErrorMessage = "Avatar is required")]
         public string AvatarId { get; set; }
-
-        [Display(Name = "Avatar Level", Description = "Level of the Avatar")]
-        [Required(ErrorMessage = "Level is required")]
-        public int AvatarLevel { get; set; }
-
-        [Display(Name = "Tokens", Description = "Tokens Saved")]
-        [Required(ErrorMessage = "Tokens are required")]
-        public int Tokens { get; set; }
 
         [Display(Name = "Current Status", Description = "Status of the Student")]
         [Required(ErrorMessage = "Status is required")]
@@ -46,8 +38,6 @@ namespace _5051.Models
         public void Initialize()
         {
             Id = Guid.NewGuid().ToString();
-            Tokens = 0;
-            AvatarLevel = 0;
             Status = StudentStatusEnum.Out;
         }
 
@@ -86,10 +76,7 @@ namespace _5051.Models
         {
             Id = data.Id;
             Name = data.Name;
-
             AvatarId = data.AvatarId;
-            AvatarLevel = data.AvatarLevel;
-            Tokens = data.Tokens;
             Status = data.Status;
         }
 
@@ -107,8 +94,6 @@ namespace _5051.Models
 
             Name = data.Name;
             AvatarId = data.AvatarId;
-            AvatarLevel = data.AvatarLevel;
-            Tokens = data.Tokens;
             Status = data.Status;
 
             return true;
@@ -120,14 +105,14 @@ namespace _5051.Models
     /// </summary>
     public class StudentDisplayViewModel : StudentModel
     {
-        [Display(Name = "Avatar Picture", Description = "Avatar Picture to Show")]
-        public string AvatarUri { get; set; }
+        [Display(Name = "Student Picture", Description = "Student Picture to Show")]
+        public string PhotoId { get; set; }
 
-        [Display(Name = "Avatar Name", Description = "Avatar Name")]
-        public string AvatarName { get; set; }
+        [Display(Name = "Student Name", Description = "Student Name")]
+        public string StudentName { get; set; }
 
-        [Display(Name = "Avatar Description", Description = "Avatar Description")]
-        public string AvatarDescription { get; set; }
+        [Display(Name = "Student Id", Description = "Student Id")]
+        public string StudentId { get; set; }
 
         public StudentDisplayViewModel() { }
 
@@ -139,21 +124,20 @@ namespace _5051.Models
         {
             Id = data.Id;
             Name = data.Name;
-            Tokens = data.Tokens;
-            AvatarLevel = data.AvatarLevel;
             AvatarId = data.AvatarId;
             Status = data.Status;
 
-            var myDataAvatar = AvatarBackend.Instance.Read(AvatarId);
-            if (myDataAvatar == null)
-            {
-                // Nothing to convert
-                return;
-            }
+            //Use this template for including other objects in View Model
 
-            AvatarName = myDataAvatar.Name;
-            AvatarDescription = myDataAvatar.Description;
-            AvatarUri = myDataAvatar.Uri;
+            //var myDataAvatar = StudentBackend.Instance.Read(StudentId);
+            //if (myDataAvatar == null)
+            //{
+                // Nothing to convert
+            //    return;
+            //}
+
+            //StudentName = myDataAvatar.Name;
+            //PhotoId = myDataAvatar.AvatarId;
         }
     }
 
