@@ -38,12 +38,12 @@
                         </form>
                     </div>
                     <div class="col-sm-9">
-                        <button type="button" onclick="openCity('Paris')" class="btn btn-primary">Edit Records</button> 
+                        <button type="button" onclick="changeTable('editTable')" class="btn btn-primary">Edit Records</button> 
 
 
 
                         <div class="w3-bar w3-black">
-                            <button class="w3-bar-item w3-button" style="display: none;" onclick="openCity('London')">London</button>
+                            <button class="w3-bar-item w3-button" style="display: none;" onclick="changeTable('defaultTable')">defaultTable</button>
                         </div>
 
                      
@@ -74,7 +74,7 @@
                 </div>
                 @*outside of inner container but within outer container*@
                     <div class="innerContainer">
-                        <div id="London" class="w3-container city">
+                        <div id="defaultTable" class="w3-container editFeature">
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>
@@ -105,7 +105,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div id="Paris" class="w3-container city" style="display:none">
+                        <div id="editTable" class="w3-container editFeature" style="display:none">
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>
@@ -178,15 +178,15 @@
 </div>
 
 
-    <script>
-                            function openCity(cityName) {
-                                var i;
-                                var x = document.getElementsByClassName("city");
-                                for (i = 0; i < x.length; i++) {
-                                    x[i].style.display = "none";
-                                }
-                                document.getElementById(cityName).style.display = "block";
-                            }
-    </script>
+<script>
+    function changeTable(tableName) {
+        var i;
+        var x = document.getElementsByClassName("editFeature");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        document.getElementById(tableName).style.display = "block";
+    }
+</script>
 
 
