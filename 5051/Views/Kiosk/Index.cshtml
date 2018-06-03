@@ -31,7 +31,22 @@
                         <div class="col-md-3">
                             <div class="box">
                                 <img class="photo" src="~/Content/img/@item.AvatarId" alt="Student Image">
-                                <p>@item.Name</p>
+                                <p>@item.Name @item.Status</p>
+                                
+                                @using (Html.BeginForm())
+                                {
+                                @Html.AntiForgeryToken()
+                                @Html.HiddenFor(m => item.Id)
+                                <br />
+                                <br />
+                                <div class="row">
+                                    <div class="col-sm-3 text-right">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        @Html.ActionLink("Update", "Index", new { id = item.Id }, new { @class = "btn btn-primary" })
+                                    </div>
+                                </div>
+                                }
                             </div>
                         </div> 
                     }

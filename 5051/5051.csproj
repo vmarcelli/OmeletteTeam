@@ -896,6 +896,7 @@
     <Content Include="Views\Student\StudentBadges.cshtml" />
     <Content Include="Views\Student\StudentData.cshtml" />
     <Content Include="Views\Admin\Update.cshtml" />
+    <Content Include="Views\Kiosk\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

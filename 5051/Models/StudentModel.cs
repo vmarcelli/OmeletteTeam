@@ -30,7 +30,7 @@ namespace _5051.Models
         [Required(ErrorMessage = "Avatar is required")]
         public string AvatarId { get; set; }
 
-        [Display(Name = "Current Status", Description = "Status of the Student")]
+        [Display(Name = "Status", Description = "Status of the Student")]
         [Required(ErrorMessage = "Status is required")]
         public StudentStatusEnum Status { get; set; }
 
