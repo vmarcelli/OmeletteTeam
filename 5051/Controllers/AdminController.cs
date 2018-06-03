@@ -16,6 +16,7 @@ namespace _5051.Controllers
         //The Backend Data source
         private StudentBackend StudentBackend = StudentBackend.Instance;
 
+        private AttendanceEntryViewModel attendanceEntryViewModel = new AttendanceEntryViewModel(); 
         private AttendanceEntryDataSourceMock attendanceDataSource = AttendanceEntryDataSourceMock.Instance;
         //AttendanceEntryModel attendanceEntry = new AttendanceEntryModel("11:00 am", "2:00 pm");
         // GET: Admin
@@ -48,8 +49,8 @@ namespace _5051.Controllers
         public ActionResult Report()
         {
             var myDataList = attendanceDataSource.Index();
-
-            return View(myDataList);
+            var attendanceEntryViewModel = new AttendanceEntryViewModel(myDataList); 
+            return View(attendanceEntryViewModel);
         }
 
         // GET: ReportPDF
