@@ -43,4 +43,19 @@ p {
     margin-bottom: 10px;
 }
 
+.message {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    background-color: #66C1C1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10px;
+    padding-top: px;
+}
 
