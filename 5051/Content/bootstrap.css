@@ -1,3 +1,14 @@
+/* NUGET: BEGIN LICENSE TEXT
+ *
+ * Microsoft grants you the right to use these script files for the sole
+ * purpose of either: (i) interacting through your browser with the Microsoft
+ * website or online service, subject to the applicable licensing or use
+ * terms; or (ii) using the files as included with a Microsoft product subject
+ * to that product's license terms. Microsoft reserves all other rights to the
+ * files not expressly granted by Microsoft, whether by implication, estoppel
+ * or otherwise. The notices and licenses below are for informational purposes only.
+ *
+ * NUGET: END LICENSE TEXT */
 /*!
  * Bootstrap v3.0.0
  *
@@ -3855,25 +3866,27 @@ textarea.input-group-sm > .input-group-btn > .btn {
   margin-bottom: -1px;
 }
 
-.nav-tabs > li > a {
-  margin-right: 2px;
-  line-height: 1.428571429;
-  border: 1px solid transparent;
-  border-radius: 4px 4px 0 0;
-}
+    .nav-tabs > li > a {
+        margin-right: 2px;
+        line-height: 1.428571429;
+        border: 1px solid #FEBC04;
+        background-color: #DDB36B;
+        border-radius: 4px 4px 0 0;
+        color: #FFF; 
+    }
 
 .nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #dddddd;
+    border-color: #FEBC04 #FEBC04 #dddddd;
 }
 
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #555555;
-  cursor: default;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-bottom-color: transparent;
+    color: #FFF;
+    cursor: default;
+    background-color: #FEBC04;
+    border: 1px solid #FEBC04;
+    border-bottom-color: transparent;
 }
 
 .nav-tabs.nav-justified {
