@@ -7,7 +7,9 @@
 <head>
     @*imports google roboto font*@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    @*links to kiosk css file*@
     <link rel="stylesheet" href="~/Content/kiosk.css">
+    @*links to kiosk js file*@
     <script type="text/javascript" src="~/Scripts/kiosk.js"></script>
 </head>
 
@@ -18,8 +20,7 @@
         </div>
 
         <div class="grid">
-            @*grid of students, image is clickable*@
-
+            @*grid of students, box is clickable nock sign in and out*@
             @{
                 foreach (var item in Model.StudentList)
                 {
