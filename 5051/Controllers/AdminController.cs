@@ -84,27 +84,16 @@ namespace _5051.Controllers
         /// <returns></returns>
         // POST: Avatar/Update/5
         [HttpPost]
-        public ActionResult Update([Bind(Include=
-                                        "Id,"+
-                                        "TimeIn,"+
-                                        "TimeOut,"+
-                                        "")] AttendanceEntryModel data)
+        public ActionResult Update(Object sender, EventArgs e)
         {
-
-            if (data == null)
-            {
-                // Send to error page
-                return RedirectToAction("Error", new { route = "Home", action = "Error" });
-            }
-
-            if (string.IsNullOrEmpty(data.Id))
-            {
-                // Send back for Edit
-                return View(data);
-            }
-
+            //make an array of attendance tracking in a while loop
+            //in another while loop update data source
+            String text1 = Convert.ToString(Request.Form["Id1"]);
+            String text2 = Convert.ToString(Request.Form["TimeIn1"]);
+            String text3 = Convert.ToString(Request.Form["TimeOut1"]);
+            attendanceDataSource.Update(text1, text2, text3);
             //Update
-            attendanceDataSource.Update(data);
+            //attendanceDataSource.Update(data1);
             return RedirectToAction("Report");
         }
     }

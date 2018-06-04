@@ -125,19 +125,24 @@
 
 
 
+                                        @{ 
+                                            int count = 1;
 
-                                        @foreach (var item in Model.AttendanceList)
-                                        {
-                                            
+                                            foreach (var item in Model.AttendanceList)
+                                            {
+
                                             <tr>
                                                 <td>4/5/2018</td>
-                                                <td><input type="text" name="Id" style="display: none;" value="@item.Id" /><input type="text" name="TimeIn" value="@item.TimeIn"></td>
-                                                <td><input type="text" name="TimeOut" value="@item.TimeOut"></td>
+                                                <td><input type="text" name="@("Id"+ count)" style="display: none;" value="@item.Id" /><input type="text" name="@("TimeIn" +count)" value="@item.TimeIn"></td>
+                                                <td><input type="text" name="@("TimeOut" +count)" value="@item.TimeOut"></td>
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
                                             </tr>
+                                                count++; 
+                                            }
+
                                         }
 
 

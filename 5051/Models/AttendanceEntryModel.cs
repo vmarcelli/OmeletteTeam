@@ -70,6 +70,19 @@ namespace _5051.Models
 
             return true;
         }
+
+        /// <summary>
+        /// Updates the Attendance Entry
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public bool Update(string timeIn, string timeOut)
+        {
+
+            TimeIn = timeIn;
+            TimeOut = timeOut;
+            return true;
+        }
     }
 
 }

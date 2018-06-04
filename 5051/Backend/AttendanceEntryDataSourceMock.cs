@@ -80,6 +80,22 @@ namespace _5051.Backend
             return myReturn;
         }
 
+        //update something on list
+        public void Update(string id, string timeIn, string timeOut)
+        {
+            //find the object with that id
+            foreach (var item in attendanceList)
+            {
+                if (item.Id == id)
+                {
+                    item.Update(timeIn, timeOut);
+                }
+            }
+
+        }
+
+
+
         /// <summary>
         /// Remove the Data item if it is in the list
         /// </summary>
