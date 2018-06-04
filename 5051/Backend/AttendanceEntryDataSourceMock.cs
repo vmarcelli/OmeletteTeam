@@ -80,7 +80,14 @@ namespace _5051.Backend
             return myReturn;
         }
 
-        //update something on list
+        // <summary>
+        // Updates the attendance record with the same id. It uses the
+        // timein and timeout values to update it. 
+        // </summary>
+        // <param name="id">The id of the attendance record</param>
+        // <param name="timeIn">time in</param>
+        // <param name="timeOut">time out</param>
+        // <returns>void</returns>
         public void Update(string id, string timeIn, string timeOut)
         {
             //find the object with that id
@@ -127,13 +134,13 @@ namespace _5051.Backend
         /// </summary>
         public void Initialize()
         {
-            Create(new AttendanceEntryModel("8:00 am", "11:00 am"));
-            Create(new AttendanceEntryModel("8:05 am", "11:00 am"));
-            Create(new AttendanceEntryModel("9:00 am", "11:00 am"));
-            Create(new AttendanceEntryModel("10:00 am", "11:00 am"));
-            Create(new AttendanceEntryModel("12:00 pm", "11:00 am"));
-            Create(new AttendanceEntryModel("1:00 pm", "11:00 am"));
-            Create(new AttendanceEntryModel("2:00 pm", "11:00 am"));
+            Create(new AttendanceEntryModel("6/1/2018","8:00 am", "11:00 am"));
+            Create(new AttendanceEntryModel("5/31/2018", "8:05 am", "11:00 am"));
+            Create(new AttendanceEntryModel("5/30/2018", "9:00 am", "11:00 am"));
+            Create(new AttendanceEntryModel("5/29/2018", "10:00 am", "11:00 am"));
+            Create(new AttendanceEntryModel("5/28/2018", "12:00 pm", "11:00 am"));
+            Create(new AttendanceEntryModel("5/27/2018", "1:00 pm", "11:00 am"));
+            Create(new AttendanceEntryModel("5/26/2018", "2:00 pm", "11:00 am"));
         }
     }
 }

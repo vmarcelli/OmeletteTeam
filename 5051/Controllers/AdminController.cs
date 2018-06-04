@@ -78,20 +78,21 @@ namespace _5051.Controllers
         }
 
         /// <summary>
-        /// This updates the avatar based on the information posted from the udpate page
+        /// This updates the avatar based on the id, timein, and timeout param.
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        // POST: Avatar/Update/5
+        // POST: Admin/Update/
         [HttpPost]
         public ActionResult Update(Object sender, EventArgs e)
         {
-            //make an array of attendance tracking in a while loop
-            //in another while loop update data source
+            //variable that will hold the values posted 
             String id = "temp";
             String timeIn = "temp";
             String timeOut = "temp";
             int count = 1; 
+            //a while loop that will keep on updated the data source
+            //based on the values posted until there are no more values
             while (id != null)
             {
                 id = Convert.ToString(Request.Form["Id" + count]);
