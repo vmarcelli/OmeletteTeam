@@ -88,12 +88,19 @@ namespace _5051.Controllers
         {
             //make an array of attendance tracking in a while loop
             //in another while loop update data source
-            String text1 = Convert.ToString(Request.Form["Id1"]);
-            String text2 = Convert.ToString(Request.Form["TimeIn1"]);
-            String text3 = Convert.ToString(Request.Form["TimeOut1"]);
-            attendanceDataSource.Update(text1, text2, text3);
-            //Update
-            //attendanceDataSource.Update(data1);
+            String id = "temp";
+            String timeIn = "temp";
+            String timeOut = "temp";
+            int count = 1; 
+            while (id != null)
+            {
+                id = Convert.ToString(Request.Form["Id" + count]);
+                timeIn = Convert.ToString(Request.Form["TimeIn" + count]);
+                timeOut = Convert.ToString(Request.Form["TimeOut" + count]);
+                attendanceDataSource.Update(id, timeIn, timeOut);
+                count++;
+                id = Convert.ToString(Request.Form["Id" + count]);
+            }
             return RedirectToAction("Report");
         }
     }
