@@ -1,6 +1,8 @@
 ﻿// javascript for kiosk page
 
 window.onload = function () {
+/*
+
     // gets student kiosk box
     var students = document.getElementsByClassName("box");
 
@@ -47,6 +49,7 @@ window.onload = function () {
             }
         } 
     }
+    */
 };
 
 
