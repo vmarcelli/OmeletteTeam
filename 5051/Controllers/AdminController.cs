@@ -105,7 +105,7 @@ namespace _5051.Controllers
 
             //Update
             attendanceDataSource.Update(data);
-            return RedirectToAction("Student");
+            return RedirectToAction("Report");
         }
     }
 }
