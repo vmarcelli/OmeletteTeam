@@ -25,12 +25,16 @@
 </center>
 
 <!-- Snap Attendance Logo and Title -->
-<div>
-    <img src="~/Content/img/logos/logo_white.png" alt="Snap Attendance Logo" />
+<div class="row">
+    <div class="col-sm-6">
+        <img src="~/Content/img/logos/logo_white.png" alt="Snap Attendance Logo" style="margin-top: 10px;" />
+    </div>
+    <div class="col-sm-6">
+        <h1 id="pageTitle">
+            Student Data
+        </h1>
+    </div>
 </div>
-<h1 id="pageTitle">
-    Student Data
-</h1>
 
 <!-- Top Data Box -->
 <center>
@@ -47,14 +51,26 @@
             <div id="dataTitle">
                 Goals
             </div>
-            <div id="dataText">Hot Streak Badge</div>
+            <div id="dataText">Hot Streak</div>
             <div class="progress" style="width:60%">
                 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
                      aria-valuemin="0" aria-valuemax="100" style="width:60%">
                 </div>
             </div>
             <div id="dataText">
-                60% 9:00AM
+                60%
+            </div>
+            <div id="dataText">Early Bird</div>
+            <div class="progress" style="width:60%; margin-bottom: 10px;">
+                <div class="progress-bar progress-bar" role="progressbar" aria-valuenow="40"
+                     aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                </div>
+            </div>
+            <div id="dataText">
+                40%
+            </div>
+            <div id="dataText" style="font-size: 12px; margin-top: 10px;">
+                Last Updated: 9:00AM
             </div>
         </div>
     </div>
@@ -63,7 +79,7 @@
 <!-- Bottom Data Box -->
 <center>
     <div class="row" id="dataBox" style="padding-bottom: 30px;">
-        <!-- Aesthetic grid for mockup purposes only, does not update -->
+        <!-- Aesthetic grid for presentation purposes only, does not update -->
         <div class="grid-container">
             <div style="color:#189088;">Date</div>
             <div style="color:#189088;">Check-In</div>

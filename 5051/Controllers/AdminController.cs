@@ -16,6 +16,7 @@ namespace _5051.Controllers
         //The Backend Data source
         private StudentBackend StudentBackend = StudentBackend.Instance;
 
+        private AttendanceEntryViewModel attendanceEntryViewModel = new AttendanceEntryViewModel(); 
         private AttendanceEntryDataSourceMock attendanceDataSource = AttendanceEntryDataSourceMock.Instance;
         //AttendanceEntryModel attendanceEntry = new AttendanceEntryModel("11:00 am", "2:00 pm");
         // GET: Admin
@@ -47,7 +48,9 @@ namespace _5051.Controllers
         // GET: Report
         public ActionResult Report()
         {
-            return View();
+            var myDataList = attendanceDataSource.Index();
+            var attendanceEntryViewModel = new AttendanceEntryViewModel(myDataList); 
+            return View(attendanceEntryViewModel);
         }
 
         // GET: ReportPDF
@@ -75,34 +78,31 @@ namespace _5051.Controllers
         }
 
         /// <summary>
-        /// This updates the avatar based on the information posted from the udpate page
+        /// This updates the avatar based on the id, timein, and timeout param.
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        // POST: Avatar/Update/5
+        // POST: Admin/Update/
         [HttpPost]
-        public ActionResult Update([Bind(Include=
-                                        "Id,"+
-                                        "TimeIn,"+
-                                        "TimeOut,"+
-                                        "")] AttendanceEntryModel data)
+        public ActionResult Update(Object sender, EventArgs e)
         {
-
-            if (data == null)
+            //variable that will hold the values posted 
+            String id = "temp";
+            String timeIn = "temp";
+            String timeOut = "temp";
+            int count = 1; 
+            //a while loop that will keep on updated the data source
+            //based on the values posted until there are no more values
+            while (id != null)
             {
-                // Send to error page
-                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+                id = Convert.ToString(Request.Form["Id" + count]);
+                timeIn = Convert.ToString(Request.Form["TimeIn" + count]);
+                timeOut = Convert.ToString(Request.Form["TimeOut" + count]);
+                attendanceDataSource.Update(id, timeIn, timeOut);
+                count++;
+                id = Convert.ToString(Request.Form["Id" + count]);
             }
-
-            if (string.IsNullOrEmpty(data.Id))
-            {
-                // Send back for Edit
-                return View(data);
-            }
-
-            //Update
-            attendanceDataSource.Update(data);
-            return RedirectToAction("Student");
+            return RedirectToAction("Report");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿
+﻿@model _5051.Models.AttendanceEntryViewModel
+@using system.linq
 @{
     ViewBag.Title = "Report";
 }
@@ -37,18 +38,21 @@
                         </form>
                     </div>
                     <div class="col-sm-9">
-                        <button type="button" class="btn btn-primary">Edit report</button> 
+                        <button type="button" onclick="changeTable('editTable')" class="btn btn-primary">Edit Records</button>
+                        <div>
+                            <button style="display: none;" onclick="changeTable('defaultTable')">defaultTable</button>
+                        </div>
                     </div>
                 </div>
                 <div class="row leftmargin">
                     <div class="dropdown btn-group">
                         <button type="button" class="btn btn-default">Student</button>
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                            Johnny Smith
+                            Danny
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Jennifer Lawrence</a></li>
+                            <li><a href="#">Johnny Smith</a></li>
                             <li><a href="#">Jose Garcia</a></li>
                             <li><a href="#">Peter King</a></li>
                             <li><a href="#">Erika Flores</a></li>
@@ -59,114 +63,91 @@
                         </ul>
                     </div>
                 </div>
-                <div class="innerContainer">
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">Date</th>
-                                <th scope="col">Time In</th>
-                                <th scope="col">Time Out</th>
-                                <th scope="col">Time Accrued (minutes)</th>
-                                <th scope="col">In Early</th>
-                                <th scope="col">Out Late</th>
-                                <th scope="col">Absent</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">09/16/18</th>
-                                <td>8:55 am</td>
-                                <td>1:55 pm</td>
-                                <td>300</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">09/17/18</th>
-                                <td></td>
-                                <td></td>
-                                <td>0</td>
-                                <td></td>
-                                <td></td>
-                                <td>[x]</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">09/18/18</th>
-                                <td>9:05 am</td>
-                                <td>1:00 pm</td>
-                                <td>126</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">09/19/18</th>
-                                <td>8:45 am</td>
-                                <td>12:31 pm</td>
-                                <td>180</td>
-                                <td>[x]</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">09/20/18</th>
-                                <td>8:54 am</td>
-                                <td>3:05 pm</td>
-                                <td>306</td>
-                                <td></td>
-                                <td>[x]</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">.</th>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">.</th>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">.</th>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                                <td>.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">12/16/18</th>
-                                <td>8:50 am</td>
-                                <td>2:30 pm</td>
-                                <td>340</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Total</th>
-                                <td></td>
-                                <td></td>
-                                <td>232 hrs</td>
-                                <td>4</td>
-                                <td>1</td>
-                                <td>7</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
                 @*outside of inner container but within outer container*@
+                <div class="innerContainer">
+                    <div id="defaultTable" class="w3-container editFeature">
+                        @*Attendance list that cannot be modified*@
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Time In</th>
+                                    <th scope="col">Time Out</th>
+                                    <th scope="col">Time Accrued (minutes)</th>
+                                    <th scope="col">In Early</th>
+                                    <th scope="col">Out Late</th>
+                                    <th scope="col">Absent</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model.AttendanceList)
+                                {
+                                    <tr>
+                                        <td>4/5/2018</td>
+                                        <td>@item.TimeIn</td>
+                                        <td>@item.TimeOut</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <form action="/Admin/Update/" method="post">
+                        <div id="editTable" class="w3-container editFeature" style="display:none">
+
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Time In</th>
+                                        <th scope="col">Time Out</th>
+                                        <th scope="col">Time Accrued (minutes)</th>
+                                        <th scope="col">In Early</th>
+                                        <th scope="col">Out Late</th>
+                                        <th scope="col">Absent</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @*Attendance list that can be modified*@
+                                    @{
+                                        int count = 1;
+
+                                        foreach (var item in Model.AttendanceList)
+                                        {
+
+                                            <tr>
+                                                <td>4/5/2018</td>
+                                                <td><input type="text" name="@("Id"+ count)" style="display: none;" value="@item.Id" /><input type="text" name="@("TimeIn" +count)" value="@item.TimeIn"></td>
+                                                <td><input type="text" name="@("TimeOut" +count)" value="@item.TimeOut"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            count++;
+                                        }
+
+                                    }
+
+
+
+                                </tbody>
+
+
+                            </table>
+
+                            <input type="submit" value="Save" class="btn btn-primary">
+                        </div>
+
+                    </form>
+
+                </div>
                 <div class="row leftmargin">
                     <div class="btn-group formSpacing">
                         <button type="button" class="btn btn-default">Start Date</button>
@@ -189,12 +170,22 @@
                             Show Expected Trend Line<input type="checkbox" name="trend" value="checkBox" class="checkMark">
                         </div>
                     </div>
-                 </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-
+@*script that makes it possible to have two different views of the table. Implements the "edit report" button*@
+<script>
+    function changeTable(tableName) {
+        var i;
+        var x = document.getElementsByClassName("editFeature");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        document.getElementById(tableName).style.display = "block";
+    }
+</script>
 
 
