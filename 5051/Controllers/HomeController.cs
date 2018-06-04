@@ -6,6 +6,9 @@ using System.Web.Mvc;
 
 namespace _5051.Controllers
 {
+    /// <summary>
+    /// The Home controller manages the navigation bar at the foot of the website 
+    /// </summary>
     public class HomeController : Controller
     {
         // returns index view
