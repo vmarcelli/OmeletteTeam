@@ -32,6 +32,7 @@ h1 {
     margin-right: auto;
     margin-left: auto;
     border-radius: 5px;
+    color: #67c1c1;
 }
 
 .btn-primary {
@@ -39,3 +40,4 @@ h1 {
     outline-color: #DDB36B;
     border: none;
 }
+
