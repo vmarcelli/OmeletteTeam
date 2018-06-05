@@ -36,6 +36,8 @@ body {
     font-size: 20px;
 }
 
+
+
 /* Navbar at bottom of page for navigating between student pages */
 #studentNavBar {
     font-family: 'Roboto', sans-serif;
@@ -43,6 +45,9 @@ body {
     font-size: 45px;
     width: 100%;
     padding: 5px;
+    padding-top: 10px;
+    margin-top: 50px;
+    background-color: #127f79;
 }
 
 /* Style for Navbar Badge Button*/
