@@ -113,7 +113,7 @@ namespace _5051.Backend
         {
             Create(new StudentModel("John", "student-John.jpg", "8:56 AM", "2:05 PM"));
             Create(new StudentModel("Jess", "student-Jess.jpg", "11:00 AM", "1:15 PM"));
-            Create(new StudentModel("Daniel", "student-Daniel.jpg", "8:45 AM", "11:30 AM"));
+            Create(new StudentModel("Tommy", "student-Daniel.jpg", "8:45 AM", "11:30 AM"));
             Create(new StudentModel("Jason", "student-Jason.jpg", "1:23 PM", "4:05 PM"));
             Create(new StudentModel("Dwayne", "student-Dwayne.jpg", "10:32 AM", "3:34 PM"));
             Create(new StudentModel("Reggie", "student-Reggie.jpg", "8:59 AM", "12:05 PM"));
