@@ -54,9 +54,9 @@ body {
 #studentBadgesTab {
     background-color: #febc04;
     color: white;
-    padding: 10px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: 5px;
+    padding-left: 14%;
+    padding-right: 14%;
     margin-left: 3px;
     margin-right: 3px;
 }
@@ -65,9 +65,9 @@ body {
 #studentDataTab {
     background-color: #fcce00;
     color: white;
-    padding: 10px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: 5px;
+    padding-left: 16%;
+    padding-right: 16%;
     margin-left: 3px;
     margin-right: 3px;
 }
@@ -76,9 +76,9 @@ body {
 #studentProfileTab {
     background-color: #67dbdb;
     color: white;
-    padding: 10px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: 5px;
+    padding-left: 18%;
+    padding-right: 18%;
     margin-left: 3px;
     margin-right: 3px;
 }
