@@ -9,7 +9,7 @@ using _5051.Backend;
 namespace _5051.Controllers
 {
     /// <summary>
-    /// The Kiosk that will run in the classroom
+    /// Manages the sign-in to the Kiosk that will run in the window room
     /// </summary>
     public class KioskSignInController : Controller
     {

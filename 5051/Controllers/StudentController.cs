@@ -9,6 +9,9 @@ using _5051.Backend;
 
 namespace _5051.Controllers
 {
+    /// <summary>
+    /// Manges the student profile which contains data and badges tabs
+    /// </summary>
     public class StudentController : Controller
     {
         // A ViewModel used for the Student that contains the StudentList

@@ -25,6 +25,13 @@ namespace _5051.Models
         [Display(Name = "TimeOut", Description = "Check out Time")]
         public string TimeOut { get; set; }
 
+        [Display(Name = "TimeInDate", Description = "Check in Time date format")]
+        public DateTime TimeInDate { get; set; }
+
+        [Display(Name = "TimeOutDate", Description = "Check out Time date format")]
+        public DateTime TimeOutDate { get; set; }
+
+
         /// <summary>
         /// Create the default values, empty initially
         /// </summary>
@@ -46,7 +53,7 @@ namespace _5051.Models
         /// <summary>
         /// New Attendance Entry with parameters for check-in and check-out time
         /// </summary>
-        public AttendanceEntryModel(string timeIn, string timeOut)
+        public AttendanceEntryModel(string date, string timeIn, string timeOut)
         {
             Initialize();
             TimeIn = timeIn;
@@ -68,6 +75,19 @@ namespace _5051.Models
             TimeIn = data.TimeIn;
             TimeOut = data.TimeOut;
 
+            return true;
+        }
+
+        /// <summary>
+        /// Updates the Attendance Entry
+        /// </summary>
+        /// <param name="timein"></param>
+        /// <param name="timeout"></param>
+        /// <returns>bool</returns>
+        public bool Update(string timeIn, string timeOut)
+        {
+            TimeIn = timeIn;
+            TimeOut = timeOut;
             return true;
         }
     }

@@ -25,5 +25,7 @@ namespace _5051.Models
                 AttendanceList.Add(item);
             }
         }
+
+
     }
 }
