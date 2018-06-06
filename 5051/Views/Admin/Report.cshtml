@@ -81,6 +81,8 @@
                             </thead>
                             <tbody>
                                 @{int[] accrued = new int[] { 97, 92, 81, 60, 67, 34, 45 };
+                                    bool[] early = new bool[] { true, true, false, false, true, false, true };
+                                    bool[] outLate = new bool[] { false, false, true, false, false, false, true };
                                     int counter = 0;
                                     }
 
@@ -90,9 +92,9 @@
                                         <td>4/@(counter+5)/2018</td>
                                         <td>@item.TimeIn</td>
                                         <td>@item.TimeOut</td>
-                                        <td>@accrued[counter++]</td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>@accrued[counter]</td>
+                                        <td>@if(early[counter]){<span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>}</td>
+                                        <td>@if (outLate[counter++]){<span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>}</td>
                                         <td></td>
                                     </tr>
                                    
