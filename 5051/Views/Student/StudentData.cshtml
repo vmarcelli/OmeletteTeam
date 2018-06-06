@@ -7,7 +7,7 @@
     <!-- Link for the Roboto Thin style -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="~/Content/Student.css" />
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 </head>
 
 <!-- Tab Buttons at the bottom of the page -->
@@ -41,7 +41,9 @@
     <div class="row" id="dataBox">
         <!-- Data Section with Average increase of Student progress-->
         <div class="col-sm-6">
-            <img src="~/Content/img/Student/StudentData_Graph.png" class="img-responsive" alt="Graph Picture" />
+            
+            <canvas id="studentDataChart"></canvas>
+            <script></script>
             <div id="dataText" style="padding-top:5px;">
                 +5% Avg!
             </div>
