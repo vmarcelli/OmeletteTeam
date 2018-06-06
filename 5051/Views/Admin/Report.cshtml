@@ -80,18 +80,22 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @{int[] accrued = new int[] { 97, 92, 81, 60, 67, 34, 45 };
+                                    int counter = 0;
+                                    }
 
                                 @foreach (var item in Model.AttendanceList)
                                 {
                                     <tr>
-                                        <td>4/5/2018</td>
+                                        <td>4/@(counter+5)/2018</td>
                                         <td>@item.TimeIn</td>
                                         <td>@item.TimeOut</td>
-                                        <td></td>
+                                        <td>@accrued[counter++]</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                     </tr>
+                                   
                                 }
 
                             </tbody>
