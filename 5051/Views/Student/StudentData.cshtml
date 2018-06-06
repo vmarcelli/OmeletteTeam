@@ -43,7 +43,21 @@
         <div class="col-sm-6">
             
             <canvas id="studentDataChart"></canvas>
-            <script></script>
+            <script>
+                let chart = document.getElementById('studentDataChart').getContext('2d');
+                let studentChart = new Chart(chart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['9/16/18', '9/17/18', '9/18/18', '9/19/18', '9/20/18'],
+                        datasets: [{
+                            label: 'Attendance in Minutes',
+                            data: [24, 125, 240, 30, 240]
+                            
+                        }]
+                    },
+                    options: {}
+                });
+            </script>
             <div id="dataText" style="padding-top:5px;">
                 +5% Avg!
             </div>
