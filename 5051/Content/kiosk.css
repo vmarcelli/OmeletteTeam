@@ -58,6 +58,10 @@ p {
     margin-bottom: 10px;
 }
 
+.click-to-sign-in {
+    margin-bottom: 30px;
+}
+
 .badge-earn {
     font-size: 14px;
     opacity: 0;

@@ -55,17 +55,19 @@ window.onload = function () {
 // badge earn animation
 $(document).ready(function () {
     $(".student").click(function () {
+        // number of clicks in a given student object
         var clicks = $(this).data('clicks');
 
         if (clicks) {
             // do nothing
         } else {
+            // run animation
             $(".badge-earn", this).animate({
                 opacity: '1',
                 'margin-top': '0px'
             }).delay(2000).animate({
                 opacity: '0',
-                'margin-top': '30px'
+                'margin-top': '25px'
             });
         }
         $(this).data("clicks", !clicks);    
