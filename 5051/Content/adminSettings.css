@@ -41,3 +41,11 @@ h1 {
     border: none;
 }
 
+    .btn-primary:hover {
+        background-color: #FFC526;
+    }
+
+.tabs > li > a:hover {
+    background-color: #FFC526;
+}
+

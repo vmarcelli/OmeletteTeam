@@ -54,6 +54,10 @@ h1 {
     border: none;
 }
 
+    .btn-primary:hover {
+        background-color: #FFC526;
+    }
+
 [type="date"] {
     background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
 }
@@ -64,4 +68,8 @@ h1 {
 
 .TealText {
     color: #67c1c1;
+}
+
+.tabs > li > a:hover {
+    background-color: #FFC526;
 }

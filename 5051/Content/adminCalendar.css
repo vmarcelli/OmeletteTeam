@@ -69,3 +69,11 @@ h1 {
     outline-color: #DDB36B;
     border: none;
 }
+
+    .btn-primary:hover {
+        background-color: #FFC526;
+    }
+
+.tabs > li > a:hover {
+    background-color: #FFC526;
+}
