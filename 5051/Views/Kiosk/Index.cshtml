@@ -10,6 +10,8 @@
     @*links to kiosk css file*@
     <link rel="stylesheet" href="~/Content/kiosk.css">
     @*links to kiosk js file*@
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="~/Scripts/kiosk.js"></script>
 </head>
 
@@ -18,18 +20,25 @@
             @*SnapAttendance logo*@
             <img class="logo" src="~/Content/img/logos/logo_white.png" alt="SnapAttendanceLogo">
         </div>
+        <div class="row greeting">
+            @*'Click to sign in' greeting*@
+            <p>Click yourself to sign in!</p>
+        </div>
 
         <div class="grid">
-            @*grid of students, box is clickable nock sign in and out*@
+            @*grid of students, box is clickable mock sign in and out*@
             @{
                 foreach (var item in Model.StudentList)
                 {
                     <div class="box">
                         <div class="student text-center">
                             <div class="greeting message">
-                                <p>Welcome, @item.Name!<br />
-                                <img class="logo" src="~/Content/img/Student/Student_EarlyB2.png" alt="Early Bird" height="150">
-                                </p>
+                                <p>Welcome, @item.Name!</p>
+                                <div class="badge-earn">
+                                    <p class="badge-message">Badge Earned!</p>
+                                    <img class="badge-icon" src="~/Content/img/Student/Student_EarlyB3.png" alt="Early Bird" width="50" height="50">
+                                    <p class="badge-message">Early Bird - Gold</p>
+                                </div>
                             </div>
                             <div class="farewell message">
                                 <p>See you next time!</p>
@@ -40,6 +49,7 @@
                     </div>
                 }
             }
-        </div>   
+        </div> 
+    
 </body>
 

@@ -56,6 +56,15 @@ p {
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 10px;
-    padding-top: px;
+}
+
+.badge-earn {
+    font-size: 14px;
+    opacity: 0;
+    align-content: center;
+    margin-top: 40px;
+    width: 140px;
+    height: 140px;
+    margin-left: 23px;
 }
 
