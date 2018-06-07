@@ -371,8 +371,7 @@
     <Content Include="Content\img\student-Taylor.jpg" />
     <Content Include="Content\img\StudentBadgeTab.jpg" />
     <Content Include="Content\img\StudentDataTab.jpg" />
-    <Content Include="Content\img\Student\greenUp.png" />
-    <Content Include="Content\img\Student\redDown.png" />
+    <Content Include="Content\img\Student\yellowUp.png" />
     <Content Include="Content\img\Student\StudentBadges_BadgesTab.png" />
     <Content Include="Content\img\Student\StudentBadges_DataTab.png" />
     <Content Include="Content\img\Student\StudentBadges_EarlyB0NEW.png" />
